@@ -88,6 +88,7 @@
 ## User-Defined
 
 `int fd = open(...)`
+
 - Integer `fd` is a small integer that will likely be set to `3`.
 
 ## Examples
@@ -115,14 +116,14 @@
 
 ### `fd` vs `FILE*`
 
-|`fd`          | `FILE*`                                    |
-|-------------:|:-------------------------------------------|
+|         `fd` | `FILE*`                                    |
+| -----------: | :----------------------------------------- |
 | Low-Level IO | Buffered IO (built on top of Low-Level IO) |
-|`open`        | `fopen`                                    |
-|`read`        | `fread`                                    |
-|`write`       | `fwrite`                                   |
+|       `open` | `fopen`                                    |
+|       `read` | `fread`                                    |
+|      `write` | `fwrite`                                   |
 
- - Low-Level IO stuff like access to `fd` is abstracted from user.
+- Low-Level IO stuff like access to `fd` is abstracted from user.
 
 #### Example
 
@@ -227,7 +228,7 @@ if (pipe(pipe_ends) == -1) {
 ```
 
 <p align="center" width="100%">
-    <img src="Diagram and explanation goes here">
+    <img src="img/figure-2-1.png">
 </p>
 
 ### Part 2
@@ -240,7 +241,7 @@ if (child == -1) {
 ```
 
 <p align="center" width="100%">
-    <img src="Diagram and explanation goes here">
+    <img src="img/figure-2-2.png">
 </p>
 
 ### Part 3
@@ -269,7 +270,7 @@ if (child == 0) {
 ```
 
 <p align="center" width="100%">
-    <img src="Diagram and explanation goes here">
+    <img src="img/figure-2-3.png">
 </p>
 
 # Source

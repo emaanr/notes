@@ -107,16 +107,12 @@ main {
 ```
 
 <p align="center" width="100%">
-    <img src="Re-create diagram and put it here.">
+    <img src="img/figure.png">
 </p>
 
 - `SIGRETURN` is a special signal that is sent by the handler to the Kernel after the handler is done "handling".
 
 ## Signal Masking
-
-<p align="center" width="100%">
-    <img src="Create Linked List diagram here.">
-</p>
 
 - Can't control when the handler is run which can lead to problems.
 - Two options:

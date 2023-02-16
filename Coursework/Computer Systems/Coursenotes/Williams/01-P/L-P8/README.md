@@ -86,7 +86,6 @@
     <img src="img/figure-1.png">
 </p>
 
-
 ## Shells
 
 - Functionality may differ from shell to shell.
@@ -115,7 +114,7 @@
 
 - Jobs are made up of processes but they are not processes.
   - Do not confuse with states of _processes_.
-  
+
 #### Foregound
 
 - Foreground job gets input from the terminal.
