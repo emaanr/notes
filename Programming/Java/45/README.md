@@ -35,7 +35,7 @@
 
 # Code
 
-[FileClass.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/45/FileClass/src/FileClass.java)
+[FileClass.java](https://github.com/emaanr/notes/blob/main/Programming/Java/45/FileClass/src/FileClass.java)
 
 # Source
 

@@ -78,7 +78,7 @@
 
 # Code
 
-[StringMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/17/StringMethods/src/StringMethods.java)
+[StringMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/17/StringMethods/src/StringMethods.java)
 
 # Source
 

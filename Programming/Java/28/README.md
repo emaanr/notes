@@ -48,7 +48,7 @@ void method2() {
 
 # Code
 
-[VariableScope.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/28/VariableScope/src/VariableScope.java)
+[VariableScope.java](https://github.com/emaanr/notes/blob/main/Programming/Java/28/VariableScope/src/VariableScope.java)
 
 # Source
 

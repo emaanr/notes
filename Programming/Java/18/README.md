@@ -47,7 +47,7 @@
 
 # Code
 
-[WrapperClasses](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/18/WrapperClasses/src/WrapperClasses.java)
+[WrapperClasses](https://github.com/emaanr/notes/blob/main/Programming/Java/18/WrapperClasses/src/WrapperClasses.java)
 
 # Source
 

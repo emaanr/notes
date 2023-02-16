@@ -47,7 +47,7 @@ for (int i=0; i < array.length; i++) {
 
 # Code
 
-[Arrays.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/15/Arrays/src/Arrays.java)
+[Arrays.java](https://github.com/emaanr/notes/blob/main/Programming/Java/15/Arrays/src/Arrays.java)
 
 # Source
 

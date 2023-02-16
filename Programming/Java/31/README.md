@@ -62,7 +62,7 @@ for (Object object : objects) {
 
 # Code
 
-[ArrayOfObjects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/31/ArrayOfObjects/src/ArrayOfObjects.java)
+[ArrayOfObjects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/31/ArrayOfObjects/src/ArrayOfObjects.java)
 
 # Source
 

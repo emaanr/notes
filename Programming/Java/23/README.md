@@ -49,7 +49,7 @@ static double method(double param1, double param2) {
 
 # Code
 
-[OverloadedMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/23/OverloadedMethods/src/OverloadedMethods.java)
+[OverloadedMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/23/OverloadedMethods/src/OverloadedMethods.java)
 
 # Source
 

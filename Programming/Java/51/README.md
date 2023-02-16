@@ -53,7 +53,7 @@ static void customException() throws CustomException {
 
 # Code
 
-[CustomExceptions.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/51/CustomExceptions/src/CustomExceptions.java)
+[CustomExceptions.java](https://github.com/emaanr/notes/blob/main/Programming/Java/51/CustomExceptions/src/CustomExceptions.java)
 
 # Source
 

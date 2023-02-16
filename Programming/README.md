@@ -56,9 +56,9 @@
 
     Description.
 
-|                                    ##                                    | README | Content     |
-| :----------------------------------------------------------------------: | ------ | ----------- |
-| [01](https://github.com/emaanr/notes/tree/main/Programming/C/BroCode/01) | Topic  | Topic Title |
+|                                ##                                | README | Content     |
+| :--------------------------------------------------------------: | ------ | ----------- |
+| [01](https://github.com/emaanr/notes/tree/main/Programming/C/01) | Topic  | Topic Title |
 
 ## [CodeVault](https://github.com/emaanr/notes/tree/main/Programming/C/CodeVault)
 

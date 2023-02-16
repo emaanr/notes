@@ -21,7 +21,7 @@ final datatype FINAL_VARIABLE = value;
 
 # Code
 
-[FinalKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/25/FinalKeyword/src/FinalKeyword.java)
+[FinalKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/25/FinalKeyword/src/FinalKeyword.java)
 
 # Source
 

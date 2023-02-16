@@ -87,7 +87,7 @@ class ChildClass extends ParentClass {
 
 # Code
 
-[Abstraction.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/37/Abstraction/src/Abstraction.java)
+[Abstraction.java](https://github.com/emaanr/notes/blob/main/Programming/Java/37/Abstraction/src/Abstraction.java)
 
 # Source
 

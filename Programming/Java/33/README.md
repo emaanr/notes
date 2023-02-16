@@ -85,7 +85,7 @@ Math.staticMethod();
 
 # Code
 
-[StaticKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/33/StaticKeyword/src/StaticKeyword.java)
+[StaticKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/33/StaticKeyword/src/StaticKeyword.java)
 
 # Source
 

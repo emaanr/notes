@@ -11,10 +11,10 @@
 
 # Special Effects
 
-| ## | README                | Content                    | Link                                                                           |
-|----|-----------------------|----------------------------|:------------------------------------------------------------------------------:|
-| 01 | Topic                 | Topic Title                | [01](https://github.com/emaanr/notes/tree/main/Programming/Java/BroCode/FX/01) |
+| ##  | README | Content     |                                  Link                                  |
+| --- | ------ | ----------- | :--------------------------------------------------------------------: |
+| 01  | Topic  | Topic Title | [01](https://github.com/emaanr/notes/tree/main/Programming/Java/FX/01) |
 
-# Source 
+# Source
 
 [BroCode: Java Tutorial for Beginners](https://www.youtube.com/playlist?list=PLZPZq0r_RZOMhCAyywfnYLlrjiVOkdAI1)

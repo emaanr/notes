@@ -122,7 +122,7 @@ x = 25;     // Assign x to be of value 25
 
 # Code
 
-[Variables.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/02/Variables/src/Variables.java)
+[Variables.java](https://github.com/emaanr/notes/blob/main/Programming/Java/02/Variables/src/Variables.java)
 
 # Source
 

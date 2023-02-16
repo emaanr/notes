@@ -82,7 +82,7 @@ System.out.println(enum_n.num); // Prints N
 
 # Code
 
-[Enum.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/49/Enum/src/Enum.java)
+[Enum.java](https://github.com/emaanr/notes/blob/main/Programming/Java/49/Enum/src/Enum.java)
 
 # Source
 

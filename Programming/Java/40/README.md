@@ -104,7 +104,7 @@ Integer deep2 = 0
 
 # Code
 
-[CopyObjects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/40/CopyObjects/src/CopyObjects.java)
+[CopyObjects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/40/CopyObjects/src/CopyObjects.java)
 
 # Source
 

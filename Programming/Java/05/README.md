@@ -54,7 +54,7 @@
 
 # Code
 
-[ArithmeticExpressions.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/05/ArithmeticExpressions/src/ArithmeticExpressions.java)
+[ArithmeticExpressions.java](https://github.com/emaanr/notes/blob/main/Programming/Java/05/ArithmeticExpressions/src/ArithmeticExpressions.java)
 
 # Source
 

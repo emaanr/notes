@@ -61,7 +61,7 @@ ChildClsss extends ParentClass {
 
 # Code
 
-[SuperKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/36/SuperKeyword/src/SuperKeyword.java)
+[SuperKeyword.java](https://github.com/emaanr/notes/blob/main/Programming/Java/36/SuperKeyword/src/SuperKeyword.java)
 
 # Source
 

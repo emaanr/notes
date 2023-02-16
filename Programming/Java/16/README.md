@@ -59,7 +59,7 @@ for (int i=0; i < array.length; i++) {
 
 # Code
 
-[TwoDArrays.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/16/TwoDArrays/src/TwoDArrays.java)
+[TwoDArrays.java](https://github.com/emaanr/notes/blob/main/Programming/Java/16/TwoDArrays/src/TwoDArrays.java)
 
 # Source
 

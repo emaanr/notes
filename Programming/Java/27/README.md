@@ -48,7 +48,7 @@ public class Object {
 
 # Code
 
-[Constructors.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/27/Constructors/src/Constructors.java)
+[Constructors.java](https://github.com/emaanr/notes/blob/main/Programming/Java/27/Constructors/src/Constructors.java)
 
 # Source
 

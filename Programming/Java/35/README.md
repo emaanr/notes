@@ -44,7 +44,7 @@ ChildClass extends ParentClass {
 
 # Code
 
-[MethodOverriding.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/35/MethodOverriding/src/MethodOverriding.java)
+[MethodOverriding.java](https://github.com/emaanr/notes/blob/main/Programming/Java/35/MethodOverriding/src/MethodOverriding.java)
 
 # Source
 

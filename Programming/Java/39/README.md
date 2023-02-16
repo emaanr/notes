@@ -89,7 +89,7 @@ public Class {
 
 # Code
 
-[Encapsulation.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/39/Encapsulation/src/Encapsulation.java)
+[Encapsulation.java](https://github.com/emaanr/notes/blob/main/Programming/Java/39/Encapsulation/src/Encapsulation.java)
 
 # Source
 

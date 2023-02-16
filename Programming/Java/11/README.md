@@ -58,7 +58,7 @@ if (!cond) {
 
 # Code
 
-[LogicalOperators.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/11/LogicalOperators/src/LogicalOperators.java)
+[LogicalOperators.java](https://github.com/emaanr/notes/blob/main/Programming/Java/11/LogicalOperators/src/LogicalOperators.java)
 
 # Source
 

@@ -109,7 +109,7 @@ ArrayList is of size 4
 
 # Code
 
-[ArrayLists.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/19/ArrayLists/src/ArrayLists.java)
+[ArrayLists.java](https://github.com/emaanr/notes/blob/main/Programming/Java/19/ArrayLists/src/ArrayLists.java)
 
 # Source
 

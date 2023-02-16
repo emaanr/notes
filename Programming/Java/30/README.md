@@ -52,7 +52,7 @@ System.out.print(object.toString());
 
 # Code
 
-[ToString.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/30/ToString/src/ToString.java)
+[ToString.java](https://github.com/emaanr/notes/blob/main/Programming/Java/30/ToString/src/ToString.java)
 
 # Source
 

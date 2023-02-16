@@ -42,7 +42,7 @@
 
 # Code
 
-[FileWriters.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/46/FileWriters/src/FileWriters.java)
+[FileWriters.java](https://github.com/emaanr/notes/blob/main/Programming/Java/46/FileWriters/src/FileWriters.java)
 
 # Source
 

@@ -77,7 +77,7 @@ static void method() {
 
 # Code
 
-[Methods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/22/Methods/src/Methods.java)
+[Methods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/22/Methods/src/Methods.java)
 
 # Source
 

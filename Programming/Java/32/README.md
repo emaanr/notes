@@ -34,7 +34,7 @@ class Main {
 
 # Code
 
-[ObjectPassing.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/32/ObjectPassing/src/ObjectPassing.java)
+[ObjectPassing.java](https://github.com/emaanr/notes/blob/main/Programming/Java/32/ObjectPassing/src/ObjectPassing.java)
 
 # Source
 

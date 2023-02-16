@@ -72,11 +72,11 @@
 
 # Code
 
-[main/AccessModifiers.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/38/AccessModifiers/src/main/AccessModifiers.java)
+[main/AccessModifiers.java](https://github.com/emaanr/notes/blob/main/Programming/Java/38/AccessModifiers/src/main/AccessModifiers.java)
 
-[main/Child.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/38/AccessModifiers/src/main/Child.java)
+[main/Child.java](https://github.com/emaanr/notes/blob/main/Programming/Java/38/AccessModifiers/src/main/Child.java)
 
-[other/Parent.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/38/AccessModifiers/src/other/Parent.java)
+[other/Parent.java](https://github.com/emaanr/notes/blob/main/Programming/Java/38/AccessModifiers/src/other/Parent.java)
 
 # Source
 

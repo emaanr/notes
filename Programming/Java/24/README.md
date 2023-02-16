@@ -164,7 +164,7 @@ System.out.printf("%b", bool);
 
 # Code
 
-[Printf.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/24/Printf/src/Printf.java)
+[Printf.java](https://github.com/emaanr/notes/blob/main/Programming/Java/24/Printf/src/Printf.java)
 
 # Source
 

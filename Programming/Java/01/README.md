@@ -195,7 +195,7 @@ public class Main {
 
 # Code
 
-[HelloWorld.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/01/HelloWorld/src/HelloWorld.java)
+[HelloWorld.java](https://github.com/emaanr/notes/blob/main/Programming/Java/01/HelloWorld/src/HelloWorld.java)
 
 # Source
 

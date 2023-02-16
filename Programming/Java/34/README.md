@@ -54,7 +54,7 @@ Main {
 
 # Code
 
-[Inheritance.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/34/Inheritance/src/Inheritance.java)
+[Inheritance.java](https://github.com/emaanr/notes/blob/main/Programming/Java/34/Inheritance/src/Inheritance.java)
 
 # Source
 

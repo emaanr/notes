@@ -149,7 +149,7 @@ String temp; // Unassigned temp variable
 
 # Code
 
-[SwapVariables.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/03/SwapVariables/src/SwapVariables.java)
+[SwapVariables.java](https://github.com/emaanr/notes/blob/main/Programming/Java/03/SwapVariables/src/SwapVariables.java)
 
 # Source
 

@@ -35,7 +35,7 @@ do {
 
 # Code
 
-[WhileLoop.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/12/WhileLoop/src/WhileLoop.java)
+[WhileLoop.java](https://github.com/emaanr/notes/blob/main/Programming/Java/12/WhileLoop/src/WhileLoop.java)
 
 # Source
 

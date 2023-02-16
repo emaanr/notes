@@ -18,7 +18,7 @@
 
 # Code
 
-[RandomNumbers.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/08/RandomNumbers/src/RandomNumbers.java)
+[RandomNumbers.java](https://github.com/emaanr/notes/blob/main/Programming/Java/08/RandomNumbers/src/RandomNumbers.java)
 
 # Source
 

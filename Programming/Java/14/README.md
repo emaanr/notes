@@ -55,7 +55,7 @@ if (cond) {
 
 # Code
 
-[NestedLoops.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/14/NestedLoops/src/NestedLoops.java)
+[NestedLoops.java](https://github.com/emaanr/notes/blob/main/Programming/Java/14/NestedLoops/src/NestedLoops.java)
 
 # Source
 

@@ -155,9 +155,9 @@ class GenericClassBounded <T extends Class, V extends Class> {
 
 # Code
 
-[GenericClasses.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/53/Generics/src/GenericClasses.java)
+[GenericClasses.java](https://github.com/emaanr/notes/blob/main/Programming/Java/53/Generics/src/GenericClasses.java)
 
-[GenericMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/53/Generics/src/GenericMethods.java)
+[GenericMethods.java](https://github.com/emaanr/notes/blob/main/Programming/Java/53/Generics/src/GenericMethods.java)
 
 # Source
 

@@ -34,7 +34,7 @@ for (datatype elem : elemList) {
 
 # Code
 
-[ForEachLoop.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/21/ForEachLoop/src/ForEachLoop.java)
+[ForEachLoop.java](https://github.com/emaanr/notes/blob/main/Programming/Java/21/ForEachLoop/src/ForEachLoop.java)
 
 # Source
 

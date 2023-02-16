@@ -51,7 +51,7 @@ public static void main(String[] args) {
 
 # Code
 
-[DynamicPolymorphism.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/43/DynamicPolymorphism/src/DynamicPolymorphism.java)
+[DynamicPolymorphism.java](https://github.com/emaanr/notes/blob/main/Programming/Java/43/DynamicPolymorphism/src/DynamicPolymorphism.java)
 
 # Source
 

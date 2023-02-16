@@ -53,7 +53,7 @@
 
 # Code
 
-[MathClass.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/07/MathClass/src/MathClass.java)
+[MathClass.java](https://github.com/emaanr/notes/blob/main/Programming/Java/07/MathClass/src/MathClass.java)
 
 # Source
 

@@ -218,7 +218,7 @@ Exception in thread "main" java.util.InputMismatchException
 
 # Code
 
-[AcceptInput.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/04/AcceptInput/src/AcceptInput.java)
+[AcceptInput.java](https://github.com/emaanr/notes/blob/main/Programming/Java/04/AcceptInput/src/AcceptInput.java)
 
 # Source
 

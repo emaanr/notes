@@ -125,7 +125,7 @@ key_n, value_n
 
 # Code
 
-[HashMaps.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/50/HashMaps/src/HashMaps.java)
+[HashMaps.java](https://github.com/emaanr/notes/blob/main/Programming/Java/50/HashMaps/src/HashMaps.java)
 
 # Source
 

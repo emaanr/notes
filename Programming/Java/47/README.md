@@ -55,7 +55,7 @@ reader.close();
 
 # Code
 
-[FileReaders.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/47/FileReaders/src/FileReaders.java)
+[FileReaders.java](https://github.com/emaanr/notes/blob/main/Programming/Java/47/FileReaders/src/FileReaders.java)
 
 # Source
 

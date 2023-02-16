@@ -36,7 +36,7 @@
 
 # Code
 
-[Switch.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/10/Switch/src/Switch.java)
+[Switch.java](https://github.com/emaanr/notes/blob/main/Programming/Java/10/Switch/src/Switch.java)
 
 # Source
 

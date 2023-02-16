@@ -47,7 +47,7 @@ for (pre-cond; cond; post-cond) {
 
 # Code
 
-[ForLoop](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/13/ForLoop/src/ForLoop.java)
+[ForLoop](https://github.com/emaanr/notes/blob/main/Programming/Java/13/ForLoop/src/ForLoop.java)
 
 # Source
 

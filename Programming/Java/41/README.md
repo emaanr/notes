@@ -36,7 +36,7 @@ class Class implements Interface {
 
 # Code
 
-[Interface.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/41/Interface/src/Interface.java)
+[Interface.java](https://github.com/emaanr/notes/blob/main/Programming/Java/41/Interface/src/Interface.java)
 
 # Source
 

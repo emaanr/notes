@@ -23,7 +23,7 @@ data.method_1().method_2().method_3()...method_n();
 
 # Code
 
-[MethodChaining.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/48/MethodChaining/src/MethodChaining.java)
+[MethodChaining.java](https://github.com/emaanr/notes/blob/main/Programming/Java/48/MethodChaining/src/MethodChaining.java)
 
 # Source
 

@@ -26,7 +26,7 @@
 
 # Code
 
-[Objects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/26/Objects/src/Objects.java)
+[Objects.java](https://github.com/emaanr/notes/blob/main/Programming/Java/26/Objects/src/Objects.java)
 
 # Source
 

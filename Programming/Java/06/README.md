@@ -23,7 +23,7 @@
 
 # Code
 
-[GUI.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/06/GUI/src/GUI.java)
+[GUI.java](https://github.com/emaanr/notes/blob/main/Programming/Java/06/GUI/src/GUI.java)
 
 # Source
 

@@ -38,7 +38,7 @@ System.out.println(arrList_name.get(arrList).get(elem));
 
 # Code
 
-[TwoDArrayList.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/20/TwoDArrayList/src/TwoDArrayList.java)
+[TwoDArrayList.java](https://github.com/emaanr/notes/blob/main/Programming/Java/20/TwoDArrayList/src/TwoDArrayList.java)
 
 # Source
 

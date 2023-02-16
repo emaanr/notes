@@ -73,7 +73,7 @@ try {
 
 # Code
 
-[ExceptionHandling.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/44/ExceptionHandling/src/ExceptionHandling.java)
+[ExceptionHandling.java](https://github.com/emaanr/notes/blob/main/Programming/Java/44/ExceptionHandling/src/ExceptionHandling.java)
 
 # Source
 

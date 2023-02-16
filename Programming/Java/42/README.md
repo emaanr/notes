@@ -61,7 +61,7 @@ class Main {
 
 # Code
 
-[Polymorphism.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/42/Polymorphism/src/Polymorphism.java)
+[Polymorphism.java](https://github.com/emaanr/notes/blob/main/Programming/Java/42/Polymorphism/src/Polymorphism.java)
 
 # Source
 

@@ -108,7 +108,7 @@ if (cond) {
 
 # Code
 
-[IfStatements.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/09/IfStatements/src/IfStatements.java)
+[IfStatements.java](https://github.com/emaanr/notes/blob/main/Programming/Java/09/IfStatements/src/IfStatements.java)
 
 # Source
 

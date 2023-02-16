@@ -46,7 +46,7 @@ public static void main(String[] args) {
 
 # Code
 
-[InnerClasses.java](https://github.com/emaanr/notes/blob/main/Programming/Java/BroCode/52/InnerClasses/src/InnerClasses.java)
+[InnerClasses.java](https://github.com/emaanr/notes/blob/main/Programming/Java/52/InnerClasses/src/InnerClasses.java)
 
 # Source
 
