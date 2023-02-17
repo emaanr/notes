@@ -79,22 +79,24 @@
 
 # Creation
 
+- How to create a process.
+
 ## Needs
 
-  - Binary (path to it).
-  - Command line arguments.
-  - Environment to run in.
-    - Includes `stdin` and `stdout` among other things.
+- Binary (path to it).
+- Command line arguments.
+- Environment to run in.
+  - Includes `stdin` and `stdout` among other things.
 
 ## Spawn
 
-  - Spawn new processes using `syscalls`:
-    - Unix: `posix_spawn()`
-    - Windows: `createProcessA()`
-  - Creates Address Space and loads in:
-      - Binary
-      - Command Line Arguments on Stack
-      - Environment-related stuff in a Table
+- Spawn new processes using `syscalls`:
+  - Unix: `posix_spawn()`
+  - Windows: `createProcessA()`
+- Creates Address Space and loads in:
+  - Binary
+  - Command Line Arguments on Stack
+  - Environment-related stuff in a Table
 
 ## Fork
 
@@ -117,6 +119,7 @@
 - Called once, returns twice.
 
 > Note: 1 Parent can have 0 or more Children.
+>
 > - Parent = 1
 >   - Child $\geq$ 0
 
@@ -153,6 +156,7 @@ int main (int argc, char** argv) {
     }
 }
 ```
+
 ```
 parent
 child
@@ -173,6 +177,7 @@ int main (int argc, char** argv) {
     }
 }
 ```
+
 ```
 parent
 
