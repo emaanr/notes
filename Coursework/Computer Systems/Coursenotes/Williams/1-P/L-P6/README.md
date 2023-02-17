@@ -72,7 +72,7 @@
 ## `exec` w/o `fork`
 
 - Shows up in containers often.
-- Useful to do some setup or redefine some set up for a process.
+- Useful to do some setup or re-define some setup for a process.
 
 # File Descriptors
 
@@ -103,7 +103,7 @@
 ## UNIX Design Philosophy
 
 - Have unified interface to all "kernel abstract objects/things" .
-  - Called Files, which can be anything, and uses File Descriptors as a user-space handle.
+  - Called "Files", which can be anything, and uses "File Descriptors" as a user-space handle.
 - Programs are small but can accomplish many things (many use cases) or sometimes only have one use (like `echo`).
 
 ### `open`
