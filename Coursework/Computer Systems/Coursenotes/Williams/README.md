@@ -45,7 +45,7 @@
 | [L-P3](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P3)       | Unicode                  |   QA   |
 | [L-P4](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P4)       | Process States           |   QA   |
 | [L-P5](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P5)       | Process Management       |   QA   |
-| [L-P6](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P6)       | File Descriptors & Pipes |   IP   |
+| [L-P6](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P6)       | File Descriptors & Pipes |   QA   |
 | [L-P7](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P7)       | Signals                  |   IP   |
 | [L-P8](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P8)       | Job Control              |   IP   |
 
