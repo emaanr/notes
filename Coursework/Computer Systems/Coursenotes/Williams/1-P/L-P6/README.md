@@ -279,6 +279,6 @@ if (child == 0) {
 
 # Supplements
 
-[Unix Filesystem](https://github.com/emaanr/notes/blob/main/Coursework/Computer%20Systems/Coursenotes/Other/01-P/L-P6/Supplements/unix-filesystem.md)
+[Unix Filesystem](https://github.com/emaanr/notes/blob/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P6/Supplements/unix-filesystem.md)
 
-[Pipes, Forks, Dups](https://github.com/emaanr/notes/blob/main/Coursework/Computer%20Systems/Coursenotes/Other/01-P/L-P6/Supplements/pipes-forks-dups.md)
+[Pipes, Forks, Dups](https://github.com/emaanr/notes/blob/main/Coursework/Computer%20Systems/Coursenotes/Williams/1-P/L-P6/Supplements/pipes-forks-dups.md)
