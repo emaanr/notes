@@ -1,10 +1,10 @@
-# Building Executables
+# Building Executables & Linking: Part I
 
     February 16, 2023
 
 # Table of Contents
 
-- [Building Executables](#building-executables)
+- [Building Executables \& Linking: Part I](#building-executables--linking-part-i)
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Symbol Resolution](#symbol-resolution)

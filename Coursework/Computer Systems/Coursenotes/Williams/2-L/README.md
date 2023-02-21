@@ -15,7 +15,7 @@
 | L-L#                                                                                                          | Content                                   | Status |
 | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | :----: |
 | [L-L1](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/2-L/L-L1) | Undefined Behavior & Building Executables |   IP   |
-| [L-L2](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/2-L/L-L2) | Building Executables                      |   IP   |
+| [L-L2](https://github.com/emaanr/notes/tree/main/Coursework/Computer%20Systems/Coursenotes/Williams/2-L/L-L2) | Building Executables & Linking: Part I |   IP   |
 
 ## Key
 
