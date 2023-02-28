@@ -21,8 +21,6 @@
   - This is what the Windows Terminal is. It's really good at displaying textual output and can pass input but the Terminal isnt't smart.
     - It doesn't actually _process_ input or _look_ at your files or _think_.
 
----
-
 ## Console
 
     Folks in the mid 20th century would have a piece of furniture in their living room called a console or a console cabinet. A Console
@@ -31,8 +29,6 @@
 
 - Think of Console as a "Gaming Console" where the Terminal is the "Game" in the Gaming Console.
 - In the software world, a Terminal and a Console are, for all intents, synonymous.
-
----
 
 ## Shell
 
