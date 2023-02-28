@@ -10,6 +10,6 @@
 
 # Directory
 
-|                                         ##                                          | Title                                                             |
-| :---------------------------------------------------------------------------------: | ----------------------------------------------------------------- |
-| [01](https://github.com/emaanr/notes/blob/main/Computers/console-terminal-shell.md) | What's the difference between a Console, a Terminal, and a Shell? |
+|                                       ##                                       | Title                                                             |
+| :----------------------------------------------------------------------------: | ----------------------------------------------------------------- |
+| [01](https://github.com/emaanr/notes/blob/main/Misc/console-terminal-shell.md) | What's the difference between a Console, a Terminal, and a Shell? |
