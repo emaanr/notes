@@ -25,9 +25,9 @@
 
 ## Console
 
-    Folks in the mid 20th century would have a piece of furniture in their living room called a console or a console cabinet.
-    A Console in the context of computers is a console or cabinet with a screen and keyboard combined inside it, but it is
-    effectively a Terminal. Technically the Console is the device and the Terminal is now the software program inside the Console.
+    Folks in the mid 20th century would have a piece of furniture in their living room called a console or a console cabinet. A Console
+    in the context of computers is a console or cabinet with a screen and keyboard combined inside it, but it is effectively a Terminal.
+    Technically the Console is the device and the Terminal is now the software program inside the Console.
 
 - Think of Console as a "Gaming Console" where the Terminal is the "Game" in the Gaming Console.
 - In the software world, a Terminal and a Console are, for all intents, synonymous.
@@ -36,8 +36,7 @@
 
 ## Shell
 
-    A Shell is the program that the Terminal sends user input to. The Shell generates output and passes it back to the Terminal for
-    display.
+    A Shell is the program that the Terminal sends user input to. The Shell generates output and passes it back to the Terminal for display.
 
 - Some examples of Shells:
   - Unix
