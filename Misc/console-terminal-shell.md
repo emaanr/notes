@@ -36,7 +36,7 @@
 
 ## Shell
 
-    A Shell is the program that the Terminal sends user input to. The Shell generates output and passes it back to the Terminal for display.
+    Shell is the program that the Terminal sends user input to. The Shell generates output and passes it back to the Terminal for display.
 
 - Some examples of Shells:
   - Unix
