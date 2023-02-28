@@ -46,7 +46,7 @@
 
 # [Miscellanous](https://github.com/emaanr/notes/tree/main/Misc)
 
-    Notes on miscellaneous computer related topics.
+    Notes on miscellaneous topics.
 
 |                                       ##                                       | Title                                                             | Status |
 | :----------------------------------------------------------------------------: | ----------------------------------------------------------------- | :----: |
