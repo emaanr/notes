@@ -46,11 +46,11 @@
 
 # [Miscellanous](https://github.com/emaanr/notes/tree/main/Misc)
 
-    Notes on miscellaneous computer related topics.
+    Notes on miscellaneous topics.
 
-|                                         ##                                          | Title                                                             | Status |
-| :---------------------------------------------------------------------------------: | ----------------------------------------------------------------- | :----: |
-| [01](https://github.com/emaanr/notes/blob/main/Computers/console-terminal-shell.md) | What's the difference between a Console, a Terminal, and a Shell? |   X    |
+|                                       ##                                       | Title                                                             | Status |
+| :----------------------------------------------------------------------------: | ----------------------------------------------------------------- | :----: |
+| [01](https://github.com/emaanr/notes/blob/main/Misc/console-terminal-shell.md) | What's the difference between a Console, a Terminal, and a Shell? |   X    |
 
 # [Practice](https://github.com/emaanr/notes/tree/main/Practice)
 
