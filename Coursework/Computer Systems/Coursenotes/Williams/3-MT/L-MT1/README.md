@@ -115,6 +115,9 @@
 
 - If processes make changes to their own copies of the address space, then other processes can't _see_ those changes and may be working out outdated data or computing with incorrect values.
 - The only difference between starting a process or a thread is whether or not Virtual Memory (VM), which is referring to the address space, is shared.
+- Threads are a part of the same program while children have their own destinies and can `exec` without corrupting the shared data like threads would.
+  - Exiting in any thread will exit from the whole program.
+  - Exiting in a child will not affect the state of its parent or its siblings or its children.
 
 <p align="center" width="100%">
     <img src="img/figure-1.png">
