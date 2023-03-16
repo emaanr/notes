@@ -85,8 +85,6 @@ Zombie processes should not be confused with _orphan processes_: an orphan proce
   - If multiple cores, they may even run simultaneously.
 - The `wait()` system call allows the parent to wait (be BLOCKED) until child has finished.
 
-***
-
 ### Case 1
 
     Parent runs first
@@ -102,8 +100,6 @@ Zombie processes should not be confused with _orphan processes_: an orphan proce
 - Parent continues running.
 - Parent exits.
 - Kernel cleans up parent's data.
-
-***
 
 ### Case 2
 
@@ -148,8 +144,6 @@ struct person {
 };
 ```
 
-***
-
 ### Example 1
 
 ```c
@@ -168,8 +162,6 @@ int main(int argc, char* argv[]) {
 ```
 Ben is 24 years old and has Brown eyes.
 ```
-
-***
 
 ### Example 2
 
@@ -265,7 +257,7 @@ In computer programming, variable shadowing occurs when a variable declared with
 
 ## Allows
 
-Languages like C (and Python) allow this:
+Languages like C and Python allow this:
 
  - The first x is _shadowed_ by the second.
  - The inner x _masks_ the outer x.
@@ -316,7 +308,8 @@ public static void main(String[] args) {
 }
 ```
 ```
-/Class.java:5: error: variable x is already defined in method main(String[])
+Error: Variable x is already defined in method main(String[])
+
 int x = 888; // Second, Inner
     ^
 ```
