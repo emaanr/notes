@@ -31,7 +31,7 @@
 # Pipes
 
 A _pipe_ redirects standard input from one program to be the standard output of another program. Note that the pipe works in real time such that:
-  1. The pipe can stall the redirection if it becomes full
+  1. The pipe can stall the redirection if it becomes full.
   2. Bottlenecking may also occur if the two streams are moving at different speeds.
 
 # Context Switching
@@ -256,17 +256,17 @@ A list of signals and what they mean.
 
 # Variable Shadowing
 
- In computer programming, variable shadowing occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope. At the level of identifiers (names, rather than variables), this is known as name masking. This outer variable is said to be shadowed by the inner variable, while the inner identifier is said to mask the outer identifier. This can lead to confusion, as it may be unclear which variable subsequent uses of the shadowed variable name refer to, which depends on the name resolution rules of the language. Some languages allow variable shadowing, some do not, but many modern languages don't because it leads to programmer error.
+In computer programming, variable shadowing occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope. At the level of identifiers (names, rather than variables), this is known as name masking. This outer variable is said to be shadowed by the inner variable, while the inner identifier is said to mask the outer identifier. This can lead to confusion, as it may be unclear which variable that subsequent uses of the shadowed variable name refer to, which depends on the name resolution rules of the language. Some languages allow variable shadowing while others do not, but many modern languages don't because it leads to programmer error.
 
- - Languages like C allow this.
+ - Languages like C (and Python) allow this.
    - The first x is _shadowed_ by the second.
    - Another way this is worded is that the inner x _masks_ the outer x.
 
 ```c
 int main() {
-  int x = 10; //1
+  int x = 10; // First, Outer
   while(true) {
-    int x = 888; //2
+    int x = 888; // Second, Inner
     printf("%d", x);
   }
 }
@@ -277,9 +277,9 @@ int main() {
 
 ```java
 public static void main(String[] args) {
-    int x = 10; // 1
+    int x = 10; // First, Outer
     while(true) {
-        int x = 888; // 2
+        int x = 888; // Second, Inner
         System.out.println(x);
     }
 }
