@@ -27,6 +27,11 @@
 - [Signals](#signals)
   - [Signal Table](#signal-table)
 - [Variable Shadowing](#variable-shadowing)
+  - [Allows](#allows)
+    - [C](#c)
+    - [Python](#python)
+  - [Disallows](#disallows)
+    - [Java](#java)
 
 # Pipes
 
@@ -258,30 +263,60 @@ A list of signals and what they mean.
 
 In computer programming, variable shadowing occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope. At the level of identifiers (names, rather than variables), this is known as name masking. This outer variable is said to be shadowed by the inner variable, while the inner identifier is said to mask the outer identifier. This can lead to confusion, as it may be unclear which variable that subsequent uses of the shadowed variable name refer to, which depends on the name resolution rules of the language. Some languages allow variable shadowing while others do not, but many modern languages don't because it leads to programmer error.
 
- - Languages like C (and Python) allow this.
-   - The first x is _shadowed_ by the second.
-   - Another way this is worded is that the inner x _masks_ the outer x.
+## Allows
+
+Languages like C (and Python) allow this:
+
+ - The first x is _shadowed_ by the second.
+ - The inner x _masks_ the outer x.
+
+### C
 
 ```c
 int main() {
   int x = 10; // First, Outer
-  while(true) {
+  if(x != 0) {
     int x = 888; // Second, Inner
     printf("%d", x);
   }
 }
 ```
+```
+888
+```
 
-- Languages like Java do not allow this.
-  - This java program does not compile for example.
+### Python
+
+```python
+x = 10
+
+if x != None:
+    x = 888
+    print(x)
+```
+```
+888
+```
+
+## Disallows
+
+Languages like Java do not allow this.
+
+- This java program does not compile for example.
+
+### Java
 
 ```java
 public static void main(String[] args) {
     int x = 10; // First, Outer
-    while(true) {
+    if(x != 0) {
         int x = 888; // Second, Inner
         System.out.println(x);
     }
 }
-
+```
+```
+/Class.java:5: error: variable x is already defined in method main(String[])
+int x = 888; // Second, Inner
+    ^
 ```
