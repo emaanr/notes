@@ -1,18 +1,18 @@
-# Git
+# Git Answers
 
-      How to do different things with Git.
+    Get answers...on how to do things with Git!
 
 # Table of Contents
 
-- [Git](#git)
+- [Git Answers](#git-answers)
 - [Table of Contents](#table-of-contents)
 - [Repositories](#repositories)
   - [Create New Repo via CLI](#create-new-repo-via-cli)
     - [`git init`](#git-init)
     - [`git add .`](#git-add-)
-    - [`git commit -m "MESSAGE"`](#git-commit--m-message)
+    - [`git commit -m <msg>`](#git-commit--m-msg)
     - [`git branch -M main`](#git-branch--m-main)
-    - [`git remote add origin https://github.com/USERNAME/REPO-NAME.git`](#git-remote-add-origin-httpsgithubcomusernamerepo-namegit)
+    - [`git remote add origin https://github.com/<username>/<repo>.git`](#git-remote-add-origin-httpsgithubcomusernamerepogit)
     - [`git push -u origin main`](#git-push--u-origin-main)
   - [Repository Topic](#repository-topic)
     - [`Command 1`](#command-1)
@@ -56,9 +56,9 @@
 Make sure there is a newly initialized and empty repository with the same name as the folder you wish to push.
 
 1. `git init`
-2. `git commit -m "MESSAGE"`
+2. `git commit -m <msg>`
 3. `git branch -M main`
-4. `git remote add origin https://github.com/USERNAME/REPO-NAME.git`
+4. `git remote add origin https://github.com/<username>/<repo>.git`
 5. `git push -u origin main`
 
 ### `git init`
@@ -69,24 +69,24 @@ Make sure there is a newly initialized and empty repository with the same name a
 
    - Add all files to be staged for commit.
 
-### `git commit -m "MESSAGE"`
+### `git commit -m <msg>`
 
-   - Commit staged files with commit message, MESSAGE.
+   - Commit staged files with a commit message using `-m <msg>` where `<msg>` message is surrounded in single quotes or double quotes.
 
 ### `git branch -M main`
 
    - This branch renames the default branch name `master` to `main` via the use of the `-M` flag.
    - I prefer to use `main` over `master`, otherwise this step could be skipped entirely.
 
-### `git remote add origin https://github.com/USERNAME/REPO-NAME.git`
+### `git remote add origin https://github.com/<username>/<repo>.git`
 
-   - To tell the local git repository on your computer which remote repository to send changes to.
+   - To tell the local git repository on your computer which remote repository `<repo>` to send changes to.
 
 ### `git push -u origin main`
 
    - The `-u` flag adds a tracking reference to the upstream server you are pushing to.
    - This means that every next push/pull done from within our local repository will know to send/retrieve information to/from the `main` branch.
-   - Recall that if you didn't do `Step 4` then you would instead invoke `git push -u origin master` at this point.
+   - Recall that if you didn't do `git branch -M main` then you would instead invoke `git push -u origin master` at this point.
 
 ## Repository Topic
 

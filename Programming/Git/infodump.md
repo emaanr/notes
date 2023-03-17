@@ -1,6 +1,6 @@
 # Infodump
 
-    Infodump of concepts and commands I want to study and add to cheatsheet.
+    Infodump of Git related information before deciding which files to delegate information to and how.
 
 # Table of Contents
 
