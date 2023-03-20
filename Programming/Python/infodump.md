@@ -65,7 +65,7 @@
       - [`math.ceil(x)`](#mathceilx)
       - [`math.floor(x)`](#mathfloorx)
 - [Controlling Program Flow](#controlling-program-flow)
-  - [Conditonals](#conditonals)
+  - [Conditionals](#conditionals)
     - [If-Elif-Else](#if-elif-else)
       - [If](#if)
       - [Elif](#elif)
@@ -696,7 +696,7 @@ Conditionals and Loops are two means through which programmers control Program F
 3. For
    - Loop
 
-## Conditonals
+## Conditionals
 
 Conditionals are expressions that evaluate to either `True` or `False` and are mostly used to determine Program Flow through `if` statements and `while` loops.
 
