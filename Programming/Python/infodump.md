@@ -78,6 +78,8 @@
 - [Iterators](#iterators)
   - [Iterable](#iterable)
 - [Functions vs Methods](#functions-vs-methods)
+- [Function Aliasing](#function-aliasing)
+  - [Why](#why)
   - [Functions](#functions-1)
   - [Methods](#methods)
   - [Example](#example)
@@ -817,6 +819,61 @@ Functions and methods can have nuances meanings depending on this programming la
   - One way of doing something which has different approaches or "methods" but related to the same aspect such as a class.
     - That is, we can think of methods as ubiquitous in classes and object oriented programming in that, a "method" is somewhat of an object-oriented word for a "function".
     - In general, methods are functions that belong to classes.
+
+# Function Aliasing
+
+Function aliasing is the idea of assigning a function to a variable to use via the variable instead of directly calling the function.
+
+```python
+def fun(via):
+    print(f"Called via {via}")
+  
+var = fun
+print(f'The id of fun() : {id(fun)}')
+print(f'The id of var() : {id(var)}')
+  
+fun('Function')
+var('Variable')
+```
+```
+The id of fun() : 139626643099432
+The id of var() : 139626643099432
+Called via Function
+Called via Variable
+```
+
+- As we can see in the example, both the variable and the function share an `id` and perform the same functionality.
+  - However, we are able to use `var()` to call the functionality of the function `fun()`.
+- Note that although the assignment is done like `var = fun`, when we actually call the newly assigned variable, we do so with parens: `var()` instead of just `var`.
+  - This remains true regardless of whether or not arguments are accepted/required in the function being aliased.
+
+## Why
+
+Here are some potential cases where we might want to use function aliasing since at first glance it seems somewhat pointless.
+
+- Creating an alias for a specific function (method) from a class so we dont have to call it through the class it belongs to every time we want to use it.
+  - Especially reasonable if we are needing to use that function *alot* since this will likely improve readability of the entire program.
+
+```python
+class Person:
+  def __init__(self):
+    self.name = "Emaan" # Default name value
+    
+  def get_name(self):
+    return self.name
+
+# Create object of Person class
+person = Person()
+  
+# Create function reference and it's alias
+name = person.get_name
+  
+# Print name via class function (method)
+print(person.get_name())
+
+# Print name via alias
+print(name())
+```
 
 ## Functions
 
