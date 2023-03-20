@@ -64,8 +64,24 @@
     - [Functions](#functions)
       - [`math.ceil(x)`](#mathceilx)
       - [`math.floor(x)`](#mathfloorx)
+- [Controlling Program Flow](#controlling-program-flow)
+  - [Conditonals](#conditonals)
+    - [If-Elif-Else](#if-elif-else)
+      - [If](#if)
+      - [Elif](#elif)
+      - [Else](#else)
+  - [Loops](#loops)
+    - [While](#while)
+    - [For](#for)
+      - [Looping through String](#looping-through-string)
+- [Keywords](#keywords)
+- [Iterators](#iterators)
+  - [Iterable](#iterable)
+- [Functions vs Methods](#functions-vs-methods)
+  - [Functions](#functions-1)
+  - [Methods](#methods)
+  - [Example](#example)
 - [Packages vs Modules](#packages-vs-modules)
-- [Iterable](#iterable)
 
 # Variables & Datatypes
 
@@ -667,20 +683,121 @@ print(math.floor(10.0))
 
 - The `math.floor()` method rounds a required numerical parameter, denoted by `x`, **DOWN** to the nearest integer, if necessary, and returns the result.
 
-# Packages vs Modules
+# Controlling Program Flow
 
-- Any Python file is a [*module*](https://docs.python.org/3/tutorial/modules.html), its name being the file's base name without the `.py` extension.
-- A [*package*](https://docs.python.org/3/tutorial/modules.html#packages) is a collection of Python modules.
-  - While a module is a single Python file, a package is a directory of Python modules containing an additional `__init__.py` file, to distinguish a package from a directory that just happens to contain a bunch of Python scripts.
-  - Packages can be nested to any depth, provided that the corresponding directories contain their own `__init__.py file.`
-- The distinction between module and package seems to hold just at the file system level.
-  - When you import a module or a package, the corresponding object created by Python is always of type module.
-  - Note, however, when you import a package, only variables/functions/classes in the `__init__.py` file of that package are directly visible, not sub-packages or modules.
-- More information can be found [here](https://realpython.com/python-modules-packages/).
+Conditionals and Loops are two means through which programmers control Program Flow.
 
-# Iterable
+1. If-Elif-Else
+   - Conditional
+2. While
+   - Conditional Loop
+3. For
+   - Loop
 
-- Iterable is an object which can be looped over or iterated over with the help of a for loop.
+## Conditonals
+
+Conditionals are expressions that evaluate to either `True` or `False` and are mostly used to determine Program Flow through `if` statements and `while` loops.
+
+### If-Elif-Else
+
+```python
+if cond:
+  # Code
+elif cond:
+  # Code
+... # Can have any number of 'elif' conditions
+else:
+  # Code
+```
+
+- These conditionals will only run ***one*** block of code within its Program Flow.
+
+#### If
+
+- The first conditional being checked.
+- Can be used by itself, does not necessarily need an `elif` or `else` following it.
+  - However if used with `else` this means that at least either `if` block or `else` block will execute.
+  - If used by itself it will simply run if the condition evaluates to `True` and will not run at all if the condition evaluates to `False` otherwise.
+
+#### Elif
+
+- If the previous condition wasn't true, try this one.
+- Can have any number of these.
+
+#### Else
+
+- If not of the previous conditions were true, run this one.
+- Catches anything not caught by previous conditions.
+
+## Loops
+
+A loop is a sequence of instructions that are continually executed until a certain condition is reached. Python has two primitive loop commands:
+
+1. While
+2. For
+
+### While
+
+```python
+cond # Set up condition
+while cond:
+  # Code
+```
+
+- The `while` loop will execute a set of statements so long as the condition `cond` remains `True`.
+- The while loop, unlike the other Program Flow utilities discussed, requires its `cond` to be ready before it can use it.
+
+> Note: Python ***does not*** have commands that support Do-While loops the same way other languages might, but there are ways to achieve the same result using just a While loop.
+
+### For
+
+```python
+for element in iterable:
+  # Code
+```
+
+- A `for` loop is used for iterating over a sequnce.
+  - This is less like the `for` keyword in other programming languages and works more like an iterator method as found in other object-oriented languages.
+- The `iterable` can be any iterable object such as:
+  - The `range()` function to do something like:
+    - `for(initialization; condition; statement)` in other languages.
+  - Any iterable datatype like:
+    - Tuple
+      - `tuple`
+    - Dictionary
+      - `dict`
+    - Set
+      - `set`
+    - String
+      - `str`
+    - Range
+      - `range`
+
+> Note: Python ***does not*** have commands that support For-Each loops the same way other languages might, but there are ways to achieve the same result using just a For loop. The `for-in` functions very similarly to `for-each` except `for-in` iterates over every element while `for-each` may not necessarily.
+
+#### Looping through String
+
+```python
+for char in "str":
+  print(char)
+```
+```
+s
+t
+r
+```
+
+- Because strings are iterable objects in Python, they contain a sequence of characters than the `for` keyword can iterate over.
+
+# Keywords
+
+
+
+# Iterators
+
+## Iterable
+
+<!-- - Iterable is an object which can be looped over or iterated over with the help of a for loop.
 - Some objects that are considered iterables include:
   - Lists
   - Tuples
@@ -688,4 +805,71 @@ print(math.floor(10.0))
   - Dictionaries
   - Strings
   - Etc.
-- In short and simpler terms, iterable is anything that you can loop over.
+- In short and simpler terms, iterable is anything that you can loop over. -->
+
+# Functions vs Methods
+
+Functions and methods can have nuances meanings depending on this programming language but generally we can define them as such.
+
+- Function:
+  - Standalone feature or functionality.
+- Method:
+  - One way of doing something which has different approaches or "methods" but related to the same aspect such as a class.
+    - That is, we can think of methods as ubiquitous in classes and object oriented programming in that, a "method" is somewhat of an object-oriented word for a "function".
+    - In general, methods are functions that belong to classes.
+
+## Functions
+
+A function is a piece of code that is called by name.
+
+- It can be passed data to operate on:
+  - Parameters
+  - Arguments
+- It can optionally return data:
+  - Return Value
+- All data passed to a function is explicitly passed.
+
+## Methods
+
+A method is a piece of code that is called by a name that is associated with some object. A method is identical to a function in most respects expect for two key differences:
+
+1. A method is implicitly passed the object on which it was called.
+   - Think of the `self` parameter in Python object constructors.
+2. A method is able to operate on data that is contained within the class.
+   - Remembering that an object is an instance of a class, the class is the definition and the object is an instance of that data.
+
+## Example
+
+Take the following Python example which demonstrates a class called `Door` that has a method called `open` as well as a function called `knock_door`.
+
+```python
+class Door:
+  def open(self):
+    print 'Hello Stranger'
+
+def knock_door():
+    a_door = Door()
+    Door.open(a_door)
+
+knock_door()
+```
+
+- The `open` function is called a "method" because it is declared within a class.
+- The `knock_door` function is simply a function because it is not declared inside of a class.
+  - This function makes a method call to `open` via an instance of the `Door` class.
+- A function can be called anywhere, but a method can only be called (at least in Python) by:
+  1. Passing a new object of the same type as the class where the method is declared:
+     - `Class.method(Object)`
+  2. Invoking the method inside the object:
+     - `Object.method()`
+
+# Packages vs Modules
+
+- Any Python file is a [*module*](https://docs.python.org/3/tutorial/modules.html), its name being the file's base name without the `.py` extension.
+- A [*package*](https://docs.python.org/3/tutorial/modules.html#packages) is a collection of Python modules.
+  - While a module is a single Python file, a package is a directory of Python modules containing an additional `__init__.py` file, to distinguish a package from a directory that just happens to contain a bunch of Python scripts.
+  - Packages can be nested to any depth, provided that the corresponding directories contain their own `__init__.py` file.
+- The distinction between module and package seems to hold just at the file system level.
+  - When you import a module or a package, the corresponding object created by Python is always of type module.
+  - Note, however, when you import a package, only variables/functions/classes in the `__init__.py` file of that package are directly visible, not sub-packages or modules.
+- More information can be found [here](https://realpython.com/python-modules-packages/).
