@@ -125,9 +125,11 @@ Python has the following data types built-in by default, in these categories:
 x = 25
 print(type(x))
 ```
+
 ```
 <class 'int'>
 ```
+
 - The `type()` function will return the datatype of its argument.
 
 ### Set
@@ -135,6 +137,7 @@ print(type(x))
 ```python
 x = 25
 ```
+
 - Setting a variable `x` of type `int` to `25`.
 
 ### Cast
@@ -162,9 +165,11 @@ The process of converting a value of one data type to another data type:
 x = int(25.0)
 print(type(x))
 ```
+
 ```
 <class 'int'>
 ```
+
 - Variable `x` is originally a float, but is explicit cast to an int.
 
 ##### Implicit
@@ -177,6 +182,7 @@ print(type(y))
 x = x / y
 print(type(x))
 ```
+
 ```
 <class 'int'>
 <class 'float'>
@@ -201,6 +207,7 @@ x = 1
 y = True
 z = "Three"
 ```
+
 - Simplest way to declare a variable.
 - Can be good to:
   - Separate the declarations of unrelated variables.
@@ -211,6 +218,7 @@ z = "Three"
 ```python
 x, y, z = 1, True, "Three"
 ```
+
 - Can declare variables on one line like this regardless of the data type.
 - Can be beneficial if:
   - Variables are related somehow.
@@ -243,6 +251,7 @@ The `print()` function is one way to print to console in Python.
 print("Message")
 print('Message')
 ```
+
 ```
 Message
 Message
@@ -260,6 +269,7 @@ print(integer)
 string = "String"
 print(string)
 ```
+
 ```
 25
 String
@@ -278,15 +288,18 @@ String
 name = "Emaan Rana"
 print("My name is " + name + "!")
 ```
+
 ```
 My name is Emaan Rana!
 ```
+
 #### `,`
 
 ```python
 name = "Emaan Rana"
 print("My name is", name, "!")
 ```
+
 ```
 My name is Emaan Rana !
 ```
@@ -300,6 +313,7 @@ My name is Emaan Rana !
 age = 23
 print("I am", 23, "years old!")
 ```
+
 ```
 I am 23 years old!
 ```
@@ -318,6 +332,7 @@ string = "My favorite number is: "
 
 print(string + integer)
 ```
+
 ```
 TypeError: Can only concatenate str (not "int") to a str.
 ```
@@ -330,9 +345,11 @@ string = "My favorite number is: "
 
 print(string + str(integer))
 ```
+
 ```
 My favorite number is 25
 ```
+
 - We can cast the type `int` variable called `integer` to a `str` using `str(integer)`.
 
 ## f-Strings
@@ -346,13 +363,14 @@ Read as "format strings", f-Strings are another way to print in Python.
 age = 23
 print(f"I am {age} years old!")
 ```
+
 ```
 I am 23 years old!
 ```
 
 # User Input
 
-  We can accept user input using the `input()` function in Python.
+We can accept user input using the `input()` function in Python.
 
 ## `input()`
 
@@ -366,6 +384,7 @@ input()
 user_input = input("Accept some user input: ") # Store in variable
 print(user_input) # Print variable to confirm assignment
 ```
+
 ```
 Accept some user input: Hello World!
 Hello World!
@@ -387,13 +406,13 @@ Python can perform the same basic arithmetic operations as any other language in
 
 | Operator | Operation      | Example       |
 | :------: | -------------- | ------------- |
-|     +    | Addition       | `2 + 5 = 7`   |
-|     -    | Subtraction    | `4 - 2 = 2`   |
-|     *    | Multiplication | `2 * 3 = 6`   |
-|     /    | Division       | `5 / 2 = 2.5` |
+|    +     | Addition       | `2 + 5 = 7`   |
+|    -     | Subtraction    | `4 - 2 = 2`   |
+|    \*    | Multiplication | `2 * 3 = 6`   |
+|    /     | Division       | `5 / 2 = 2.5` |
 |    //    | Floor Division | `5 // 2 = 2`  |
-|     %    | Modulo         | `5 % 2 = 1`   |
-|    **    | Power          | `4 ** 2 = 16` |
+|    %     | Modulo         | `5 % 2 = 1`   |
+|   \*\*   | Power          | `4 ** 2 = 16` |
 
 ### Augmented Operations
 
@@ -406,6 +425,7 @@ num = 2
 num += 5
 print(num) # 7
 ```
+
 ```
 7
 ```
@@ -417,6 +437,7 @@ num = 4
 num -= 2
 print(num) # 2
 ```
+
 ```
 2
 ```
@@ -428,6 +449,7 @@ num = 2
 num *= 3
 print(num) # 6
 ```
+
 ```
 6
 ```
@@ -439,6 +461,7 @@ num = 5
 num /= 2
 print(num) # 2.5
 ```
+
 ```
 2.5
 ```
@@ -450,6 +473,7 @@ num = 5
 num //= 2
 print(num) # 2
 ```
+
 ```
 2
 ```
@@ -461,6 +485,7 @@ num = 5
 num %= 2
 print(num) # 1
 ```
+
 ```
 1
 ```
@@ -472,6 +497,7 @@ num = 4
 num **= 2
 print(num) # 16
 ```
+
 ```
 16
 ```
@@ -479,7 +505,7 @@ print(num) # 16
 ## Built-In Functions
 
 Built-In functions do not require explicit import of external modules or packages.
- 
+
 1. `round()`
 2. `abs()`
 3. `pow()`
@@ -497,6 +523,7 @@ print(result)
 result = round(3.1415, 2)
 print(result)
 ```
+
 ```
 3
 3.14
@@ -511,6 +538,7 @@ print(result)
 result = abs(-25)
 print(result)
 ```
+
 ```
 25
 ```
@@ -526,6 +554,7 @@ print(result)
 result = pow(4, 3, 5)
 print(result)
 ```
+
 ```
 64
 4
@@ -543,6 +572,7 @@ print(result)
 result = max('Emaan', 'Ben', 'Aki')
 print(result)
 ```
+
 ```
 99
 Emaan
@@ -570,6 +600,7 @@ print(result)
 result = min('Emaan', 'Ben', 'Aki')
 print(result)
 ```
+
 ```
 10
 Aki
@@ -608,6 +639,7 @@ import math
 # Print the value of pi
 print (math.pi)
 ```
+
 ```
 3.141592653589793
 ```
@@ -623,12 +655,12 @@ import math
 # Print the value of e
 print (math.e)
 ```
+
 ```
 2.718281828459045
 ```
 
 - Constant `math.e` returns a float representing the value of e.
-
 
 ### Functions
 
@@ -650,6 +682,7 @@ print(math.ceil(-1.9))
 print(math.ceil(9.9))
 print(math.ceil(10.0))
 ```
+
 ```
 4
 2
@@ -674,6 +707,7 @@ print(math.floor(-1.9))
 print(math.floor(9.9))
 print(math.floor(10.0))
 ```
+
 ```
 0
 3
@@ -712,7 +746,7 @@ else:
   # Code
 ```
 
-- These conditionals will only run ***one*** block of code within its Program Flow.
+- These conditionals will only run **_one_** block of code within its Program Flow.
 
 #### If
 
@@ -749,7 +783,7 @@ while cond:
 - The `while` loop will execute a set of statements so long as the condition `cond` remains `True`.
 - The while loop, unlike the other Program Flow utilities discussed, requires its `cond` to be ready before it can use it.
 
-> Note: Python ***does not*** have commands that support Do-While loops the same way other languages might, but there are ways to achieve the same result using just a While loop.
+> Note: Python **_does not_** have commands that support Do-While loops the same way other languages might, but there are ways to achieve the same result using just a While loop.
 
 ### For
 
@@ -775,7 +809,7 @@ for element in iterable:
     - Range
       - `range`
 
-> Note: Python ***does not*** have commands that support For-Each loops the same way other languages might, but there are ways to achieve the same result using just a For loop. The `for-in` functions very similarly to `for-each` except `for-in` iterates over every element while `for-each` may not necessarily.
+> Note: Python **_does not_** have commands that support For-Each loops the same way other languages might, but there are ways to achieve the same result using just a For loop. The `for-in` functions very similarly to `for-each` except `for-in` iterates over every element while `for-each` may not necessarily.
 
 #### Looping through String
 
@@ -783,6 +817,7 @@ for element in iterable:
 for char in "str":
   print(char)
 ```
+
 ```
 s
 t
@@ -792,8 +827,6 @@ r
 - Because strings are iterable objects in Python, they contain a sequence of characters than the `for` keyword can iterate over.
 
 # Keywords
-
-
 
 # Iterators
 
@@ -827,14 +860,15 @@ Function aliasing is the idea of assigning a function to a variable to use via t
 ```python
 def fun(via):
     print(f"Called via {via}")
-  
+
 var = fun
 print(f'The id of fun() : {id(fun)}')
 print(f'The id of var() : {id(var)}')
-  
+
 fun('Function')
 var('Variable')
 ```
+
 ```
 The id of fun() : 139626643099432
 The id of var() : 139626643099432
@@ -852,22 +886,22 @@ Called via Variable
 Here are some potential cases where we might want to use function aliasing since at first glance it seems somewhat pointless.
 
 - Creating an alias for a specific function (method) from a class so we dont have to call it through the class it belongs to every time we want to use it.
-  - Especially reasonable if we are needing to use that function *alot* since this will likely improve readability of the entire program.
+  - Especially reasonable if we are needing to use that function _alot_ since this will likely improve readability of the entire program.
 
 ```python
 class Person:
   def __init__(self):
     self.name = "Emaan" # Default name value
-    
+
   def get_name(self):
     return self.name
 
 # Create object of Person class
 person = Person()
-  
+
 # Create function reference and it's alias
 name = person.get_name
-  
+
 # Print name via class function (method)
 print(person.get_name())
 
@@ -922,8 +956,8 @@ knock_door()
 
 # Packages vs Modules
 
-- Any Python file is a [*module*](https://docs.python.org/3/tutorial/modules.html), its name being the file's base name without the `.py` extension.
-- A [*package*](https://docs.python.org/3/tutorial/modules.html#packages) is a collection of Python modules.
+- Any Python file is a [_module_](https://docs.python.org/3/tutorial/modules.html), its name being the file's base name without the `.py` extension.
+- A [_package_](https://docs.python.org/3/tutorial/modules.html#packages) is a collection of Python modules.
   - While a module is a single Python file, a package is a directory of Python modules containing an additional `__init__.py` file, to distinguish a package from a directory that just happens to contain a bunch of Python scripts.
   - Packages can be nested to any depth, provided that the corresponding directories contain their own `__init__.py` file.
 - The distinction between module and package seems to hold just at the file system level.
