@@ -287,7 +287,7 @@ Recall that a variable is a reusable container for storing a value and behaves a
 
 ### Declaring
 
-There are various ways to declare variables that may be beneficial given a particular use case.
+- There are various ways to declare variables that may be beneficial given a particular use case.
 
 #### Way 1
 
