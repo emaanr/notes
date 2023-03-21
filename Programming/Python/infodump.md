@@ -23,10 +23,10 @@
         - [Explicit](#explicit)
         - [Implicit](#implicit)
   - [Variables](#variables)
-    - [Declaring](#declaring)
-      - [Way 1](#way-1)
-      - [Way 2](#way-2)
-      - [Way 3](#way-3)
+  - [Declaring](#declaring)
+    - [Way 1](#way-1)
+    - [Way 2](#way-2)
+    - [Way 3](#way-3)
 - [Printing](#printing)
   - [`print()`](#print)
     - [Strings](#strings)
@@ -110,6 +110,7 @@
     - [`class`](#class)
     - [`with`](#with)
     - [`as`](#as)
+      - [`with-as`](#with-as)
     - [`pass`](#pass)
     - [`lambda`](#lambda)
   - [Returning](#returning)
@@ -285,11 +286,11 @@ print(type(x))
 
 Recall that a variable is a reusable container for storing a value and behaves as if it were the value it contains.
 
-### Declaring
+## Declaring
 
-- There are various ways to declare variables that may be beneficial given a particular use case.
+There are various ways to declare variables that may be beneficial given a particular use case.
 
-#### Way 1
+### Way 1
 
 ```python
 x = 1
@@ -302,7 +303,7 @@ z = "Three"
   - Separate the declarations of unrelated variables.
   - Declare certain variables closer to the blocks of code that use them.
 
-#### Way 2
+### Way 2
 
 ```python
 x, y, z = 1, True, "Three"
@@ -313,7 +314,7 @@ x, y, z = 1, True, "Three"
   - Variables are related somehow.
   - It's more convenient to declare in one place for the particular program being written.
 
-#### Way 3
+### Way 3
 
 ```python
 x = y = z = 0
@@ -1204,19 +1205,81 @@ In order to define functions or classes and use [context managers](#context-mana
 
 ### `def`
 
+- Used to define a function or method of a class.
+- The basic syntax for defining a function with def looks like this:
+
+```python
+def <function>(<params>):
+  <body>
+```
+
 ### `class`
+
+- Used to define a class.
+- The general syntax for defining a class with `class` is as follows:
+
+```python
+class <Class>(<extends>):
+  <body>
+```
 
 ### `with`
 
-The with statement can make code dealing with system resources more readable. It also helps avoid bugs or leaks by making it almost impossible to forget cleaning up or releasing a resource after we’re done with it.
+- Context managers execute specific code before and after the statements you specify. To use one, you use the `with` keyword:
 
-The with statement simplifies exception handling by encapsulating standard uses of try/finally statements in so-called Context Managers.
-Most commonly it is used to manage the safe acquisition and release of system resources. Resources are acquired by the with statement and released automatically when execution leaves the with context.
-Using with effectively can help you avoid resource leaks and make your code easier to read.
+```python
+with <context manager> as <var>:
+    <statements>
+```
+
+- Using `with` gives you a way to define code to be executed within the context manager's scope.
+- The most basic example of this is when working with file I/O in Python.
+  - Use a context manager to ensure that a file is closed properly after opening it to do something with it.
+- The `with` statement can make code dealing with system resources more readable.
+- It also helps avoid bugs or leaks by making it almost impossible to forget cleaning up or releasing a resource after we’re done with it.
+- The `with` statement simplifies exception handling by encapsulating standard uses of `try...finally` statements in so-called Context Managers.
+- Most commonly it is used to manage the safe acquisition and release of system resources.
+  - Resources are acquired by the `with` statement and released automatically when execution leaves the `with` context.
+- Using `with` effectively can help you avoid resource leaks and make your code easier to read.
 
 ### `as`
 
+- Used to create aliases for entities like:
+  1. Imports
+     - `import <module> as <alias>`
+  2. Exceptions
+     - `except Exception as <alias>`
+  3. Context Managers
+     - `with <expr> as <alias>`
+
+#### `with-as`
+
+- If you want access to the results of the expression or context manager passed to `with`, you'll need to alias it using `as`.
+- The alias is available in the `with` block:
+
+```python
+with <expr> as <alias>:
+  <statements>
+```
+
+- Most of the time, you'll see these two Python keywords: `with` and `as`, used together.
+
 ### `pass`
+
+- Since Python doesn't have block indicators to specify the end of a block, the `pass` keyword is used to specify that the block is intentionally left blank.
+- Equivalent of a `no-op`, or no operation.
+- Here are a few examples of using `pass` to specify that the block is blank:
+
+```python
+def function():
+    pass
+
+class Class:
+    pass
+
+if True:
+    pass
+```
 
 ### `lambda`
 
@@ -1343,6 +1406,11 @@ print(person.get_name())
 print(name())
 ```
 
+```
+Emaan
+Emaan
+```
+
 ## Functions
 
 A function is a piece of code that is called by name.
@@ -1412,7 +1480,7 @@ A context manager is a simple "protocol" (or interface) that an object needs to 
 
 ## `with`
 
-The most common way you'll work with context managers is by using the `with` statement.
+The most common way you'll work with context managers is by using the [`with`](#with) statement.
 
 - Helps you write more expressive code and makes it easier to avoid resource leaks in your programs.
 
@@ -1483,6 +1551,8 @@ finally:
 ### Example: With
 
 ```python
+some_lock = threading.Lock()
+
 # Better:
 with some_lock:
   # Code to execute
