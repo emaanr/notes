@@ -23,10 +23,10 @@
         - [Explicit](#explicit)
         - [Implicit](#implicit)
   - [Variables](#variables)
-  - [Declaring](#declaring)
-    - [Way 1](#way-1)
-    - [Way 2](#way-2)
-    - [Way 3](#way-3)
+    - [Declaring](#declaring)
+      - [Way 1](#way-1)
+      - [Way 2](#way-2)
+      - [Way 3](#way-3)
 - [Printing](#printing)
   - [`print()`](#print)
     - [Strings](#strings)
@@ -285,11 +285,11 @@ print(type(x))
 
 Recall that a variable is a reusable container for storing a value and behaves as if it were the value it contains.
 
-## Declaring
+### Declaring
 
 There are various ways to declare variables that may be beneficial given a particular use case.
 
-### Way 1
+#### Way 1
 
 ```python
 x = 1
@@ -302,7 +302,7 @@ z = "Three"
   - Separate the declarations of unrelated variables.
   - Declare certain variables closer to the blocks of code that use them.
 
-### Way 2
+#### Way 2
 
 ```python
 x, y, z = 1, True, "Three"
@@ -313,7 +313,7 @@ x, y, z = 1, True, "Three"
   - Variables are related somehow.
   - It's more convenient to declare in one place for the particular program being written.
 
-### Way 3
+#### Way 3
 
 ```python
 x = y = z = 0
