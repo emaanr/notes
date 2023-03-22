@@ -8,6 +8,7 @@
 - Take notes on [here](https://realpython.com/python-modules-packages/) for [Packages vs Modules](#packages-vs-modules) and link your own notes instead.
 - Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
 - Recreate some diagrams using these references [[1]](nvie.com/posts/iterators-vs-generators) [[2]](blog.avenuecode.com/containers-iterables-iterators-and-generators).
+- Recreate the diagram in [Iterators: Limitations](#limitations) from this [source](analyticsvidhya.com/blog/2017/everything-you-need-to-know-about-iterables-and-iterators-in-python-as-a-data-scientist)
 
 # Table of Contents
 
@@ -168,8 +169,25 @@
   - [Containers](#containers)
     - [Built-In](#built-in)
     - [Collections Module](#collections-module)
-  - [Iterable](#iterable)
+  - [Iterable vs Iterator](#iterable-vs-iterator)
+    - [Iterable](#iterable)
+      - [Diagram](#diagram)
+      - [Disassembly](#disassembly)
+      - [Check if Iterable](#check-if-iterable)
+        - [Way 1](#way-1-2)
+        - [Way 2](#way-2-2)
+        - [Way 3](#way-3-1)
     - [Iterator](#iterator)
+      - [Lazy Factory](#lazy-factory)
+      - [User-Defined](#user-defined-1)
+        - [`iterator.__iter__()`](#iterator__iter__)
+          - [`iter()`](#iter)
+        - [`iterator.__next__()`](#iterator__next__)
+          - [`next()`](#next)
+          - [`StopIteration`](#stopiteration)
+        - [`itertools`](#itertools)
+      - [Limitations](#limitations)
+    - [Why Separate](#why-separate)
   - [Generators](#generators)
     - [Generator Expressions](#generator-expressions)
   - [Comprehensions](#comprehensions)
@@ -1827,9 +1845,218 @@ Containers are data structures that live in memory and typically hold all their 
   - `UserList`
   - `UserString`
 
-## Iterable
+## Iterable vs Iterator
+
+An iterable is any object that can return an iterator, and an iterator is the object used to iterate over an iterable object.
+
+- Note that every iterator is also an iterable, but not every iterable is an iterator.
+
+Iterables:
+
+- Can be iterated using `for` loop.
+- Iterables support `iter()` function.
+- Iterables are not iterators.
+
+Iterators:
+
+- Can be iterated using `for` loop.
+- Iterators support `next()` and `iter()` functions.
+- Iterators are also iterables.
+
+### Iterable
+
+- An iterable is any object, not necessarily a data structure, than can return an tierator with the purpose of returning all the iterable's elements.
+- Most containers are iterable, but not _only_ containers are iterable.
+  - Some examples being:
+    - Files
+    - Sockets
+  - Containers are finite iterables but infinite sources of data can also be iterable.
+
+```python
+x = [1, 2, 3] # Iterable
+y = iter(x)   # Iterator
+z = iter(x)   # Iterator
+
+print(next(y))
+print(next(y))
+print(next(y))
+print(next(z))
+
+print(type(x))
+print(type(y))
+print(type(z))
+```
+
+```
+1
+2
+3
+1
+<class 'list'>
+<class 'list_iterator'>
+<class 'list_iterator'>
+```
+
+- Here, `x` is an iterable.
+  - In this example `x` is a data structure (list) but it need not be.
+- While `y` and `z` are individual instances of an interator.
+  - Both `y` and `z` hold state.
+
+> Note: Often for pragmatic reasons, in the simplest case, iterable classes will implement both `__iter__()` and `__next__()`, having `__iter__()` returning `self`, making the class both an iterable and its own iterator.
+>
+> - It is fine to return a different object as the iterator though.
+> - However, this has its limitations and may produce unexpected results in concurrent environments (E.g: Multiprocessing API).
+> - See "[Why Separate](#why-separate)" section for more information.
+
+#### Diagram
+
+```python
+x = [1, 2, 3]
+for elem in x:
+  ...
+```
+
+<p align="center" width="100%">
+    <img title="Relationship Diagram: Iterable and Iterator" src="img/file.png">
+</p>
+
+#### Disassembly
+
+- If you disassembler iterable Python code, you will see the following instruction calls:
+  - `GET_ITER` which is invoking the `iter()` function which is `__iter__()` dunder method under the hood.
+  - `FOR_ITER` which is inboking the `next()` function which is `__next__()` dunder method under the hood.
+
+#### Check if Iterable
+
+##### Way 1
+
+```python
+it = 'It'
+
+if hasattr(it, '__iter__'):
+  print(f'{it} is iterable')
+else:
+  print(f'{it} is not iterable')
+```
+
+```
+It is iterable
+```
+
+- Using `hasattr()` to check if argument is using `__iter__` method.
+
+##### Way 2
+
+```python
+from collections.abc import Iterable
+
+it = 'It'
+
+if isinstance(it, Iterable):
+  print(f'{it} is iterable')
+else:
+  print(f'{it} is not iterable')
+```
+
+```
+It is iterable
+```
+
+- Using 'isinstance()' to check if argument is an instance of `Iterable` class from `collections.abc` module.
+
+##### Way 3
+
+```python
+it = 'It'
+
+try:
+  iter(it)
+  print(f'{} is iterable'.format(it))
+except TypeError:
+  print(f'{} is not iterable'.format(it))
+```
+
+```
+It is iterable
+```
+
+- Using `iter()` built-in function to check if `it` is iterable.
+- Function `iter()`:
+  - Checks whether object implements `__iter__()` dunder method and calls it to obtain iterator.
+  - If the check fails, Python raises a `TypeError`.
 
 ### Iterator
+
+- An iterator is a stateful helper object that will produce the next value when calling the `next()` function on it.
+  - Therefore, any object that implements the `__next__()` dunder method is an iterator.
+
+#### Lazy Factory
+
+- Central idea of an iterator is that it is like a lazy factory that is idle until you ask it for a value, at which point it will satisfy the request and return to being idle afterwards.
+
+> Recall: That "lazy" in programming means to defer an action until it becomes necessary, if ever. If the result of the action is never used, the action will never be carried out to begin with, which saves from doing unnecessary work.
+
+#### [User-Defined](docs.python.org/3/library/stdtypes.html#typeiter)
+
+- Two distinct dunder methods used to allow user-defined classes to support iteration:
+  - `__iter__()`
+  - `__next__()`
+- Whether or not these functions are supported can be confirmed using the `dir()` function on a known iterator object.
+
+##### `iterator.__iter__()`
+
+- Returns the iterator object itself.
+- Required to allow both containers and iterators to be used with the `for` and `in` statements.
+
+###### `iter()`
+
+- Calling the `iter()` function on an iterable gives us an iterator.
+
+##### `iterator.__next__()`
+
+- Return the next item for the iterator.
+- If there are no further items, raise the `StopIteration` exception.
+  - Once an iterator's `__next__()` methods raises `StopIteration`, it must continue to do so on subsequenct calls.
+    - Implementations that do not obey this property are deemed broken.
+
+###### `next()`
+
+- Calling the `next()` function on an iterator gives us the next element.
+
+###### `StopIteration`
+
+- Once the iterator is exhausted, meaning it has no more elements to process, calling `next()` will raise a `StopIteration` exception.
+
+##### [`itertools`](docs.python.org/3/library/itertools.html)
+
+- A module belonging to the "Functional Programming Modules" subcategory of the Python Standard Library.
+- All the functions in this module return iterators.
+- Implements a number of iterator building blocks:
+  - "Functions creating iterators for efficient looping."
+
+#### Limitations
+
+<p align="center" width="100%">
+    <img title="Flowchart: Iterator Limitations" src="img/file.png">
+</p>
+
+- Can only go forward with iterator.
+  - No way to obtain previous element.
+- Cannot make copy of an individual instance of an iterator.
+- Can't reset an iterator.
+  - Will have to create a new instance of the iterator for the same stream.
+
+### Why Separate
+
+- Iteratables and iterators are separate objects, but they don't have to be.
+  - As mentioned before we can create an object that implements both `__iter__` and `__next__` which would make it an iterator that is also an iterable.
+- These entities are separated due to "keeping state".
+  - An iterator needs to maintain information on position so it knows which element to return `next()`.
+    - E.g: Pointer to an internal data object such as a list.
+  - If an iterable itself maintains "state", you can only use it in one loop at a time.
+    - Otherwise, the other loop(s) would interfere with the state of the first loop.
+      - By returning a new iterator object with its own "state" we don't run into this issue.
+  - Especially important when working with concurrency.
 
 ## Generators
 
