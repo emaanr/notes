@@ -154,6 +154,17 @@
   - [`threading.Lock`](#threadinglock)
     - [Example: Without](#example-without-2)
     - [Example: With](#example-with-2)
+- [Lambda Functions](#lambda-functions)
+  - [User-Defined](#user-defined)
+    - [`def double(x)`](#def-doublex)
+      - [Example: Without](#example-without-3)
+      - [Example: With](#example-with-3)
+    - [`def multiply(x, y)`](#def-multiplyx-y)
+      - [Example: Without](#example-without-4)
+      - [Example: With](#example-with-4)
+  - [`sorted()`](#sorted)
+    - [Example: With](#example-with-5)
+    - [Example: Without](#example-without-5)
 
 # Variables & Datatypes
 
@@ -1225,7 +1236,7 @@ class <Class>(<extends>):
 
 ### `with`
 
-- Context managers execute specific code before and after the statements you specify. To use one, you use the `with` keyword:
+- [Context managers](#context-managers) execute specific code before and after the statements you specify. To use one, you use the `with` keyword:
 
 ```python
 with <context manager> as <var>:
@@ -1248,7 +1259,7 @@ with <context manager> as <var>:
   1. Imports
      - `import <module> as <alias>`
   2. Exceptions
-     - `except Exception as <alias>`
+     - `except <exception> as <alias>`
   3. Context Managers
      - `with <expr> as <alias>`
 
@@ -1282,6 +1293,13 @@ if True:
 ```
 
 ### `lambda`
+
+- Used to define a function that doesn't have a name and has only one statement, the results of which are returned.
+- Functions defined with `lambda` are referred to as [lambda functions](#lambda-functions):
+
+```python
+lambda <args>: <statement>
+```
 
 ## Returning
 
@@ -1560,3 +1578,122 @@ with some_lock:
 
 - Using a `with` statement allows you to abstract away most of the resource handling logic.
 - Instead of having to write an explicit `try...finally` statement each time, `with` takes care of that for us.
+
+# Lambda Functions
+
+More informaton on the [`lambda`](#lambda) keyword and lambda functions in Python.
+
+```python
+lambda <args>: <statement>
+```
+
+- A lambda function is a function written in one line using the `lambda` keyword.
+
+  - Accepts any number of arguments.
+  - Has only one statement.
+
+## User-Defined
+
+Can be thought of as a shortcut since it is useful if needed for a short period of time after which it is "thrown away" in a sense.
+
+### `def double(x)`
+
+- Example of user-defined lambda function with one argument.
+
+#### Example: Without
+
+```python
+def double(x):
+  return x * 2
+
+print(double(5))
+```
+
+```
+10
+```
+
+#### Example: With
+
+```python
+double = lambda x: x * 2
+
+print(double(5))
+```
+
+```
+10
+```
+
+### `def multiply(x, y)`
+
+- Example of user-defined lambda function with more than one argument.
+
+#### Example: Without
+
+```python
+def multiply(x, y):
+  return x * y
+
+print(multiply(2, 5))
+```
+
+```
+10
+```
+
+#### Example: With
+
+```python
+multiply = lambda x, y: x * y
+
+print(multiply(2, 5))
+```
+
+```
+10
+```
+
+## `sorted()`
+
+Also useful to readjust behavior of pre-existing functions such as `sorted()` whose default functionality is to sort strings alphabetically:
+
+```python
+ids = ["id1", "id2", "id30", "id3", "id20", "id10"]
+sorted(ids)
+```
+
+```
+['id1', 'id10', 'id2', 'id20', 'id3', 'id30']
+```
+
+### Example: With
+
+```python
+sorted(ids, key=lambda x: int(x[2:]))
+```
+
+```
+['id1', 'id2', 'id3', 'id10', 'id20', 'id30']
+```
+
+- Using the lambda function, the list is `sorted()` based not on alphabetical order but on the numerical order of the last characters of the strings after converting them to integers.
+
+### Example: Without
+
+```python
+def sort_by_int(x):
+  return int(x[2:])
+
+sorted(ids, key=sort_by_int)
+```
+
+```
+['id1', 'id2', 'id3', 'id10', 'id20', 'id30']
+```
+
+- Without `lambda`:
+  - Would have had to define a function.
+  - Give it a name.
+  - Then pass it to `sorted()`.
+- Using lambda functions made this code cleaner.
