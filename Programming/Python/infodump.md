@@ -7,6 +7,7 @@
 - Add more examples to [Datatypes: Get/Set](#datatypes) from this site [here](https://www.w3schools.com/python/python_datatypes.asp)
 - Take notes on [here](https://realpython.com/python-modules-packages/) for [Packages vs Modules](#packages-vs-modules) and link your own notes instead.
 - Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
+- Recreate some diagrams using these references [[1]](nvie.com/posts/iterators-vs-generators) [[2]](blog.avenuecode.com/containers-iterables-iterators-and-generators).
 
 # Table of Contents
 
@@ -134,8 +135,6 @@
     - [`del`](#del)
     - [`global`](#global)
     - [`nonlocal`](#nonlocal)
-- [Iterators](#iterators)
-  - [Iterable](#iterable)
 - [Functions vs Methods](#functions-vs-methods)
 - [Function Aliasing](#function-aliasing)
   - [Why](#why-1)
@@ -165,6 +164,23 @@
   - [`sorted()`](#sorted)
     - [Example: With](#example-with-5)
     - [Example: Without](#example-without-5)
+- [Containers vs Iterables vs Iterators vs Generators vs Comprehension](#containers-vs-iterables-vs-iterators-vs-generators-vs-comprehension)
+  - [Containers](#containers)
+    - [Built-In](#built-in)
+    - [Collections Module](#collections-module)
+  - [Iterable](#iterable)
+    - [Iterator](#iterator)
+  - [Generators](#generators)
+    - [Generator Expressions](#generator-expressions)
+  - [Comprehensions](#comprehensions)
+    - [Lists](#lists)
+      - [List Comprehension](#list-comprehension)
+    - [Dictionaries](#dictionaries)
+      - [Dictionary Comprehension](#dictionary-comprehension)
+    - [Sets](#sets)
+      - [Set Comprehension](#set-comprehension)
+- [Data Scraping \& Extraction](#data-scraping--extraction)
+- [Packages](#packages)
 
 # Variables & Datatypes
 
@@ -963,7 +979,7 @@ while <condition>:
 - The `while` loop will execute a set of statements so long as the condition `cond` remains `True`.
 - The while loop, unlike the other Program Flow utilities discussed, requires its `cond` to be ready before it can use it.
 
-> Note: Python **_does not_** have commands that support Do-While loops the same way other languages might, but there are ways to achieve the same result using just a While loop.
+> Note: Python **_does not_** have native support for Do-While loops the same way other languages might, but there are ways to achieve the same result using just a While loop.
 
 ### For
 
@@ -989,7 +1005,7 @@ for <element> in <iterable>:
     - Range
       - `range`
 
-> Note: Python **_does not_** have commands that support For-Each loops the same way other languages might, but there are ways to achieve the same result using just a For loop. The `for-in` functions very similarly to `for-each` except `for-in` iterates over every element while `for-each` may not necessarily.
+> Note: Python **_does not_** have native support for For-Each loops the same way other languages might, but there are ways to achieve the same result using just a For loop. The `for-in` functions very similarly to `for-each` except `for-in` iterates over every element while `for-each` may not necessarily.
 
 #### Looping through String
 
@@ -1119,7 +1135,7 @@ Allow you to use conditional logic and execute code given certain conditions.
   - `else if` (Two separate words)
   - `elseif` (Both words mashed together)
 
-> Note: Python **_does not_** have commands that support `switch` statements, however similar functionality can be achieved through the use of of `if` and `elif`.
+> Note: Python **_does not_** have native support for `switch` statements, however similar functionality can be achieved through the use of of `if` and `elif`.
 
 ### `else`
 
@@ -1303,9 +1319,82 @@ lambda <args>: <statement>
 
 ## Returning
 
+There are two Python keywords used to specify what gets returned from functions or methods:
+
+1. `return`
+2. `yield`
+
 ### `return`
 
+- Is valid only as part of a function defined with `def`.
+- When Python encounters this keyword, it will exit the function at that point and return the results of whatever comes after the return keyword:
+
+```python
+def <function>():
+  return <expr>
+```
+
+- When given no expression, return will return `None` by default:
+
+```python
+def return_none():
+  return
+
+r = return_none()
+print(r)
+```
+
+```
+None
+```
+
+- Most of the time, however, you want to return the results of an expression or a specific value:
+
+```python
+def hello():
+  return "Hello World"
+
+print(hello())
+```
+
+```
+Hello World
+```
+
+```python
+def hello(name):
+  greeting = "Hello " + name
+  return greeting
+
+printf(hello("Emaan"))
+```
+
+```
+Hello Emaan
+```
+
+- The `return` keyword can be used multiple times in a function to create more than one exit point.
+  - A classic example of this being a recursive function to calculate the factorial:
+
+```python
+def factorial(n):
+  if n == 1:
+    return 1
+  else:
+    return n * factorial(n - 1)
+```
+
 ### `yield`
+
+- When a function has a `yield` statement, what gets returned is a [generator](#generator).
+  - The generator can then be passed to Python's built-in `next()` to get the next value returned from the function.
+- When calling a function with `yield` statements, Python executes the function until it reaches the first `yield` keyword and then returns a generator.
+  - These are known as generator functions:
+
+```python
+def <function>():
+  yield <expr>
+```
 
 ## Import
 
@@ -1342,20 +1431,6 @@ lambda <args>: <statement>
 ### `global`
 
 ### `nonlocal`
-
-# Iterators
-
-## Iterable
-
-<!-- - Iterable is an object which can be looped over or iterated over with the help of a for loop.
-- Some objects that are considered iterables include:
-  - Lists
-  - Tuples
-  - Sets
-  - Dictionaries
-  - Strings
-  - Etc.
-- In short and simpler terms, iterable is anything that you can loop over. -->
 
 # Functions vs Methods
 
@@ -1697,3 +1772,85 @@ sorted(ids, key=sort_by_int)
   - Give it a name.
   - Then pass it to `sorted()`.
 - Using lambda functions made this code cleaner.
+
+# Containers vs Iterables vs Iterators vs Generators vs Comprehension
+
+Distinguishing between some important concepts in Python:
+
+- Containers
+- Iterables
+- Iterators
+- Generators
+- Generator Expressions
+- Comprehensions
+  - `list`
+  - `dict`
+  - `set`
+
+<p align="center" width="100%">
+    <img title="Relationship Diagram" src="img/file.png">
+</p>
+
+<p align="center" width="100%">
+    <img title="Hierarchy Diagram" src="img/file.png">
+</p>
+
+## Containers
+
+Containers are data structures that live in memory and typically hold all their values in memory.
+
+- Holds other objects.
+- Supports membership testing using the `in` operator via the `__contains__` dunder method found in objects classified as containers.
+  - That is, if an object is a container, then under the hood it contains the `__contains__` dunder method somewhere in its code.
+- Usually containers provide a way to access the contained objects and to iterate over them.
+- Not all containers are necessarily iterable, however, many of them are.
+
+### Built-In
+
+- Some built-in data types are also containers:
+  - `list`
+  - `tuple`
+  - `set`
+  - `dict`
+  - `str`
+
+### Collections Module
+
+- The [`collections`](docs.python.org/3/library/collections.html) module of the standard library implements some additional specialized container data types providing alternatives to the aforementioned general purpose built-in containers:
+  - `namedTuple()`
+  - `deque`
+  - `ChainMap`
+  - `Counter`
+  - `OrderedDict`
+  - `defaultdict`
+  - `UserDict`
+  - `UserList`
+  - `UserString`
+
+## Iterable
+
+### Iterator
+
+## Generators
+
+### Generator Expressions
+
+## Comprehensions
+
+### Lists
+
+#### List Comprehension
+
+### Dictionaries
+
+#### Dictionary Comprehension
+
+### Sets
+
+#### Set Comprehension
+
+# Data Scraping & Extraction
+
+# Packages
+
+Useful packages in Python and what they can be used for.
