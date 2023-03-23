@@ -79,7 +79,7 @@
       - [Way 2](#way-2-1)
     - [Ternary Operator](#ternary-operator)
       - [Syntax](#syntax)
-      - [Why](#why)
+      - [Why use Ternary](#why-use-ternary)
         - [Example: Without](#example-without)
         - [Example: With](#example-with)
   - [Loops](#loops)
@@ -138,7 +138,7 @@
     - [`nonlocal`](#nonlocal)
 - [Functions vs Methods](#functions-vs-methods)
 - [Function Aliasing](#function-aliasing)
-  - [Why](#why-1)
+  - [Why use Aliases](#why-use-aliases)
   - [Functions](#functions-1)
   - [Methods](#methods)
   - [Example](#example)
@@ -952,7 +952,7 @@ else: <code_1>; <code_2>; ... <code_n>;
 - Notice the non-obvious order:
   - The middle expression is evaluated first and based on that result, one of the expressions on the ends is returned.
 
-#### Why
+#### Why use Ternary
 
 - Commonly used to select variable assignment.
 - Uses short-circuit evaluation like compound logical expressions meaning that portions of a conditional expression are not evaluated if they don't need to be.
@@ -1489,12 +1489,9 @@ Called via Variable
 - Note that although the assignment is done like `var = fun`, when we actually call the newly assigned variable, we do so with parens: `var()` instead of just `var`.
   - This remains true regardless of whether or not arguments are accepted/required in the function being aliased.
 
-## Why
+## Why use Aliases
 
 Here are some potential cases where we might want to use function aliasing since at first glance it seems somewhat pointless.
-
-- Creating an alias for a specific function (method) from a class so we dont have to call it through the class it belongs to every time we want to use it.
-  - Especially reasonable if we are needing to use that function _alot_ since this will likely improve readability of the entire program.
 
 ```python
 class Person:
@@ -1522,6 +1519,9 @@ Emaan
 Emaan
 ```
 
+- Creating an alias for a specific function (method) from a class so we dont have to call it through the class it belongs to every time we want to use it.
+  - Especially reasonable if we are needing to use that function _alot_ since this will likely improve readability of the entire program.
+
 ## Functions
 
 A function is a piece of code that is called by name.
@@ -1544,7 +1544,7 @@ A method is a piece of code that is called by a name that is associated with som
 
 ## Example
 
-Take the following Python example which demonstrates a class called `Door` that has a method called `open` as well as a function called `knock_door`.
+Take the following Python example which demonstrates a class called `Door` that has a method called `open` as well as a function called `knock_door`:
 
 ```python
 class Door:
