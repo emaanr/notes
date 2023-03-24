@@ -9,6 +9,7 @@
 - Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
 - Recreate some diagrams using these references [[1]](nvie.com/posts/iterators-vs-generators) [[2]](blog.avenuecode.com/containers-iterables-iterators-and-generators).
 - Recreate the diagram in [Iterators: Limitations](#limitations) from this [source](analyticsvidhya.com/blog/2017/everything-you-need-to-know-about-iterables-and-iterators-in-python-as-a-data-scientist)
+- Go through this [resource](http://python-course.eu/).
 
 # Table of Contents
 
@@ -169,7 +170,11 @@
   - [Containers](#containers)
     - [Built-In](#built-in)
     - [Collections Module](#collections-module)
-  - [Iterable vs Iterator](#iterable-vs-iterator)
+  - [Iterables vs Iterators](#iterables-vs-iterators)
+    - [Definitions](#definitions)
+      - [Iterables](#iterables)
+      - [Iterators](#iterators)
+        - [Notable Exception: Containers](#notable-exception-containers)
     - [Iterable](#iterable)
       - [Diagram](#diagram)
       - [Disassembly](#disassembly)
@@ -189,10 +194,28 @@
       - [Limitations](#limitations)
     - [Why Separate](#why-separate)
   - [Generators](#generators)
+    - [Example](#example-1)
+    - [Generator Functions vs Generator Expressions](#generator-functions-vs-generator-expressions)
+      - [Definitions](#definitions-1)
+    - [Generator Functions](#generator-functions)
+      - [`yield`](#yield-1)
+        - [Statement vs Expression](#statement-vs-expression)
+          - [`yield` Statement](#yield-statement)
+          - [`yield` Expression](#yield-expression)
+        - [Advantages vs Disadvantages](#advantages-vs-disadvantages)
+        - [Advantages](#advantages)
+        - [Disadvantages](#disadvantages)
+      - [Generator Iterators](#generator-iterators)
     - [Generator Expressions](#generator-expressions)
+      - [Generator Comprehensions](#generator-comprehensions)
+    - [Generator Methods](#generator-methods)
+      - [`send()`](#send)
+      - [`throw()`](#throw)
+      - [`close()`](#close)
   - [Comprehensions](#comprehensions)
     - [Lists](#lists)
       - [List Comprehension](#list-comprehension)
+        - [List Comprehension vs Generator Comprehension](#list-comprehension-vs-generator-comprehension)
     - [Dictionaries](#dictionaries)
       - [Dictionary Comprehension](#dictionary-comprehension)
     - [Sets](#sets)
@@ -1404,9 +1427,13 @@ def factorial(n):
 
 ### `yield`
 
-- When a function has a `yield` statement, what gets returned is a [generator](#generator).
-  - The generator can then be passed to Python's built-in `next()` to get the next value returned from the function.
-- When calling a function with `yield` statements, Python executes the function until it reaches the first `yield` keyword and then returns a generator.
+- Keyword `yield` is considered both a [statement](#yield-statement) and an [expression](#yield-expression).
+- When a function uses the `yield` keyword, what gets returned is a [generator](#generators).
+  - The generator can be passed to Python's built-in `next()` function to get the next value returned from the function.
+  - The caller receives an object from the generator class.
+    - To put it another way, the `yield` keyword will transform any expression supplied with it into a generator object and then return that generator object to the caller.
+      - Therefore, we must iterate through the generator object to obtain the values.
+- Python executes the function until it encounters `yield` at which point execution is suspended and then returns a generator.
   - These are known as generator functions:
 
 ```python
@@ -1845,7 +1872,7 @@ Containers are data structures that live in memory and typically hold all their 
   - `UserList`
   - `UserString`
 
-## Iterable vs Iterator
+## Iterables vs Iterators
 
 An iterable is any object that can return an iterator, and an iterator is the object used to iterate over an iterable object.
 
@@ -1863,9 +1890,50 @@ Iterators:
 - Iterators support `next()` and `iter()` functions.
 - Iterators are also iterables.
 
+### Definitions
+
+- Definitons for both [iterable](docs.python.org/3/glossary.html#term-iterable) and [iterator](docs.python.org/3/glossary.html#term-iterator) according to the [Python Documentation: Glossary](docs.python.org/3/glossary.html).
+
+#### Iterables
+
+- An object capable of returning its members one at a time.
+- Examples of iterables include:
+  - All Sequence Types:
+    - `list`
+    - `tuple`
+    - `str`
+  - Some Non-Sequence Types:
+    - `dict`
+    - File Objects:
+      - `open()`
+        - Returns an iterable file.
+    - User-Defined:
+      - `__iter__()`
+      - `__getitem()__`
+- Iterables can be used in a `for` loop and many other places where a sequnce is needed such as with:
+  - `zip()`
+  - `map()`
+  - Etc.
+- When iterable object passed as argument to `iter()` built-in, it returns an iterator for the argument.
+  - The `for` statement creates a temporary unnamed variable to hold the iterator during duration of a loop so it is usualy unnecessary to explicitly call `iter()`.
+
+#### Iterators
+
+- An object representing a stream of data.
+  - Repeated calls to iterator's `next()` method returns successive items in the stream.
+  - When no more data available, raises a `StopIteration` exception.
+    - Iterator is now "exhausted" and any further calls to `next()` will continue to raise the `StopIteration` exception.
+- Required to have `__iter__()` method that returns itself so every iterator is also iterable and may be used in most places where other iterables are accepted.
+
+##### Notable Exception: Containers
+
+- One notable exception is code which attempts multiple iteration passes:
+  - A container object, such as `list`, produces a fresh new iterator each time you pass it to the `iter()` function or use it in a `for` loop.
+    - Attempting this with an iterator will return the same exhausted iterator object used in the previous iteration pass, making it appear like an empty container.
+
 ### Iterable
 
-- An iterable is any object, not necessarily a data structure, than can return an tierator with the purpose of returning all the iterable's elements.
+- An iterable is any object, not necessarily a data structure, than can return an iterator with the purpose of returning all the iterable's elements.
 - Most containers are iterable, but not _only_ containers are iterable.
   - Some examples being:
     - Files
@@ -1922,11 +1990,13 @@ for elem in x:
 
 #### Disassembly
 
-- If you disassembler iterable Python code, you will see the following instruction calls:
+- If you disassemble iterable Python code, you will see the following instruction calls:
   - `GET_ITER` which is invoking the `iter()` function which is `__iter__()` dunder method under the hood.
   - `FOR_ITER` which is inboking the `next()` function which is `__next__()` dunder method under the hood.
 
 #### Check if Iterable
+
+- There are a number of ways to check if something is iterable, three of which are exemplified.
 
 ##### Way 1
 
@@ -1944,6 +2014,7 @@ It is iterable
 ```
 
 - Using `hasattr()` to check if argument is using `__iter__` method.
+  - Alternatively, calling `dir(it)` would output all of the attributes implemented by the argument.
 
 ##### Way 2
 
@@ -2060,13 +2131,152 @@ It is iterable
 
 ## Generators
 
+Generators are objects that provide a convenient way to implement the iterator protocol.
+
+- Note that all generators are iterators, but not all iterators are generators.
+  - Anything that can be done with generators can also be done with class-based iterators.
+    - However, iterators may not always be the most efficient or convenient choice.
+- Can be looped over similar to that of a list.
+  - Unlike lists, lazy iterator contents are not stored in the memory.
+    - This makes generators the efficient choice for large or infinite streams of data.
+- Returns a "lazy iterator".
+  - Recall that "lazy" in programming means nothing is done unless needed.
+
+### Example
+
+```python
+def colors():
+  yield "Red"
+  yield "Orange"
+  yield "White"
+  yield "Black"
+
+color_generator = colors()
+
+print(next(color_generator)) # Red
+print(next(color_generator)) # Orange
+print(next(color_generator)) # White
+print(next(color_generator)) # Black
+```
+
+```
+Red
+Orange
+White
+Black
+```
+
+### Generator Functions vs Generator Expressions
+
+- There are two primary ways of using a generator:
+  1. Generator Functions
+     - Contains keyword `yield`.
+     - Returns a "Generator Iterator" object.
+  2. Generator Expressions
+     - Also called, "Generator Comprehensions".
+
+#### Definitions
+
+- Definitons for [generator functions](https://docs.python.org/3/glossary.html#generator), their returned [generator iterators](https://docs.python.org/3/glossary.html#generator-iterator) and [generator expressions](https://docs.python.org/3/glossary.html#generator-expression) according to the [Python Documentation: Glossary](docs.python.org/3/glossary.html).
+
+### Generator Functions
+
+- The term "generator" is ubiquitous with "generator functions".
+
+#### [`yield`](#yield)
+
+- A generator function is any function in which the keyword `yield` appears.
+- Keyword `yield` will return a value when the generator's `__next__()` method is called.
+  - Keyword `yield` suspends function execution rather than totally exiting it that way `return` does.
+    - That is, local state is retained:
+      - Local variables.
+      - Instruction pointer.
+      - Internal evaluation stack.
+      - State of any exception handling.
+
+##### Statement vs Expression
+
+- The `yield` keyword is considered to be both a statement and an expression.
+
+###### `yield` Statement
+
+```python
+yield <statement>
+```
+
+- Recall that a statement is an instruction that the Python interpreter can execute.
+
+###### `yield` Expression
+
+```python
+x = (yield <expression>)
+```
+
+- Recall that an expression is a combination of values, variables and operators.
+
+##### Advantages vs Disadvantages
+
+- Understanding when and why the `yield` keyword may be preferred (or not).
+
+##### Advantages
+
+- Highly memory efficient (reduce memory consumption), since the execution happens only when the caller iterates over the object.
+- Memory allocation load is kept within check because it retains local variable states.
+  - Because the former state is kept, the process doesn't have to start over, which reduces time.
+- If you want faster execution or computation over large datasets.
+- Can be used to produce an infinite stream of data. You can set the size of a list to infinite, as it might cause a memory limit error.
+
+##### Disadvantages
+
+- Calling of generator functions must be handled properly, else might cause errors in program.
+- Coding complexity increases due to time and storage optimization, making the reasoning behind it occasionally difficult to comprehend.
+- Sometimes becomes hard to understand flow of code due to back and forth nature of generator iterator and generator functions.
+
+#### Generator Iterators
+
+- The object returned by generator functions called a "generator iterator" which leverages "lazy evaluation", classifying it as a "lazy iterator".
+- Implements the `__iter__()` and `__next__()` dunder methods.
+
 ### Generator Expressions
+
+- An expression that returns an iterator.
+- It looks like a normal expression followed by a `for` clause defining a loop variable, range, and an optional `if` clause.
+
+```python
+<gc> = (<expression> for <loop var> in <range>)
+```
+
+- Note the use of parenthesis `()` rather than brackets `[]` as would be done for `list` objects.
+  - Also note that `<gc>` stands for "generator comprehension".
+- Allows you to quickly create a generator object in just a few lines of code.
+  - Also useful in the same cases where list comprehensions are used, with an added benefit:
+    - Can create them without holding the entire object in memory before iteration.
+    - In other words: No memory penalty.
+
+#### Generator Comprehensions
+
+- Generator expressions are also referred to as "generator comprehensions" since they behave similarly to "list comprehensions."
+
+### Generator Methods
+
+- In addition to `yield`, generator objects can make use of the following methods:
+  - `send()`
+  - `throw()`
+  - `close()`
+
+#### `send()`
+
+#### `throw()`
+
+#### `close()`
 
 ## Comprehensions
 
 ### Lists
 
 #### List Comprehension
+
+##### List Comprehension vs Generator Comprehension
 
 ### Dictionaries
 
