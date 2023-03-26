@@ -2033,7 +2033,7 @@ else:
 It is iterable
 ```
 
-- Using 'isinstance()' to check if argument is an instance of `Iterable` class from `collections.abc` module.
+- Using `isinstance()` to check if argument is an instance of `Iterable` class from `collections.abc` module.
 
 ##### Way 3
 
