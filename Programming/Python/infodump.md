@@ -9,13 +9,19 @@
 - Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
 - Recreate some diagrams using these references [[1]](nvie.com/posts/iterators-vs-generators) [[2]](blog.avenuecode.com/containers-iterables-iterators-and-generators).
 - Recreate the diagram in [Iterators: Limitations](#limitations) from this [source](analyticsvidhya.com/blog/2017/everything-you-need-to-know-about-iterables-and-iterators-in-python-as-a-data-scientist)
-- Go through this [resource](http://python-course.eu/).
+- Go through this [resource](http://python-course.eu/) in `anotherdump.md`.
 
 # Table of Contents
 
 - [Infodump](#infodump)
 - [Todo](#todo)
 - [Table of Contents](#table-of-contents)
+- [Running](#running)
+  - [REPL](#repl)
+  - [CLI](#cli)
+  - [Virtual Environments](#virtual-environments)
+    - [`venv`](#venv)
+    - [`pip`](#pip)
 - [Variables \& Datatypes](#variables--datatypes)
   - [Datatypes](#datatypes)
     - [Table of Examples](#table-of-examples)
@@ -30,6 +36,9 @@
       - [Way 1](#way-1)
       - [Way 2](#way-2)
       - [Way 3](#way-3)
+- [Duck Typing](#duck-typing)
+- [Walrus Operator](#walrus-operator)
+  - [Assignment Expressions](#assignment-expressions)
 - [Printing](#printing)
   - [`print()`](#print)
     - [Strings](#strings)
@@ -46,7 +55,8 @@
   - [`input()`](#input)
 - [Math](#math)
   - [Arithmetic Operations](#arithmetic-operations)
-    - [Augmented Operations](#augmented-operations)
+  - [Bitwise Operations](#bitwise-operations)
+    - [Augmented Assignment Operations](#augmented-assignment-operations)
       - [`+=`](#-2)
       - [`-=`](#-)
       - [`*=`](#-3)
@@ -54,7 +64,12 @@
       - [`//=`](#-5)
       - [`%=`](#-6)
       - [`**=`](#-7)
-  - [Built-In Functions](#built-in-functions)
+      - [`>>=`](#-8)
+      - [`<<=`](#-9)
+      - [`&=`](#-10)
+      - [`|=`](#-11)
+      - [`^=`](#-12)
+  - [Some Built-In Math Functions](#some-built-in-math-functions)
     - [`round(number, decimal)`](#roundnumber-decimal)
     - [`abs(n)`](#absn)
     - [`pow(x, y, z)`](#powx-y-z)
@@ -137,12 +152,28 @@
     - [`del`](#del)
     - [`global`](#global)
     - [`nonlocal`](#nonlocal)
+- [Built-In Functions](#built-in-functions)
 - [Functions vs Methods](#functions-vs-methods)
-- [Function Aliasing](#function-aliasing)
-  - [Why use Aliases](#why-use-aliases)
+  - [Function Aliasing](#function-aliasing)
+    - [Why use Aliases](#why-use-aliases)
   - [Functions](#functions-1)
   - [Methods](#methods)
   - [Example](#example)
+- [Dunder](#dunder)
+  - [Methods](#methods-1)
+  - [Variables](#variables-2)
+    - [Special Attributes](#special-attributes)
+  - [`__name__ = "__main__"`](#__name__--__main__)
+- [Arguments](#arguments)
+  - [Positional](#positional)
+  - [Default](#default)
+  - [Keyword](#keyword)
+  - [Arbitrary](#arbitrary)
+    - [`*args`](#args)
+    - [`**kwargs`](#kwargs)
+- [Unpacking Operators](#unpacking-operators)
+  - [`*`](#-13)
+  - [`**`](#-14)
 - [Packages vs Modules](#packages-vs-modules)
 - [Context Managers](#context-managers)
   - [`with`](#with-1)
@@ -155,6 +186,7 @@
   - [`threading.Lock`](#threadinglock)
     - [Example: Without](#example-without-2)
     - [Example: With](#example-with-2)
+- [Files](#files)
 - [Lambda Functions](#lambda-functions)
   - [User-Defined](#user-defined)
     - [`def double(x)`](#def-doublex)
@@ -203,8 +235,8 @@
           - [`yield` Statement](#yield-statement)
           - [`yield` Expression](#yield-expression)
         - [Advantages vs Disadvantages](#advantages-vs-disadvantages)
-        - [Advantages](#advantages)
-        - [Disadvantages](#disadvantages)
+          - [Advantages](#advantages)
+          - [Disadvantages](#disadvantages)
       - [Generator Iterators](#generator-iterators)
     - [Generator Expressions](#generator-expressions)
       - [Generator Comprehensions](#generator-comprehensions)
@@ -214,14 +246,34 @@
       - [`close()`](#close)
   - [Comprehensions](#comprehensions)
     - [Lists](#lists)
+      - [List vs Array](#list-vs-array)
       - [List Comprehension](#list-comprehension)
         - [List Comprehension vs Generator Comprehension](#list-comprehension-vs-generator-comprehension)
     - [Dictionaries](#dictionaries)
       - [Dictionary Comprehension](#dictionary-comprehension)
     - [Sets](#sets)
       - [Set Comprehension](#set-comprehension)
+- [OOP](#oop)
+  - [Inheritance](#inheritance)
+    - [Overriding](#overriding)
+      - [Absence of `@Override`](#absence-of-override)
+  - [Polymorphism](#polymorphism)
+  - [Encapsulation](#encapsulation)
+  - [Abstraction](#abstraction)
 - [Data Scraping \& Extraction](#data-scraping--extraction)
 - [Packages](#packages)
+
+# Running
+
+## REPL
+
+## CLI
+
+## Virtual Environments
+
+### `venv`
+
+### `pip`
 
 # Variables & Datatypes
 
@@ -391,6 +443,12 @@ x = y = z = 0
 - Beneficial if all the variables need to be initialized to the same value.
   - Especially true if they represent similar ideas within the context of the program.
   - Might become confusing if the variables represnt different things, depending on the program.
+
+# Duck Typing
+
+# Walrus Operator
+
+## Assignment Expressions
 
 # Printing
 
@@ -572,9 +630,33 @@ Python can perform the same basic arithmetic operations as any other language in
 |    %     | Modulo         | `5 % 2 = 1`   |
 |   \*\*   | Power          | `4 ** 2 = 16` |
 
-### Augmented Operations
+## Bitwise Operations
 
-- Recall that some augmented operations include `+=`, `-=`, `*=`, `/=`, `//=` `%=` and `**=`.
+Python can also perform bitwise operations.
+
+| Operator | Operation   | Example         |
+| :------: | ----------- | --------------- |
+|    >>    | Shift Right | `23 >> 3 = 2`   |
+|    <<    | Shift Left  | `23 << 3 = 184` |
+|    &     | AND         | `23 & 3 = 3`    |
+|    \|    | OR          | `23 \| 3 = 23`  |
+|    ^     | XOR         | `23 ^ 3 = 20`   |
+
+### Augmented Assignment Operations
+
+- Python supports the following augmented assignment operations:
+  1. `+=`
+  2. `-=`
+  3. `*=`
+  4. `/=`
+  5. `//=`
+  6. `%=`
+  7. `**=`
+  8. `>>=`
+  9. `<<=`
+  10. `&=`
+  11. `|=`
+  12. `^=`
 
 #### `+=`
 
@@ -660,7 +742,67 @@ print(num) # 16
 16
 ```
 
-## Built-In Functions
+#### `>>=`
+
+```python
+num = 23
+num >>= 3
+print(num) # 2
+```
+
+```
+2
+```
+
+#### `<<=`
+
+```python
+num = 23
+num <<= 3
+print(num) # 184
+```
+
+```
+184
+```
+
+#### `&=`
+
+```python
+num = 23
+num &= 3
+print(num) # 3
+```
+
+```
+3
+```
+
+#### `|=`
+
+```python
+num = 23
+num |= 3
+print(num) # 23
+```
+
+```
+23
+```
+
+#### `^=`
+
+```python
+num = 23
+num ^= 3
+print(num) # 20
+```
+
+```
+20
+```
+
+## Some Built-In Math Functions
 
 Built-In functions do not require explicit import of external modules or packages.
 
@@ -1477,6 +1619,8 @@ def <function>():
 
 ### `nonlocal`
 
+# Built-In Functions
+
 # Functions vs Methods
 
 Functions and methods can have nuances meanings depending on this programming language but generally we can define them as such.
@@ -1488,7 +1632,7 @@ Functions and methods can have nuances meanings depending on this programming la
     - That is, we can think of methods as ubiquitous in classes and object oriented programming in that, a "method" is somewhat of an object-oriented word for a "function".
     - In general, methods are functions that belong to classes.
 
-# Function Aliasing
+## Function Aliasing
 
 Function aliasing is the idea of assigning a function to a variable to use via the variable instead of directly calling the function.
 
@@ -1516,7 +1660,7 @@ Called via Variable
 - Note that although the assignment is done like `var = fun`, when we actually call the newly assigned variable, we do so with parens: `var()` instead of just `var`.
   - This remains true regardless of whether or not arguments are accepted/required in the function being aliased.
 
-## Why use Aliases
+### Why use Aliases
 
 Here are some potential cases where we might want to use function aliasing since at first glance it seems somewhat pointless.
 
@@ -1593,6 +1737,36 @@ knock_door()
      - `Class.method(Object)`
   2. Invoking the method inside the object:
      - `Object.method()`
+
+# Dunder
+
+## Methods
+
+## Variables
+
+### Special Attributes
+
+## `__name__ = "__main__"`
+
+# Arguments
+
+## Positional
+
+## Default
+
+## Keyword
+
+## Arbitrary
+
+### `*args`
+
+### `**kwargs`
+
+# Unpacking Operators
+
+## `*`
+
+## `**`
 
 # Packages vs Modules
 
@@ -1698,6 +1872,8 @@ with some_lock:
 
 - Using a `with` statement allows you to abstract away most of the resource handling logic.
 - Instead of having to write an explicit `try...finally` statement each time, `with` takes care of that for us.
+
+# Files
 
 # Lambda Functions
 
@@ -1853,24 +2029,32 @@ Containers are data structures that live in memory and typically hold all their 
 ### Built-In
 
 - Some built-in data types are also containers:
-  - `list`
-  - `tuple`
-  - `set`
-  - `dict`
-  - `str`
+  - Sequence Types:
+    - `list`
+    - `tuple`
+    - `range`
+  - Text Sequence Type:
+    - `str`
+  - Set Type:
+    - `set`
+  - Mapping Type:
+    - `dict`
 
 ### Collections Module
 
-- The [`collections`](docs.python.org/3/library/collections.html) module of the standard library implements some additional specialized container data types providing alternatives to the aforementioned general purpose built-in containers:
-  - `namedTuple()`
-  - `deque`
-  - `ChainMap`
-  - `Counter`
-  - `OrderedDict`
-  - `defaultdict`
-  - `UserDict`
-  - `UserList`
-  - `UserString`
+| Specialized Container Datatype | Description                                                            |
+| -----------------------------: | ---------------------------------------------------------------------- |
+|                 `namedtuple()` | Factory function for creating tuple subclasses with named fields       |
+|                        `deque` | A list-like container with fast appends and pops on either end         |
+|                     `ChainMap` | A dict-like class for creating a single view of multiple mappings      |
+|                      `Counter` | A dict subclass for counting hashable objects                          |
+|                  `OrderedDict` | A dict subclass that remembers the order entries were added            |
+|                  `defaultdict` | A dict subclass that calls a factory function to supply missing values |
+|                     `UserDict` | Wrapper around dictionary objects for easier dict subclassing          |
+|                     `UserList` | Wrapper around list objects for easier list subclassing                |
+|                   `UserString` | Wrapper around string objects for easier string subclassing            |
+
+- The [`collections`](docs.python.org/3/library/collections.html) module of the standard library implements some additional specialized container data types providing alternatives to the aforementioned general purpose built-in containers.
 
 ## Iterables vs Iterators
 
@@ -1904,7 +2088,7 @@ Iterators:
     - `str`
   - Some Non-Sequence Types:
     - `dict`
-    - File Objects:
+    - `File` Objects:
       - `open()`
         - Returns an iterable file.
     - User-Defined:
@@ -1930,6 +2114,8 @@ Iterators:
 - One notable exception is code which attempts multiple iteration passes:
   - A container object, such as `list`, produces a fresh new iterator each time you pass it to the `iter()` function or use it in a `for` loop.
     - Attempting this with an iterator will return the same exhausted iterator object used in the previous iteration pass, making it appear like an empty container.
+
+> Provide an example here at some point.
 
 ### Iterable
 
@@ -2177,7 +2363,7 @@ Black
 
 #### Definitions
 
-- Definitons for [generator functions](https://docs.python.org/3/glossary.html#generator), their returned [generator iterators](https://docs.python.org/3/glossary.html#generator-iterator) and [generator expressions](https://docs.python.org/3/glossary.html#generator-expression) according to the [Python Documentation: Glossary](docs.python.org/3/glossary.html).
+- Definitons for [generator functions](https://docs.python.org/3/glossary.html#generator), their returned [generator iterators](https://docs.python.org/3/glossary.html#generator-iterator), and [generator expressions](https://docs.python.org/3/glossary.html#generator-expression) according to the [Python Documentation: Glossary](docs.python.org/3/glossary.html).
 
 ### Generator Functions
 
@@ -2218,7 +2404,7 @@ x = (yield <expression>)
 
 - Understanding when and why the `yield` keyword may be preferred (or not).
 
-##### Advantages
+###### Advantages
 
 - Highly memory efficient (reduce memory consumption), since the execution happens only when the caller iterates over the object.
 - Memory allocation load is kept within check because it retains local variable states.
@@ -2226,7 +2412,7 @@ x = (yield <expression>)
 - If you want faster execution or computation over large datasets.
 - Can be used to produce an infinite stream of data. You can set the size of a list to infinite, as it might cause a memory limit error.
 
-##### Disadvantages
+###### Disadvantages
 
 - Calling of generator functions must be handled properly, else might cause errors in program.
 - Coding complexity increases due to time and storage optimization, making the reasoning behind it occasionally difficult to comprehend.
@@ -2274,6 +2460,8 @@ x = (yield <expression>)
 
 ### Lists
 
+#### List vs Array
+
 #### List Comprehension
 
 ##### List Comprehension vs Generator Comprehension
@@ -2285,6 +2473,20 @@ x = (yield <expression>)
 ### Sets
 
 #### Set Comprehension
+
+# OOP
+
+## Inheritance
+
+### Overriding
+
+#### Absence of `@Override`
+
+## Polymorphism
+
+## Encapsulation
+
+## Abstraction
 
 # Data Scraping & Extraction
 
