@@ -50,7 +50,20 @@
       - [TypeError](#typeerror)
         - [Incorrect](#incorrect)
         - [Correct](#correct)
-  - [f-Strings](#f-strings)
+- [String Formatting](#string-formatting)
+  - [`%` Operator](#-operator)
+    - [Single Substitution](#single-substitution)
+    - [Multiple Substitutions](#multiple-substitutions)
+      - [Tuple Substitution](#tuple-substitution)
+      - [Mapping Substitution](#mapping-substitution)
+  - [`str.format()`](#strformat)
+    - [Single Substitution](#single-substitution-1)
+    - [Multiple Substitutions](#multiple-substitutions-1)
+      - [Explicit Substitution by Name](#explicit-substitution-by-name)
+  - [`f`-Strings](#f-strings)
+    - [Parser Feature](#parser-feature)
+  - [`from string import Template`](#from-string-import-template)
+- [Numerical Formatting](#numerical-formatting)
 - [User Input](#user-input)
   - [`input()`](#input)
 - [Math](#math)
@@ -452,10 +465,7 @@ x = y = z = 0
 
 # Printing
 
-We can print using:
-
-1. `print()`
-2. f-Strings
+We can print using the `print()` function whose arguments can be formatted further depending on their class.
 
 ## `print()`
 
@@ -568,21 +578,193 @@ My favorite number is 25
 
 - We can cast the type `int` variable called `integer` to a `str` using `str(integer)`.
 
-## f-Strings
+# String Formatting
 
-Read as "format strings", f-Strings are another way to print in Python.
+There have been a number of ways to format strings:
 
+1. Old-Style
+   - `%` Operator
+2. New-Style
+   - `str.format()`
+3. Interpolation
+   - `f`-Strings
+4. Template
+   - `from string import Template`
+
+> Still, the official Python 3 Documentation doesn't exactly recommend "old style" formatting or speak too fondly of it:
+>
+> > "The formatting operations described here exhibit a variety of quirks that lead to a number of common errors (such as failing to display tuples and dictionaries correctly). Using the newer formatted string literals or the `str.format()` interface helps avoid these errors. These alternatives also provide more powerful, flexible and extensible approaches to formatting text."
+>
+> — [Official Python 3 Documentation](https://docs.python.org/3/library/stdtypes.html?highlight=sprintf#printf-style-string-formatting)
+
+## `%` Operator
+
+The "Old Style" enables simple positional string formatting denoted by `%s` using the `%` operator.
+
+- Emulates the [`printf`](https://docs.python.org/3/library/stdtypes.html#old-string-formatting) functionality found in other languages.
+- Technically superseded by "New Style" formatting in Python 3.
+- Other format specifiers exist as well to convert non-string values to a string in the desired position such as, but not limited to:
+  - `%d`
+    - Converts `int` positional element to `str` class.
+  - `%x`
+    - Converts `int` positional element as its hexadecimal value to `str` class.
+
+### Single Substitution
+
+```python
+name = "Emaan"
+print('My name is %s' %(name))
+```
+
+```
+My name is Emaan
+```
+
+### Multiple Substitutions
+
+- Syntax changes slightly if you want to make multiple substitutions in a single string.
+
+#### Tuple Substitution
+
+```python
+fname = "Emaan"
+lname = "Rana"
+print('My name is %s %s' %(fname, lname))
+```
+
+```
+My name is Emaan Rana
+```
+
+- The `%` operator takes only one argument, so right-hand side need to be wrapped in a tuple.
+
+#### Mapping Substitution
+
+```python
+fname = "Emaan"
+lname = "Rana"
+print('Hello, %(fname)s %(lname)s' %{"fname": fname, "lname": lname})
+```
+
+```
+My name is Emaan Rana
+```
+
+- Also possible to refer to variable substitutions by name in format string by passing a mapping to the `%` operator.
+- This style comes up when defining a format for a logger in the `logging` module.
+
+## `str.format()`
+
+The "New-Style" introduced in Python 3 which replaces the `%` operator special syntax in effort to make syntax for string formatting more regular.
+
+- Formatting is now handled by calling `.format()` on a string object.
+
+### Single Substitution
+
+```python
+name = "Emaan"
+print('My name is {}'.format(name))
+```
+
+```
+My name is Emaan
+```
+
+- You can use `format()` to do simple positional formatting.
+
+### Multiple Substitutions
+
+```python
+fname = "Emaan"
+lname = "Rana"
+print('My name is {} {}'.format(fname, lname))
+```
+
+```
+My name is Emaan Rana
+```
+
+#### Explicit Substitution by Name
+
+```python
+print('My name is {fname} {lname}'.format(lname="Rana", fname="Emaan"))
+```
+
+```
+My name is Emaan Rana
+```
+
+- A powerful feature as it allows for re-arranging the order of display without changing the arguments passed to the `format()` function.
+
+## `f`-Strings
+
+Read as "format strings" or "formatted string literals", `f`-Strings are another way to format strings in Python using "String Interpolation".
+
+- Lets you use embedded Python expressions inside string constants.
+- Powerful because:
+  - Can embed arbitrary Python expressions.
+  - Can do inline arithmetic with it.
 - Similar to using format specifiers in other languages.
 - Denote location of variable using `{}` notation within the string and include the name of the variable in it like so: `{<var>}`.
+  - Can be used with single `f''` or double `f""` quotes.
 
 ```python
 age = 23
-print(f"I am {age} years old!")
+print(f"I am {age} years old")
 ```
 
 ```
-I am 23 years old!
+I am 23 years old
 ```
+
+### Parser Feature
+
+- Formatted string literals are a Python parser feature that converts `f`-Strings into a series of string constants and expressions which then get joined up to build the final string.
+
+```python
+fname = "Emaan"
+lname = "Rana"
+age = 23
+print(f"My name is {fname} {lname} and I am {age} years old")
+```
+
+- Is built to:
+
+```python
+print("My name is " + fname + " " + lname + " and I am " + str(age) + " years old")
+```
+
+- Both output:
+
+```
+My name is Emaan Rana and I am 23 years old
+```
+
+## `from string import Template`
+
+A simpler and less powerful means of formatting strings that excludes the use of format specifiers.
+
+- Requires some manual labor, that is, we cannot simply use format specifier`%x` to convert to hexadecimal.
+
+```python
+from string import Template
+
+fname = input("Enter Your First Name: ")
+lname = input("Enter Your Last Name: ")
+string = Template('Hey, $fname $lname!')
+print(string.substitute(fname=fname, lname=lname))
+```
+
+```
+Enter Your First Name: Program
+Enter Your Last Name: User
+Hey, Program User!
+```
+
+- Often useful for handling formatted strings generated by users of a program.
+  - Due to reduced complexity, template strings are a safer choice.
+
+# Numerical Formatting
 
 # User Input
 
