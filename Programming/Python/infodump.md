@@ -4,11 +4,8 @@
 
 # Todo
 
-- Add more examples to [Datatypes: Get/Set](#datatypes) from this site [here](https://www.w3schools.com/python/python_datatypes.asp)
 - Take notes on [here](https://realpython.com/python-modules-packages/) for [Packages vs Modules](#packages-vs-modules) and link your own notes instead.
 - Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
-- Recreate some diagrams using these references [[1]](nvie.com/posts/iterators-vs-generators) [[2]](blog.avenuecode.com/containers-iterables-iterators-and-generators).
-- Recreate the diagram in [Iterators: Limitations](#limitations) from this [source](analyticsvidhya.com/blog/2017/everything-you-need-to-know-about-iterables-and-iterators-in-python-as-a-data-scientist)
 - Go through this [resource](http://python-course.eu/) in `anotherdump.md`.
 
 # Table of Contents
