@@ -769,11 +769,7 @@ We can accept user input using the `input()` function in Python.
 
 ## `input()`
 
-```python
-input()
-```
-
-- Grants terminal access/control to user to provide input until user hits `enter` at which point the function will terminate.
+Grants terminal access/control to user to provide input until user hits `enter` at which point the function will terminate.
 
 ```python
 user_input = input("Accept some user input: ") # Store in variable
@@ -785,7 +781,7 @@ Accept some user input: Hello World!
 Hello World!
 ```
 
-- Need to store return of function in a variable to actually accesss it.
+- Need to store return of function in a variable, in this case `user_input`, to actually accesss it.
 
 # Math
 
