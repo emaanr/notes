@@ -4,14 +4,14 @@
 
 ## Arrays & Hashing
 
-- [ ] [Contains Duplicate]()
-- [x] [Valid Anagram]()
-- [ ] [Two Sum]()
-- [ ] [Group Anagrams]()
-- [ ] [Top K Frequent Elements]()
-- [ ] [Product of Array Except Self]()
-- [ ] [Encode and Decode Strings]()
-- [ ] [Longest Consecutive Sequence]()
+- [ ] [Contains Duplicate](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/contains-duplicate.md)
+- [x] [Valid Anagram](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/valid-anagram.md)
+- [ ] [Two Sum](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/two-sum.md)
+- [ ] [Group Anagrams](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/group-anagrams.md)
+- [ ] [Top K Frequent Elements](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/top-k-frequent-elements.md)
+- [ ] [Product of Array Except Self](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/product-of-array-except-self.md)
+- [ ] [Encode and Decode Strings](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/encode-and-decode-strings.md)
+- [ ] [Longest Consecutive Sequence](https://github.com/emaanr/notes/blob/main/Practice/LC/Blind%2075/Arrays%20%26%20Hashing/longest-consequtive-sequence.md)
 
 ## Two Pointers
 
