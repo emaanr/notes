@@ -60,7 +60,7 @@
 
 ## Tries
 
-- [ ] [Implement Trie Prefix Tree]()
+- [ ] [Implement Trie (Prefix Tree)]()
 - [ ] [Design Add And Search Words Data Structure]()
 - [ ] [Word Search II]()
 
@@ -79,7 +79,7 @@
 - [ ] [Clone Graph]()
 - [ ] [Pacific Atlantic Water Flow]()
 - [ ] [Course Schedule]()
-- [ ] [Number of Connected Components in An Undirected Graph]()
+- [ ] [Number of Connected Components in an Undirected Graph]()
 - [ ] [Graph Valid Tree]()
 
 ## Advanced Graphs
