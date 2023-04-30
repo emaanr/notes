@@ -270,6 +270,7 @@
   - [Polymorphism](#polymorphism)
   - [Encapsulation](#encapsulation)
   - [Abstraction](#abstraction)
+- [Regular Expressions](#regular-expressions)
 - [Data Scraping \& Extraction](#data-scraping--extraction)
 - [Packages](#packages)
 
@@ -2662,6 +2663,8 @@ x = (yield <expression>)
 ## Encapsulation
 
 ## Abstraction
+
+# Regular Expressions
 
 # Data Scraping & Extraction
 
