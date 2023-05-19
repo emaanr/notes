@@ -10,10 +10,13 @@
   - [Interface](#interface)
     - [Example: Buttons](#example-buttons)
   - [API](#api-1)
-    - [Note](#note)
+    - [Examples](#examples)
       - [Example: Strings](#example-strings)
       - [Example: Operating Systems](#example-operating-systems)
       - [Example: Web Browsers](#example-web-browsers)
+    - [Analogies](#analogies)
+      - [Restaurant](#restaurant)
+      - [Puzzle](#puzzle)
 - [Remote API](#remote-api)
   - [Example: Shazam](#example-shazam)
 - [Web Review](#web-review)
@@ -41,15 +44,28 @@
 - [REST](#rest)
   - [RESTful API](#restful-api)
   - [Constraints](#constraints)
-    - [Client-Server Architecture](#client-server-architecture)
-    - [Statelessness](#statelessness)
+    - [Client-Server](#client-server-1)
+    - [Stateless](#stateless-1)
     - [Uniform Interface](#uniform-interface)
       - [Data](#data)
       - [Resources \& Collections](#resources--collections)
       - [CRUD](#crud)
-    - [Cacheability](#cacheability)
+    - [Cacheable](#cacheable)
     - [Layered System](#layered-system)
-    - [Code on Demand](#code-on-demand)
+    - [Code on Demand (Optional)](#code-on-demand-optional)
+  - [REST APIs \& Web Services](#rest-apis--web-services)
+    - [HTTP Methods](#http-methods)
+      - [Common HTTP Methods](#common-http-methods)
+    - [Status Codes](#status-codes-1)
+      - [Common Status Codes](#common-status-codes)
+      - [Status Codes Categories](#status-codes-categories)
+    - [API Endpoints](#api-endpoints)
+  - [REST \& Python](#rest--python)
+    - [Consuming APIs](#consuming-apis)
+    - [Building APIs](#building-apis)
+    - [Tools of the Trade](#tools-of-the-trade)
+  - [Conclusion](#conclusion)
+- [Sources](#sources)
 
 # Definitons
 
@@ -83,9 +99,14 @@ APIs exist for developers to use and extend in their own applications.
   - Simply need to understand how to write an implementation to whatever the framework is expecting.
     - That is, using the API and honoring the "contract" enforced by it.
 
-### Note
+> **Note:** In the current technological climate, the term API is almost always used to refer to Web-Based API. However all kinds of APIs exist.
 
-> Note: In the current technological climate, the term API is almost always used to refer to Web-Based API. However all kinds of APIs exist such as the examples below.
+### Examples
+
+- Some Examples of APIs:
+  1. Strings
+  2. Operating Systems
+  3. Web Browsers
 
 #### Example: Strings
 
@@ -114,6 +135,27 @@ for entry in os.listdir(current_dur):
 
 - Code can be written to work on any web browser which is possible as a result of APIs.
   - All web browsers are required to implement and support a certain set of APIs to ensure this.
+
+### Analogies
+
+- Analogies can be helpful to visualize the role and use of APIs, such as:
+  - Restaurants
+  - Puzzles
+
+#### Restaurant
+
+- May help to understand the role of an API on a higher-level.
+- Analogy:
+  - Back End:
+    - Cooks in the kitchen
+  - Front End:
+    - Dining area for guests
+  - API:
+    - Servers in the restaurant
+
+#### Puzzle
+
+- May help to understand the use of an API on a lower-level.
 
 # Remote API
 
@@ -249,6 +291,11 @@ URLs have a scheme portion such as "HTTP".
 
 **RE**presentation **S**tate **T**ransfer, or REST, is an architectural style/standard that allows users to interact with resources over the web. Became so popular that the term "REST" became ubiquitous with "API".
 
+- Defines a pattern for client and server communications over a network.
+- Provides a set of constraints for software architecture to promote performance, scalability, simplicity, and reliability in the system.
+
+> **Note:** REST is not a specification but a set of guidelines on how to architect a network-connected software system.
+
 ## RESTful API
 
 When APIs embrace the style and constraints of REST, they are said to be "RESTful".
@@ -257,12 +304,25 @@ When APIs embrace the style and constraints of REST, they are said to be "RESTfu
 
 Guiding architectural constraints required for an API to be considered RESTful.
 
-### Client-Server Architecture
+1. Client-Server
+   - The client and server must be decoupled from each other, allowing each to develop independently.
+2. Stateless
+   - The server won't maintain any state between requests from the client.
+3. Uniform Interface
+   - The server will provide a uniform interface for accessing resources without defining their representation.
+4. Cacheable
+   - The data retrieved from the server should be cacheable either by the client or by the server.
+5. Layered System
+   - The client may access the resources on the server indirectly through other layers such as a proxy or load balancer.
+6. Code on Demand (Optional)
+   - The server may transfer code to the client that it can run, such as JavaScript for a single-page application.
+
+### Client-Server
 
 - The job of an API is to connect two pieces of software without limiting their own functionalities.
 - The client (makes requests) and the server (returns responses) stay separate and independent.
 
-### Statelessness
+### Stateless
 
 - For an API to be stateless, it has to handle calls independently of each other.
 - Each API call has to contain the data and commands necessary to complete the desired action.
@@ -295,11 +355,11 @@ Guiding architectural constraints required for an API to be considered RESTful.
 
 | HTTP Verbs | CRUD   |
 | ---------: | :----- |
-|        GET | Read   |
-|       POST | Create |
-|      PATCH | Update |
-|        PUT | Update |
-|     DELETE | Delete |
+|      `GET` | Read   |
+|     `POST` | Create |
+|    `PATCH` | Update |
+|      `PUT` | Update |
+|   `DELETE` | Delete |
 
 - Most of what a user may want their application to be able to do can be described by the accronym "CRUD" which stands for:
   - Create
@@ -307,7 +367,7 @@ Guiding architectural constraints required for an API to be considered RESTful.
   - Update
   - Delete
 
-### Cacheability
+### Cacheable
 
 - It is not uncommon for a stateless API requests to have large overhead.
   - In some cases this is unavoidable, but for repeated requests that need the same data, caching said information can make a notable difference.
@@ -325,7 +385,7 @@ Guiding architectural constraints required for an API to be considered RESTful.
   - This improves the overall security of the API.
 - If the scope of the API changes, layers can be added, modified, or taken out without compromising other components of the interface.
 
-### Code on Demand
+### Code on Demand (Optional)
 
 - This is an optional constraint because it can be a security risk.
 - Concept:
@@ -338,3 +398,83 @@ Guiding architectural constraints required for an API to be considered RESTful.
 - Upside:
   - Can help the client implement their own features on the go, with less work being necessary on the API or server.
     - In essence, it permits the whole system to be much more scalable and agile.
+
+## REST APIs & Web Services
+
+A REST Web Service is any web service that adheres to the aforementioned REST Architecture Constraints. These web services share their data with the public through the use of an API via public web URLs.
+
+### HTTP Methods
+
+- REST APIs listen for HTTP methods such as the aforementioned `GET` and `POST` methods in order to know what operations to perform on the resources of the web service recieving these requests.
+- As previously explored, a "resource" is any data available in the web service that can be accessed via HTTP Requests made to the REST API.
+  - The HTTP Method tells the API what action to perform on the resource that follows it.
+
+#### Common HTTP Methods
+
+| HTTP Method | Description                           |
+| ----------: | ------------------------------------- |
+|       `GET` | Retrieve a pre-existing resource      |
+|      `POST` | Create a new resource                 |
+|       `PUT` | Update an existing resource           |
+|     `PATCH` | Partially update an existing resource |
+|    `DELETE` | Delete a resource                     |
+
+- There are many HTTP methods, but the examples provided are the five most prominent/commonly used with REST APIs.
+
+### Status Codes
+
+- Once a REST API recieves and processes an HTTP request, it sends back an HTTP response.
+  - The response includes an HTTP status code that provides information about the result of the request.
+- HTTP status codes allow the application sending requests (client) to perform certain actions based on the result.
+  - These actions could include:
+    - Error Handling
+    - Success Message
+- Useful since the user will often need to perform different logic based on results of a request.
+
+#### Common Status Codes
+
+| Code | Meaning                | Description                                                                   |
+| :--: | ---------------------- | ----------------------------------------------------------------------------- |
+| 200  | OK                     | The requested action was successful                                           |
+| 201  | Created                | A new resource was created                                                    |
+| 202  | Accepted               | The request was recieved, but no modifications have been made yet             |
+| 204  | No Content             | The request was successful, but the response has no content                   |
+| 400  | Bad Request            | The request was malformed                                                     |
+| 401  | Unauthorized           | The client is not authorized to perform the requested action                  |
+| 404  | Not Found              | The requested resource was not found                                          |
+| 415  | Unsupported Media Type | The request data format is not supported by the server                        |
+| 422  | Unprocessable Entity   | The request data was properly formatted but contained invalid or missing data |
+| 500  | Internal Server Error  | The server threw an error when processing the request                         |
+
+- These ten status codes represent only a small subset of the available HTTP status codes.
+
+#### Status Codes Categories
+
+| Code Range | Category             |
+| ---------- | -------------------- |
+| 2xx        | Successful Operation |
+| 3xx        | Redirection          |
+| 4xx        | Client Error         |
+| 5xx        | Server Error         |
+
+- Status codes are numbered based on the category of the result:
+
+### API Endpoints
+
+## REST & Python
+
+### Consuming APIs
+
+### Building APIs
+
+### Tools of the Trade
+
+## Conclusion
+
+# Sources
+
+[[1]](https://www.youtube.com/watch?v=WXsD0ZgxjRw) **freeCodeCamp.org:** APIs for Beginners 2023
+
+[[2]](https://www.youtube.com/watch?v=ByGJQzlzxQg) **Aaron Jack:** What is an API
+
+[[3]](https://realpython.com/api-integration-in-python/) **RealPython:** API Integration in Python
