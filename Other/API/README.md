@@ -413,11 +413,11 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 
 | HTTP Method | Description                           |
 | ----------: | ------------------------------------- |
-|       `GET` | Retrieve a pre-existing resource      |
-|      `POST` | Create a new resource                 |
-|       `PUT` | Update an existing resource           |
+|      `POST` | **C**reate a new resource             |
+|       `GET` | **R**etrieve a pre-existing resource  |
+|       `PUT` | **U**pdate an existing resource       |
 |     `PATCH` | Partially update an existing resource |
-|    `DELETE` | Delete a resource                     |
+|    `DELETE` | **D**elete a resource                 |
 
 - There are many HTTP methods, but the examples provided are the five most prominent/commonly used with REST APIs.
 
