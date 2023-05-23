@@ -5,7 +5,6 @@
 # Todo
 
 - Take notes on [here](https://realpython.com/python-modules-packages/) for [Packages vs Modules](#packages-vs-modules) and link your own notes instead.
-- Take notes on [here](https://realpython.com/python-keywords/) for [Keywords](#keywords) and link your notes instead.
 - Go through this [resource](http://python-course.eu/) in `anotherdump.md`.
 
 # Table of Contents
@@ -270,6 +269,7 @@
   - [Polymorphism](#polymorphism)
   - [Encapsulation](#encapsulation)
   - [Abstraction](#abstraction)
+  - [Classes vs Functions](#classes-vs-functions)
 - [Regular Expressions](#regular-expressions)
 - [Data Scraping \& Extraction](#data-scraping--extraction)
 - [Packages](#packages)
@@ -2184,13 +2184,10 @@ Distinguishing between some important concepts in Python:
   - `dict`
   - `set`
 
-<p align="center" width="100%">
-    <img title="Relationship Diagram" src="img/file.png">
-</p>
-
-<p align="center" width="100%">
-    <img title="Hierarchy Diagram" src="img/file.png">
-</p>
+<figure align="center" width="100%">
+    <img title="Relationship Diagram: Containers vs Iterables vs Iterators vs Generators vs Comprehension" src="img/iter/relationship.png">
+    <figcaption><b>Relationship Diagram:</b> Containers vs Iterables vs Iterators vs Generators vs Comprehension</figcaption>
+</figure>
 
 ## Containers
 
@@ -2237,6 +2234,11 @@ Containers are data structures that live in memory and typically hold all their 
 An iterable is any object that can return an iterator, and an iterator is the object used to iterate over an iterable object.
 
 - Note that every iterator is also an iterable, but not every iterable is an iterator.
+
+<figure align="center" width="100%">
+    <img title="Flow Chart: Iteration Behavior" src="img/iter/behavior.png">
+    <figcaption><b>Flow Chart:</b> Iteration Behavior</figcaption>
+</figure>
 
 Iterables:
 
@@ -2346,9 +2348,10 @@ for elem in x:
   ...
 ```
 
-<p align="center" width="100%">
-    <img title="Relationship Diagram: Iterable and Iterator" src="img/file.png">
-</p>
+<figure align="center" width="100%">
+    <img title="Example: Iteration" src="img/iter/example.png">
+    <figcaption><b>Example:</b> Iteration</figcaption>
+</figure>
 
 #### Disassembly
 
@@ -2469,9 +2472,10 @@ It is iterable
 
 #### Limitations
 
-<p align="center" width="100%">
-    <img title="Flowchart: Iterator Limitations" src="img/file.png">
-</p>
+<figure align="center" width="100%">
+    <img title="Flow Chart: Iteration Limitations" src="img/iter/limitations.png">
+    <figcaption><b>Flow Chart:</b> Iteration Limitations</figcaption>
+</figure>
 
 - Can only go forward with iterator.
   - No way to obtain previous element.
@@ -2663,6 +2667,8 @@ x = (yield <expression>)
 ## Encapsulation
 
 ## Abstraction
+
+## Classes vs Functions
 
 # Regular Expressions
 
