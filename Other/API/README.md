@@ -353,13 +353,13 @@ Guiding architectural constraints required for an API to be considered RESTful.
 
 #### CRUD
 
-| HTTP Verbs | CRUD   |
-| ---------: | :----- |
-|      `GET` | Read   |
-|     `POST` | Create |
-|    `PATCH` | Update |
-|      `PUT` | Update |
-|   `DELETE` | Delete |
+| HTTP Verbs | CRUD       |
+| ---------: | :--------- |
+|     `POST` | **C**reate |
+|      `GET` | **R**ead   |
+|    `PATCH` | **U**pdate |
+|      `PUT` | **U**pdate |
+|   `DELETE` | **D**elete |
 
 - Most of what a user may want their application to be able to do can be described by the accronym "CRUD" which stands for:
   - Create
