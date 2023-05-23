@@ -1,6 +1,6 @@
 # API
 
-    Application Programming Interface.
+    Metasynthesized Notes on Application Programming Interfaces.
 
 # Table of Contents
 
