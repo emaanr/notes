@@ -74,7 +74,7 @@ System.out.println(obj.nonStaticField);
 
 ```java
 Math math = new Math();
-Math.staticMethod(); // Warning
+math.staticMethod(); // Warning
 ```
 
 ### Correct
