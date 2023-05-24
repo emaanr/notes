@@ -7,6 +7,7 @@
 - [Markdown](#markdown)
 - [Table of Contents](#table-of-contents)
 - [Images](#images)
+  - [Figures](#figures)
 - [Custom Style](#custom-style)
   - [Custom Tags](#custom-tags)
   - [Overwriting Tags](#overwriting-tags)
@@ -14,12 +15,23 @@
 
 # Images
 
-- Can include images using HTML tags.
+- Can include images using the `<img/>` tag within another pair of tags such as `<p></p>`.
 
 ```html
 <p align="center" width="100%">
-    <img src="path">
+  <img src="path" />
 </p>
+```
+
+## Figures
+
+- Can include images with captions using `<img/>` tag and `<figcaption></figcaption>` tags within `<figure></figure>` tags.
+
+```html
+<figure align="center" width="100%">
+  <img title="alt" src="path" />
+  <figcaption>Caption</figcaption>
+</figure>
 ```
 
 # Custom Style
@@ -40,13 +52,16 @@
 
 ```html
 <style>
-  r { color: Red }
+  r {
+    color: Red;
+  }
 </style>
 ```
+
 ```html
 <!-- Example -->
 <r>This will be Red</r>
- ```
+```
 
 ## Overwriting Tags
 
@@ -55,39 +70,47 @@
 ```html
 <!-- Removing Pre-Existing Styling -->
 <style>
-    s { text-decoration: none }   /* Strike-Through */
-    em { font-style: normal }     /* Italic Emphasis */
+  s {
+    text-decoration: none;
+  } /* Strike-Through */
+  em {
+    font-style: normal;
+  } /* Italic Emphasis */
 </style>
-
 
 <!-- Overwriting with Color Styling -->
 <style>
-    s { color: Seagreen }
-    em { color: Red }
+  s {
+    color: Seagreen;
+  }
+  em {
+    color: Red;
+  }
 </style>
 ```
+
 ```html
 <!-- Example -->
-~~This will be Seagreen~~
- _This will be Red_
- ```
+~~This will be Seagreen~~~
+```
 
- # Diff Syntax Highlighting
+```html
+<!-- Example -->
+_This will be Red_
+```
+
+# Diff Syntax Highlighting
 
 - Use ` ```diff ` for code blocks to enable syntax highlighting when using `+` indicating added lines and `-` indicating removed lines.
 
-```html
-```diff <!-- Start -->
-public class Hello1
-{
-   public static void Main()
-   {
--      System.out.Println("Removed Line");
-+      System.out.Println("Added Line in Removed Line's place");
-   }
-}
-``` <!-- End -->
-```
+````html
+```diff
+<!-- Start -->
+public class Hello1 { public static void Main() { - System.out.Println("Removed
+Line"); + System.out.Println("Added Line in Removed Line's place"); } } ```
+<!-- End -->
+````
+
 ```diff
 public class Hello1
 {
