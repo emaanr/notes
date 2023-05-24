@@ -17,6 +17,22 @@
     - [Analogies](#analogies)
       - [Restaurant](#restaurant)
       - [Puzzle](#puzzle)
+        - [Puzzle Piece](#puzzle-piece)
+        - [Puzzle](#puzzle-1)
+        - [Blanks](#blanks)
+        - [Example: Uber](#example-uber)
+        - [Example: Review System](#example-review-system)
+          - [Shape](#shape)
+        - [Example: Login Form](#example-login-form)
+          - [Endpoint](#endpoint)
+        - [Frontend-Backend](#frontend-backend)
+        - [Example: YouTube](#example-youtube)
+          - [Authorization](#authorization)
+        - [Example: Google](#example-google)
+          - [Automation](#automation)
+        - [Example: Facebook \& Slack](#example-facebook--slack)
+          - [Triggers](#triggers)
+        - [Documentation](#documentation)
 - [Remote API](#remote-api)
   - [Example: Shazam](#example-shazam)
 - [Web Review](#web-review)
@@ -147,15 +163,211 @@ for entry in os.listdir(current_dur):
 - May help to understand the role of an API on a higher-level.
 - Analogy:
   - Back End:
-    - Cooks in the kitchen
+    - Cooks in the kitchen.
   - Front End:
-    - Dining area for guests
+    - Dining area for guests.
   - API:
-    - Servers in the restaurant
+    - Servers in the restaurant.
 
 #### Puzzle
 
 - May help to understand the use of an API on a lower-level.
+- Analogy:
+  - App:
+    - Puzzle Piece.
+  - Apps:
+    - Puzzle compised of Puzzle Pieces.
+  - APIs:
+    - Blanks of Puzzle Piece.
+  - UI:
+    - Blanks of Puzzle Piece.
+  - API Definition:
+    - Shape of a Puzzle Piece.
+  - API Endpoint:
+    - Acceptable Piece of a Puzzle Piece.
+
+##### Puzzle Piece
+
+- An individual `App` can be likened to a `Puzzle Piece`.
+  - Is some code running on a server.
+
+##### Puzzle
+
+- A larger app, comprised of connecting many smaller `Apps` can be likened to a `Puzzle`.
+
+##### Blanks
+
+- The parts where the puzzle piece connect, called `Blanks`, are `APIs`.
+  - But can also be `UI`.
+
+##### Example: Uber
+
+- Using an Uber application as an example:
+  - One API handles billing and money.
+  - Another API handles location information.
+  - Another API handles the review system.
+  - And so on so forth for many more APIs and their provided functionalities.
+
+##### Example: Review System
+
+<p align="center" width="100%">
+    <img src="img/review-app.png">
+</p>
+
+- Taking a closer look at the aforementioned API that handles the review system:
+  - Needs data, such as:
+    - Rider
+    - Driver
+    - Stars
+
+###### Shape
+
+- If the puzzle piece "fits" then this means the API recieved the required data.
+  - In which case, the API or "puzzle piece" can do its job.
+- The `Shape` of a "puzzle piece" can be likened to an `API Definition`.
+
+##### Example: Login Form
+
+- Consider a Login Form as an example:
+  - Required fields are:
+    - Username
+    - Password
+  - If _both_ are _not_ provided then the form will not submit.
+    - The missing fields cause the "puzzle piece" to not fit.
+
+<p align="center" width="100%">
+    <img src="img/login-form.png">
+</p>
+
+- These kinds of forms are part of UI.
+  - UI: User Interface
+    - For the user.
+  - API: Application User Interface
+    - For the code.
+
+<p align="center" width="100%">
+    <img src="img/login-app.png">
+</p>
+
+- "LOG IN" connects to "FRONT END" via "UI".
+- "FRONT END" needs to also connect to "BACK END" via "API" in order to allow "BACK END" to check password and verify information.
+  - In this case, API and UI have the "same shape".
+    - Because both are accepting the same data:
+      - Username
+      - Password
+    - This data will pass through UI and then to API.
+
+###### Endpoint
+
+<p align="center" width="100%">
+    <img src="img/login-modularity.png">
+</p>
+
+- APIs usually have different ways they can be used.
+  - In analogous terms, APIs have multiple "pieces" that can connect to it.
+- "Shape" of "LOG IN" is:
+  - Username
+  - Password
+- There can be a "piece" for "FORGOT PASSWORD" whose "shape" requires:
+  - Username or Email
+- There can be a "piece" for "CREATE ACCOUNT" whose "shape" requires:
+  - Email
+  - Password
+- We can call each `Acceptable Piece` of a `Puzzle Piece` one of its `API Endpoint`s.
+
+> **Note:** In this example, both "LOG IN" and "CREATE ACCOUNT" can be said to have the same "shape" because they require the same data. Depending on which "endpoint" the data is delivered to, the resulting behavior delivered by the API will differ.
+
+##### Frontend-Backend
+
+<p align="center" width="100%">
+    <img src="img/frontend-backend.png">
+</p>
+
+- Every back end pretty much has an API for its front end so it is not too much extra work to make the API accessible to the public.
+  - This makes the API usable by developers.
+
+##### Example: YouTube
+
+<p align="center" width="100%">
+    <img src="img/youtube-app.png">
+</p>
+
+- YouTube videos can be watched through the YouTube [UI](https://youtube.com).
+  - However, YouTube also has a "Public API" in order to get information without using UI.
+- When viewing a video on YouTube, the user is getting the name, thumbnail, file, etcetera for it through the YouTube UI.
+  - However, this information can be programatically requested and received via the YouTube API by writing some code.
+
+> **Note:** Once again the prevalence of a UI, in this case the "YouTube UI", for users and API, in this case YouTube API, for code.
+
+###### Authorization
+
+<p align="center" width="100%">
+    <img src="img/authorization.png">
+</p>
+
+- APIs like YouTube cannot simply make its services 100% "open" or people can abuse this.
+  - Can spam and overload a server until it shuts down, known as a denial of service attack.
+    - Such matters can be prevented using an "API Key".
+- An API Key can be thought of as:
+  - A username and password combined which then can be used to uniquely identify who the user is.
+- API Keys allow the API developers to monitor how their service is being used:
+  - If YouTube wanted to, they could see all the data that a particular user is requesting.
+  - There are also usually rules about request volume and frequency to monitor how much data is being requested/serviced since it can be costly to do so.
+    - The API Key assists in allocating resources to users so they stay within a volume pre-determined by the API developers.
+      - Sometimes offer different plans/tiers of volume for users to purchase in order to utilize more of a particular API's services.
+
+##### Example: Google
+
+<p align="center" width="100%">
+    <img src="img/authorization.png">
+</p>
+
+- Let us consider the following Google APIs:
+  - Google Drive
+  - Google Sheets
+  - GMail
+
+###### Automation
+
+<p align="center" width="100%">
+    <img src="img/automation.png">
+</p>
+
+- APIs can be used to "automate" some tasks or behaviors.
+- Such as automating a work report:
+  - Google Drive:
+    - Creates report
+  - GMail
+    - Emails to recipient
+
+##### Example: Facebook & Slack
+
+<p align="center" width="100%">
+    <img src="img/authorization.png">
+</p>
+
+- Let us consider the following APIs:
+  - Facebook
+  - Slack
+
+###### Triggers
+
+- Multiple APIs can be used together by writing your own code as the glue that determines what each piece is doing.
+- You can use one API to "trigger" another API.
+- Such as:
+  - Facebook:
+    - New post trigger
+  - Slack:
+    - Posts the facebook post to a Slack Channel on trigger being recieved
+
+##### Documentation
+
+- API developers provide instructions for how to use their service, called "Documentation".
+  - Tells you how to use it, or what "shape", the piece of the puzzle is.
+- Reading up on documentation and understanding how an API can be used has some overhead and can become time consuming/tedious.
+  - This is increasingly true if many APIs are being used:
+    - Would have to read up on all of them.
+    - Would have to potentially set up accounts and keys.
 
 # Remote API
 
