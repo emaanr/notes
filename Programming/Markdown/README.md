@@ -103,13 +103,18 @@ _This will be Red_
 
 - Use ` ```diff ` for code blocks to enable syntax highlighting when using `+` indicating added lines and `-` indicating removed lines.
 
-````html
-```diff
-<!-- Start -->
-public class Hello1 { public static void Main() { - System.out.Println("Removed
-Line"); + System.out.Println("Added Line in Removed Line's place"); } } ```
-<!-- End -->
-````
+```html	
+```diff <!-- Start -->	
+public class Hello1	
+{	
+   public static void Main()	
+   {	
+-      System.out.Println("Removed Line");	
++      System.out.Println("Added Line in Removed Line's place");	
+   }	
+}	
+``` <!-- End -->	
+```
 
 ```diff
 public class Hello1
