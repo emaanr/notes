@@ -254,7 +254,7 @@ for entry in os.listdir(current_dur):
     - For the code.
 
 <p align="center" width="100%">
-    <img src="img/login-app.png">
+    <img src="img/login.png">
 </p>
 
 - "LOG IN" connects to "FRONT END" via "UI".
@@ -268,7 +268,7 @@ for entry in os.listdir(current_dur):
 ###### Endpoint
 
 <p align="center" width="100%">
-    <img src="img/login-modularity.png">
+    <img src="img/endpoints.png">
 </p>
 
 - APIs usually have different ways they can be used.
@@ -301,7 +301,7 @@ for entry in os.listdir(current_dur):
 </p>
 
 - YouTube videos can be watched through the YouTube [UI](https://youtube.com).
-  - However, YouTube also has a "Public API" in order to get information without using UI.
+  - However, YouTube also has a "Public API" called [YouTube Data API](https://developers.google.com/youtube/v3) in order to get information without using UI.
 - When viewing a video on YouTube, the user is getting the name, thumbnail, file, etcetera for it through the YouTube UI.
   - However, this information can be programatically requested and received via the YouTube API by writing some code.
 
