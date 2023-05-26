@@ -200,7 +200,15 @@ for entry in os.listdir(current_dur):
 - The parts where the puzzle piece connect, called `Blanks`, are `APIs`.
   - But can also be `UI`.
 
+<p align="center" width="100%">
+    <img src="img/puzzle.png">
+</p>
+
 ##### Example: Uber
+
+<p align="center" width="100%">
+    <img src="img/uber-app.png">
+</p>
 
 - Using an Uber application as an example:
   - One API handles billing and money.
@@ -319,7 +327,7 @@ for entry in os.listdir(current_dur):
 ##### Example: Google
 
 <p align="center" width="100%">
-    <img src="img/authorization.png">
+    <img src="img/google-apis.png">
 </p>
 
 - Let us consider the following Google APIs:
@@ -343,7 +351,7 @@ for entry in os.listdir(current_dur):
 ##### Example: Facebook & Slack
 
 <p align="center" width="100%">
-    <img src="img/authorization.png">
+    <img src="img/triggers.png">
 </p>
 
 - Let us consider the following APIs:
