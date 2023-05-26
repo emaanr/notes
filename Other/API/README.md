@@ -677,7 +677,7 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 | 4xx        | Client Error         |
 | 5xx        | Server Error         |
 
-- Status codes are numbered based on the category of the result:
+- Status codes are numbered based on the category of the result.
 
 ### API Endpoints
 
@@ -697,8 +697,10 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 
 [[2]](https://www.youtube.com/watch?v=ByGJQzlzxQg) **Aaron Jack:** What is an API (in 5 Minutes)
 
-[[3]](https://realpython.com/api-integration-in-python/) **RealPython:** API Integration in Python
+[[3]](https://www.youtube.com/watch?v=qbLc5a9jdXo) **Caleb Curry:** Rest API Crash Course
 
-[[4]](https://www.youtube.com/watch?v=ZveW4_ZJtVY) **CertBros:** APIs Explained w/ Real World Examples
+[[4]](https://realpython.com/api-integration-in-python/) **RealPython:** API Integration in Python
 
-[[5]](https://www.youtube.com/watch?v=dfaj4vI8QxE) **Code with Ana Kubów**: How to Use APIs
+[[5]](https://www.youtube.com/watch?v=ZveW4_ZJtVY) **CertBros:** APIs Explained w/ Real World Examples
+
+[[6]](https://www.youtube.com/watch?v=dfaj4vI8QxE) **Code with Ana Kubów**: How to Use APIs
