@@ -7,6 +7,14 @@
 - [Valid Anagram](#valid-anagram)
 - [Table of Contents](#table-of-contents)
 - [Question](#question)
+  - [Example 1](#example-1)
+    - [Input](#input)
+    - [Output](#output)
+  - [Example 2](#example-2)
+    - [Input](#input-1)
+    - [Output](#output-1)
+  - [Constraints](#constraints)
+  - [Follow Up](#follow-up)
 - [Solutions](#solutions)
   - [Python](#python)
     - [My Solutions](#my-solutions)
@@ -25,6 +33,47 @@
 
 # Question
 
+Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
+
+An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+## Example 1
+
+### Input
+
+```
+s = "anagram", t = "nagaram"
+```
+
+### Output
+
+```
+true
+```
+
+## Example 2
+
+### Input
+
+```
+s = "rat", t = "car"
+```
+
+### Output
+
+```
+false
+```
+
+## Constraints
+
+- `1 <= s.length, t.length <= 5 * 104`
+- `s` and `t` consist of lowercase English letters.
+
+## Follow Up
+
+What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
 # Solutions
 
 ## Python
@@ -33,13 +82,96 @@
 
 #### Initial Solution
 
+```python
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s) != len(t):
+            return False
+        else:
+            s_list = []
+            t_list = []
+            s_dict = {}
+            t_dict = {}
+
+            for c in s:
+                if c not in s_list:
+                    s_list.append(c)
+                    count = s.count(c)
+                    s_dict[c] = count
+
+            for c in t:
+                if c not in t_list:
+                    t_list.append(c)
+                    count = t.count(c)
+                    t_dict[c] = count
+
+            if s_dict == t_dict:
+                return True
+            else:
+                return False
+```
+
 #### Revised Solution
+
+```python
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if (len(t) != len(s)):
+            return False
+        for char in t:
+            if (t.count(char) != s.count(char)):
+                return False
+        return True
+```
 
 ### Other Solutions
 
 #### Solution 1
 
+```python
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        return collections.Counter(s) == collections.Counter(t)
+```
+
 #### Solution 2
+
+```python
+class Solution:
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        dict = {}
+        for char in s:
+            if char not in dict:
+                dict[char] = 1
+            else:
+                dict[char] += 1
+        for char in t:
+            if char not in dict:
+                return False
+            else:
+                dict[char] -= 1
+        return False if any(dict.values()) else True
+```
 
 ## Java
 
@@ -47,10 +179,42 @@
 
 #### Initial Solution
 
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+    }
+}
+```
+
 #### Revised Solution
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+    }
+}
+```
 
 ### Other Solutions
 
 #### Solution 1
 
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+    }
+}
+```
+
 #### Solution 2
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+    }
+}
+```
