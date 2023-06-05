@@ -33,6 +33,47 @@
 
 #### Initial Solution
 
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+
+        # Base Cases
+        if len(nums) <= 1:
+            return nums
+
+        # All Other Cases
+        nums_sorted = sorted(nums)
+        distinct_nums = set()
+        for i in nums_sorted:
+            distinct_nums.add(i)
+
+        # Add k elements and sort in descending order upon every alteration
+        top_k = []
+        for num in distinct_nums:
+            new_freq = [num, nums_sorted.count(num)]
+            print(f"CREATED NEW_FREQ: {new_freq}")
+            top_k.sort(key = lambda x: x[1])
+            if len(top_k) == k:
+                for old_freq in top_k:
+                    if new_freq[1] > old_freq[1] and new_freq not in top_k:
+                        print(f"NEW_FREQ[1] > OLD_FREQ[1]: {new_freq[1]} > {old_freq[1]}")
+                        print(f"NEW_FREQ: {new_freq}")
+                        print(f"OLD_FREQ: {old_freq}\n")
+                        top_k.remove(old_freq)
+                        top_k.append(new_freq)
+            else:
+                top_k.append(new_freq)
+                print(f"APPENDED: {new_freq}")
+                print(f"TOP K ELEMENTS: {top_k}\n")
+
+        top_k_frequent = []
+        top_k = sorted(top_k)
+        for k in top_k:
+            top_k_frequent.append(k[0])
+
+        return top_k_frequent
+```
+
 #### Revised Solution
 
 ### Other Solutions

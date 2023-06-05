@@ -20,6 +20,7 @@
     - [My Solutions](#my-solutions)
       - [Initial Solution](#initial-solution)
       - [Revised Solution](#revised-solution)
+    - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -83,13 +84,8 @@ What if the inputs contain Unicode characters? How would you adapt your solution
 #### Initial Solution
 
 ```python
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
         else:
@@ -119,13 +115,8 @@ class Solution(object):
 #### Revised Solution
 
 ```python
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
         if (len(t) != len(s)):
             return False
         for char in t:
@@ -134,18 +125,29 @@ class Solution(object):
         return True
 ```
 
+### NeetCode Solution
+
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+
+        countS, countT = {}, {}
+
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0)
+        return countS == countT
+```
+
 ### Other Solutions
 
 #### Solution 1
 
 ```python
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
         return collections.Counter(s) == collections.Counter(t)
 ```
 
@@ -153,12 +155,7 @@ class Solution(object):
 
 ```python
 class Solution:
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+    def isAnagram(self, s: str, t: str) -> bool:
         dict = {}
         for char in s:
             if char not in dict:
