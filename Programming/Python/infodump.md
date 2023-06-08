@@ -163,6 +163,77 @@
     - [`global`](#global)
     - [`nonlocal`](#nonlocal)
 - [Built-In Functions](#built-in-functions)
+  - [`abs()`](#abs)
+  - [`aiter()`](#aiter)
+  - [`all()`](#all)
+  - [`any()`](#any)
+  - [`anext()`](#anext)
+  - [`ascii()`](#ascii)
+  - [`bin()`](#bin)
+  - [`bool()`](#bool)
+  - [`breakpoint()`](#breakpoint)
+  - [`bytearray()`](#bytearray)
+  - [`bytes()`](#bytes)
+  - [`callable()`](#callable)
+  - [`chr()`](#chr)
+  - [`classmethod()`](#classmethod)
+  - [`compile()`](#compile)
+  - [`complex()`](#complex)
+  - [`delattr()`](#delattr)
+  - [`dict()`](#dict)
+  - [`dir()`](#dir)
+  - [`divmod()`](#divmod)
+  - [`enumerate()`](#enumerate)
+  - [`eval()`](#eval)
+  - [`exec()`](#exec)
+  - [`filter()`](#filter)
+  - [`float()`](#float)
+  - [`format()`](#format)
+  - [`frozenset()`](#frozenset)
+  - [`getattr()`](#getattr)
+  - [`globals()`](#globals)
+  - [`hasattr()`](#hasattr)
+  - [`hash()`](#hash)
+  - [`help()`](#help)
+  - [`hex()`](#hex)
+  - [`id()`](#id)
+  - [`input()`](#input-1)
+  - [`int()`](#int)
+  - [`isinstance()`](#isinstance)
+  - [`issubclass()`](#issubclass)
+  - [`iter()`](#iter)
+  - [`len()`](#len)
+  - [`list()`](#list)
+  - [`locals()`](#locals)
+  - [`map()`](#map)
+  - [`max()`](#max)
+  - [`memoryview()`](#memoryview)
+  - [`min()`](#min)
+  - [`next()`](#next)
+  - [`object()`](#object)
+  - [`oct()`](#oct)
+  - [`open()`](#open)
+  - [`ord()`](#ord)
+  - [`pow()`](#pow)
+  - [`print()`](#print-1)
+  - [`property()`](#property)
+  - [`range()`](#range)
+  - [`repr()`](#repr)
+  - [`reversed()`](#reversed)
+  - [`round()`](#round)
+  - [`set()`](#set-1)
+  - [`setattr()`](#setattr)
+  - [`slice()`](#slice)
+  - [`sorted()`](#sorted)
+  - [`staticmethod()`](#staticmethod)
+  - [`str()`](#str)
+  - [`sum()`](#sum)
+  - [`super()`](#super)
+  - [`tuple()`](#tuple)
+  - [`type()`](#type)
+  - [`vars()`](#vars)
+  - [`zip()`](#zip)
+  - [`__import__()`](#__import__)
 - [Functions vs Methods](#functions-vs-methods)
   - [Function Aliasing](#function-aliasing)
     - [Why use Aliases](#why-use-aliases)
@@ -190,7 +261,7 @@
     - [Supporting `with` in Objects](#supporting-with-in-objects)
       - [`__enter__(self)`](#__enter__self)
       - [`__exit__(self, exc_type, exc_value, traceback)`](#__exit__self-exc_type-exc_value-traceback)
-  - [`open()`](#open)
+  - [`open()`](#open-1)
     - [Example: With](#example-with-1)
     - [Example: Without](#example-without-1)
   - [`threading.Lock`](#threadinglock)
@@ -205,7 +276,7 @@
     - [`def multiply(x, y)`](#def-multiplyx-y)
       - [Example: Without](#example-without-4)
       - [Example: With](#example-with-4)
-  - [`sorted()`](#sorted)
+  - [`sorted()`](#sorted-1)
     - [Example: With](#example-with-5)
     - [Example: Without](#example-without-5)
 - [Containers vs Iterables vs Iterators vs Generators vs Comprehension](#containers-vs-iterables-vs-iterators-vs-generators-vs-comprehension)
@@ -228,9 +299,9 @@
       - [Lazy Factory](#lazy-factory)
       - [User-Defined](#user-defined-1)
         - [`iterator.__iter__()`](#iterator__iter__)
-          - [`iter()`](#iter)
+          - [`iter()`](#iter-1)
         - [`iterator.__next__()`](#iterator__next__)
-          - [`next()`](#next)
+          - [`next()`](#next-1)
           - [`StopIteration`](#stopiteration)
         - [`itertools`](#itertools)
       - [Limitations](#limitations)
@@ -274,6 +345,7 @@
 - [Regular Expressions](#regular-expressions)
 - [Data Scraping \& Extraction](#data-scraping--extraction)
 - [Packages](#packages)
+- [Time Complexity](#time-complexity)
 
 # Running
 
@@ -1800,6 +1872,152 @@ def <function>():
 
 # Built-In Functions
 
+The Python interpreter has a number of functions and types built into it that are always available.
+
+- [Python Documentation: Built-Ins](https://docs.python.org/3/library/functions.html)
+
+## `abs()`
+
+## `aiter()`
+
+## `all()`
+
+## `any()`
+
+## `anext()`
+
+## `ascii()`
+
+## `bin()`
+
+## `bool()`
+
+## `breakpoint()`
+
+## `bytearray()`
+
+## `bytes()`
+
+## `callable()`
+
+## `chr()`
+
+## `classmethod()`
+
+## `compile()`
+
+## `complex()`
+
+## `delattr()`
+
+## `dict()`
+
+## `dir()`
+
+## `divmod()`
+
+## `enumerate()`
+
+## `eval()`
+
+## `exec()`
+
+## `filter()`
+
+## `float()`
+
+## `format()`
+
+## `frozenset()`
+
+## `getattr()`
+
+## `globals()`
+
+## `hasattr()`
+
+## `hash()`
+
+## `help()`
+
+## `hex()`
+
+## `id()`
+
+## `input()`
+
+## `int()`
+
+## `isinstance()`
+
+## `issubclass()`
+
+## `iter()`
+
+## `len()`
+
+## `list()`
+
+## `locals()`
+
+## `map()`
+
+## `max()`
+
+## `memoryview()`
+
+## `min()`
+
+## `next()`
+
+## `object()`
+
+## `oct()`
+
+## `open()`
+
+## `ord()`
+
+## `pow()`
+
+## `print()`
+
+## `property()`
+
+## `range()`
+
+## `repr()`
+
+## `reversed()`
+
+## `round()`
+
+## `set()`
+
+## `setattr()`
+
+## `slice()`
+
+## `sorted()`
+
+## `staticmethod()`
+
+## `str()`
+
+## `sum()`
+
+## `super()`
+
+## `tuple()`
+
+## `type()`
+
+## `vars()`
+
+## `zip()`
+
+## `__import__()`
+
 # Functions vs Methods
 
 Functions and methods can have nuances meanings depending on this programming language but generally we can define them as such.
@@ -2680,3 +2898,5 @@ x = (yield <expression>)
 # Packages
 
 Useful packages in Python and what they can be used for.
+
+# Time Complexity
