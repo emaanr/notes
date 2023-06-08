@@ -109,6 +109,17 @@ Can you come up with an algorithm that is less than $O(n^2)$ time complexity?
 
 #### Initial Solution
 
+```python
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    for i in range(0, len(nums)):
+        for num in nums:
+            j = nums.index(num)
+            if num + nums[i] == target and j != i:
+                return [i, j]
+```
+
+- Correct output, but times out.
+
 #### Revised Solution
 
 ### NeetCode Solution
