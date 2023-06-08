@@ -7,6 +7,16 @@
 - [Contains Duplicate](#contains-duplicate)
 - [Table of Contents](#table-of-contents)
 - [Question](#question)
+  - [Example 1](#example-1)
+    - [Input](#input)
+    - [Output](#output)
+  - [Example 2](#example-2)
+    - [Input](#input-1)
+    - [Output](#output-1)
+  - [Example 3](#example-3)
+    - [Input](#input-2)
+    - [Output](#output-2)
+  - [Constraints](#constraints)
 - [Solutions](#solutions)
   - [Python](#python)
     - [My Solutions](#my-solutions)
@@ -28,6 +38,55 @@
       - [Solution 2](#solution-2)
 
 # Question
+
+Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
+
+## Example 1
+
+### Input
+
+```
+nums = [1,2,3,1]
+```
+
+### Output
+
+```
+true
+```
+
+## Example 2
+
+### Input
+
+```
+nums = [1,2,3,4]
+```
+
+### Output
+
+```
+false
+```
+
+## Example 3
+
+### Input
+
+```
+nums = [1,1,1,3,3,4,3,2,4,2]
+```
+
+### Output
+
+```
+true
+```
+
+## Constraints
+
+- `1 <= nums.length <= 105`
+- `-109 <= nums[i] <= 109`
 
 # Solutions
 
