@@ -12,6 +12,7 @@
     - [My Solutions](#my-solutions)
       - [Initial Solution](#initial-solution)
       - [Revised Solution](#revised-solution)
+    - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -34,6 +35,8 @@
 #### Initial Solution
 
 #### Revised Solution
+
+### NeetCode Solution
 
 ### Other Solutions
 
