@@ -84,61 +84,58 @@ What if the inputs contain Unicode characters? How would you adapt your solution
 #### Initial Solution
 
 ```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
+def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+    else:
+        s_list = []
+        t_list = []
+        s_dict = {}
+        t_dict = {}
+
+        for c in s:
+            if c not in s_list:
+                s_list.append(c)
+                count = s.count(c)
+                s_dict[c] = count
+
+        for c in t:
+            if c not in t_list:
+                t_list.append(c)
+                count = t.count(c)
+                t_dict[c] = count
+
+        if s_dict == t_dict:
+            return True
         else:
-            s_list = []
-            t_list = []
-            s_dict = {}
-            t_dict = {}
-
-            for c in s:
-                if c not in s_list:
-                    s_list.append(c)
-                    count = s.count(c)
-                    s_dict[c] = count
-
-            for c in t:
-                if c not in t_list:
-                    t_list.append(c)
-                    count = t.count(c)
-                    t_dict[c] = count
-
-            if s_dict == t_dict:
-                return True
-            else:
-                return False
+            return False
 ```
 
 #### Revised Solution
 
 ```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if (len(t) != len(s)):
+def isAnagram(self, s: str, t: str) -> bool:
+    if (len(t) != len(s)):
+        return False
+    for char in t:
+        if (t.count(char) != s.count(char)):
             return False
-        for char in t:
-            if (t.count(char) != s.count(char)):
-                return False
-        return True
+    return True
 ```
 
 ### NeetCode Solution
 
 ```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
+def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
 
-        countS, countT = {}, {}
+    countS, countT = {}, {}
 
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[t[i]] = 1 + countT.get(t[i], 0)
-        return countS == countT
+    for i in range(len(s)):
+        countS[s[i]] = 1 + countS.get(s[i], 0)
+        countT[t[i]] = 1 + countT.get(t[i], 0)
+    return countS == countT
 ```
 
 ### Other Solutions
@@ -146,28 +143,26 @@ class Solution:
 #### Solution 1
 
 ```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        return collections.Counter(s) == collections.Counter(t)
+def isAnagram(self, s: str, t: str) -> bool:
+    return collections.Counter(s) == collections.Counter(t)
 ```
 
 #### Solution 2
 
 ```python
-class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
-        dict = {}
-        for char in s:
-            if char not in dict:
-                dict[char] = 1
-            else:
-                dict[char] += 1
-        for char in t:
-            if char not in dict:
-                return False
-            else:
-                dict[char] -= 1
-        return False if any(dict.values()) else True
+def isAnagram(self, s: str, t: str) -> bool:
+    dict = {}
+    for char in s:
+        if char not in dict:
+            dict[char] = 1
+        else:
+            dict[char] += 1
+    for char in t:
+        if char not in dict:
+            return False
+        else:
+            dict[char] -= 1
+    return False if any(dict.values()) else True
 ```
 
 ## Java
