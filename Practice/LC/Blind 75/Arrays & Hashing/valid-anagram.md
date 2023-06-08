@@ -14,7 +14,7 @@
     - [Input](#input-1)
     - [Output](#output-1)
   - [Constraints](#constraints)
-  - [Follow Up](#follow-up)
+  - [Follow-Up](#follow-up)
 - [Solutions](#solutions)
   - [Python](#python)
     - [My Solutions](#my-solutions)
@@ -71,7 +71,7 @@ false
 - `1 <= s.length, t.length <= 5 * 104`
 - `s` and `t` consist of lowercase English letters.
 
-## Follow Up
+## Follow-Up
 
 What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 

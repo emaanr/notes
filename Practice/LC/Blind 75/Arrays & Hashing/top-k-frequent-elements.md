@@ -7,6 +7,17 @@
 - [Top K Frequent Elements](#top-k-frequent-elements)
 - [Table of Contents](#table-of-contents)
 - [Question](#question)
+  - [Example 1](#example-1)
+    - [Input](#input)
+    - [Output](#output)
+  - [Example 2](#example-2)
+    - [Input](#input-1)
+    - [Output](#output-1)
+  - [Example 3](#example-3)
+    - [Input](#input-2)
+    - [Output](#output-2)
+  - [Constraints](#constraints)
+  - [Follow-Up](#follow-up)
 - [Solutions](#solutions)
   - [Python](#python)
     - [My Solutions](#my-solutions)
@@ -25,6 +36,52 @@
       - [Solution 2](#solution-2-1)
 
 # Question
+
+## Example 1
+
+### Input
+
+```
+
+```
+
+### Output
+
+```
+
+```
+
+## Example 2
+
+### Input
+
+```
+
+```
+
+### Output
+
+```
+
+```
+
+## Example 3
+
+### Input
+
+```
+
+```
+
+### Output
+
+```
+
+```
+
+## Constraints
+
+## Follow-Up
 
 # Solutions
 
