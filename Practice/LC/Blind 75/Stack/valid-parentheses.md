@@ -21,9 +21,9 @@
   - [Python](#python)
     - [My Solutions](#my-solutions)
       - [Initial Solution](#initial-solution)
-        - [Algorithm Walkthrough](#algorithm-walkthrough)
+        - [Algorithm Walkthrough: Stack](#algorithm-walkthrough-stack)
           - [Input](#input-3)
-          - [Data Structure: Stack](#data-structure-stack)
+          - [Variable: Stack](#variable-stack)
           - [Step 1](#step-1)
           - [Step 2](#step-2)
           - [Step 3](#step-3)
@@ -150,7 +150,7 @@ class Solution:
             return False
 ```
 
-##### Algorithm Walkthrough
+##### Algorithm Walkthrough: Stack
 
 ###### Input
 
@@ -158,7 +158,7 @@ class Solution:
 s = "[({})]{}"
 ```
 
-###### Data Structure: Stack
+###### Variable: Stack
 
 ```
 stack = []

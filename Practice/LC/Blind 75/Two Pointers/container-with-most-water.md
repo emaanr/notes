@@ -19,7 +19,14 @@
   - [Python](#python)
     - [My Solutions](#my-solutions)
       - [Initial Solution](#initial-solution)
+        - [Algorithm Walkthrough: Bruteforce](#algorithm-walkthrough-bruteforce)
+          - [Input](#input-2)
+          - [Variables: Two Pointers](#variables-two-pointers)
       - [Revised Solution](#revised-solution)
+        - [Algorithm Walkthrough: Two Pointers](#algorithm-walkthrough-two-pointers)
+          - [Input](#input-3)
+          - [Variables: Two Pointers](#variables-two-pointers-1)
+    - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -92,7 +99,81 @@ height = [1,1]
 
 #### Initial Solution
 
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+
+        maxArea = 0
+
+        for left in range(len(height)):
+            for right in range(left+1, len(height)):
+                area = (right-left) * min(height[right], height[left])
+                maxArea = max(area, maxArea)
+
+        return maxArea
+```
+
+- Correct output, but times out.
+
+##### Algorithm Walkthrough: Bruteforce
+
+###### Input
+
+###### Variables: Two Pointers
+
 #### Revised Solution
+
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+
+        maxArea = 0
+        left = 0
+        right = len(height)-1
+
+        while left != right:
+            area = (right-left) * min(height[left], height[right])
+            maxArea = max(area, maxArea)
+
+            if height[left] < height[right]:
+                left += 1
+            elif height[left] > height[right]:
+                right -= 1
+            elif height[left] == height[right]:
+                if (height[left+1]) > (height[right-1]):
+                    right -= 1
+                else:
+                    left += 1
+
+        return maxArea
+```
+
+##### Algorithm Walkthrough: Two Pointers
+
+###### Input
+
+###### Variables: Two Pointers
+
+### NeetCode Solution
+
+```python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        l, r = 0, len(height) - 1
+        res = 0
+        h = max(height)
+
+        while l < r:
+            res = max(res, min(height[l], height[r]) * (r - l))
+            if height[l] < height[r]:
+                l += 1
+            elif height[r] <= height[l]:
+                r -= 1
+
+            if (r-l) * h <= res:
+                break
+        return res
+```
 
 ### Other Solutions
 
