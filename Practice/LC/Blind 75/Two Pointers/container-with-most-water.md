@@ -37,8 +37,8 @@ You are given an integer array `height` of length `n`. There are `n` vertical li
 
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 
-_Return the maximum amount of water a container can store.
-_
+_Return the maximum amount of water a container can store._
+
 Notice that you may not slant the container.
 
 ## Example 1
@@ -80,8 +80,9 @@ height = [1,1]
 
 ## Constraints
 
-- `1 <= s.length <= 2 * 10^5`
-- `s` consists only of printable ASCII characters.
+- `n == height.length`
+- `2 <= n <= 10^5`
+- `0 <= height[i] <= 10^4`
 
 # Solutions
 
