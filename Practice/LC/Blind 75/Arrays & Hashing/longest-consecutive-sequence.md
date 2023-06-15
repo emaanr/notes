@@ -10,14 +10,11 @@
   - [Example 1](#example-1)
     - [Input](#input)
     - [Output](#output)
+    - [Explanation](#explanation)
   - [Example 2](#example-2)
     - [Input](#input-1)
     - [Output](#output-1)
-  - [Example 3](#example-3)
-    - [Input](#input-2)
-    - [Output](#output-2)
   - [Constraints](#constraints)
-  - [Follow-Up](#follow-up)
 - [Solutions](#solutions)
   - [Python](#python)
     - [My Solutions](#my-solutions)
@@ -37,51 +34,46 @@
 
 # Question
 
+Given an unsorted array of integers `nums`, return the length of the longest consecutive elements sequence.
+
+You must write an algorithm that runs in `O(n)` time.
+
 ## Example 1
 
 ### Input
 
 ```
-
+nums = [100,4,200,1,3,2]
 ```
 
 ### Output
 
 ```
-
+4
 ```
+
+### Explanation
+
+- The longest consecutive elements sequence is `[1, 2, 3, 4]`. Therefore its length is 4.
 
 ## Example 2
 
 ### Input
 
 ```
-
+nums = [0,3,7,2,5,8,4,6,0,1]
 ```
 
 ### Output
 
 ```
-
-```
-
-## Example 3
-
-### Input
-
-```
-
-```
-
-### Output
-
-```
-
+9
 ```
 
 ## Constraints
 
-## Follow-Up
+- `0 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
 
 # Solutions
 

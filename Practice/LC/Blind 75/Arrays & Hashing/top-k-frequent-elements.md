@@ -13,9 +13,6 @@
   - [Example 2](#example-2)
     - [Input](#input-1)
     - [Output](#output-1)
-  - [Example 3](#example-3)
-    - [Input](#input-2)
-    - [Output](#output-2)
   - [Constraints](#constraints)
   - [Follow-Up](#follow-up)
 - [Solutions](#solutions)
@@ -37,18 +34,20 @@
 
 # Question
 
+Given an integer array `nums` and an integer `k`, return the `k` _most frequent elements_. You may return the answer in **any order**.
+
 ## Example 1
 
 ### Input
 
 ```
-
+nums = [1,1,1,2,2,3], k = 2
 ```
 
 ### Output
 
 ```
-
+[1,2]
 ```
 
 ## Example 2
@@ -56,32 +55,25 @@
 ### Input
 
 ```
-
+nums = [1], k = 1
 ```
 
 ### Output
 
 ```
-
-```
-
-## Example 3
-
-### Input
-
-```
-
-```
-
-### Output
-
-```
-
+[1]
 ```
 
 ## Constraints
 
+- `1 <= nums.length <= 10^5`
+- `-10^4 <= nums[i] <= 10^4`
+- `k` is in the range `[1, the number of unique elements in the array]`.
+- It is **guaranteed** that the answer is **unique**.
+
 ## Follow-Up
+
+Your algorithm's time complexity must be better than `O(nlogn)`, where n is the array's size.
 
 # Solutions
 
