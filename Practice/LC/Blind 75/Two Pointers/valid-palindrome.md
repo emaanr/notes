@@ -25,6 +25,7 @@
     - [My Solutions](#my-solutions)
       - [Initial Solution](#initial-solution)
       - [Revised Solution](#revised-solution)
+    - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -110,7 +111,64 @@ true
 
 #### Initial Solution
 
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+
+        # Convert to all lowercase
+        s = s.lower()
+
+        for char in s:
+            if not char.isalnum():
+                s = s.replace(char, "")
+
+        if s[::-1] == s:
+            return True
+        else:
+            return False
+```
+
 #### Revised Solution
+
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+
+        # Convert to lowercase
+        s = s.lower()
+
+        # Remove non-alphanumeric characters
+        s = ''.join(c for c in s if c.isalnum())
+
+        # Compare with reversed string
+        return s == s[::-1]
+```
+
+### NeetCode Solution
+
+```python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        l, r = 0, len(s) - 1
+        while l < r:
+            while l < r and not self.alphanum(s[l]):
+                l += 1
+            while l < r and not self.alphanum(s[r]):
+                r -= 1
+            if s[l].lower() != s[r].lower():
+                return False
+            l += 1
+            r -= 1
+        return True
+
+    # Could write own alpha-numeric function
+    def alphanum(self, c):
+        return (
+            ord("A") <= ord(c) <= ord("Z")
+            or ord("a") <= ord(c) <= ord("z")
+            or ord("0") <= ord(c) <= ord("9")
+        )
+```
 
 ### Other Solutions
 

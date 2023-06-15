@@ -77,6 +77,30 @@ nums = [0,3,7,2,5,8,4,6,0,1]
 
 # Solutions
 
+```python
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if len(nums) <= 1:
+            return len(nums)
+
+        nums = sorted(nums)
+        length = 1
+        longest = 1
+
+        for i in range(0, len(nums)-1):
+            if nums[i] + 1 == nums[i+1]:
+                length += 1
+                if length >= longest:
+                    longest = length
+                    print(f"LENGTH: {length} AND LONGEST: {longest}")
+            elif nums[i] == nums[i+1]:
+                continue
+            else:
+                length = 1
+
+        return longest
+```
+
 ## Python
 
 ### My Solutions
