@@ -164,9 +164,9 @@ s = "[({})]{}"
 stack = []
 ```
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example" src="img/ex.png" />
-</figure>
+</div>
 
 ###### Step 1
 
@@ -174,9 +174,9 @@ stack = []
 2. `stack.append(s[0])`
 3. `stack = ["["]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[0]" src="img/s[0].png" />
-</figure>
+</div>
 
 ###### Step 2
 
@@ -184,9 +184,9 @@ stack = []
 2. `stack.append(s[1])`
 3. `stack = ["[", "("]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[1]" src="img/s[1].png" />
-</figure>
+</div>
 
 ###### Step 3
 
@@ -194,9 +194,9 @@ stack = []
 2. `stack.append(s[2])`
 3. `stack = ["[", "(", "{"]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[2]" src="img/s[2].png" />
-</figure>
+</div>
 
 ###### Step 4
 
@@ -205,9 +205,9 @@ stack = []
    - Because `stack[-1] == "{"` which is a valid matching brace for `s[3] == "}"`
 3. `stack = ["[", "("]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[3]" src="img/s[3].png" />
-</figure>
+</div>
 
 ###### Step 5
 
@@ -216,9 +216,9 @@ stack = []
    - Because `stack[-1] == "("` which is a valid matching brace for `s[4] == ")"`
 3. `stack = ["["]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[4]" src="img/s[4].png" />
-</figure>
+</div>
 
 ###### Step 6
 
@@ -227,9 +227,9 @@ stack = []
    - Because `stack[-1] == "["` which is a valid matching brace for `s[5] == "]"`
 3. `stack = []`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[5]" src="img/s[5].png" />
-</figure>
+</div>
 
 ###### Step 7
 
@@ -237,9 +237,9 @@ stack = []
 2. `stack.append(s[6])`
 3. `stack = ["{"]`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[6]" src="img/s[6].png" />
-</figure>
+</div>
 
 ###### Step 8
 
@@ -248,9 +248,9 @@ stack = []
    - Because `stack[-1] == "{"` which is a valid matching brace for `s[7] == "}"`
 3. `stack = []`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: s[7]" src="img/s[7].png" />
-</figure>
+</div>
 
 ##### Step 9
 
