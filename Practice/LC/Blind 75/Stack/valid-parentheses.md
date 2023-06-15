@@ -257,9 +257,9 @@ stack = []
 1. `stack == []`
 2. `return True`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
   <img title="Example: Result" src="img/ex.png" />
-</figure>
+</div>
 
 #### Revised Solution
 
