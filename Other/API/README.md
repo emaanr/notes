@@ -33,6 +33,10 @@
         - [Example: Facebook \& Slack](#example-facebook--slack)
           - [Triggers](#triggers)
         - [Documentation](#documentation)
+  - [More on API](#more-on-api)
+    - [High Level Overview](#high-level-overview)
+      - [Example: Weather](#example-weather)
+      - [Example: YouTube](#example-youtube-1)
 - [Remote API](#remote-api)
   - [Example: Shazam](#example-shazam)
 - [Web Review](#web-review)
@@ -376,6 +380,129 @@ for entry in os.listdir(current_dur):
   - This is increasingly true if many APIs are being used:
     - Would have to read up on all of them.
     - Would have to potentially set up accounts and keys.
+
+## More on API
+
+More information on APIs including high level overview with diagrams and more practical examples with diagram.
+
+### High Level Overview
+
+<p align="center" width="100%">
+    <img src="img/hlo-api.png">
+</p>
+
+- Consider an application that has taken years of development and a lot of money to build.
+- Would want said application to be easily integratable with other applications and services in order to be useful.
+  - Trying to build custom integrations with thousands of third party apps simply isn't feasible.
+    - APIs mitigate this issue.
+- By building an API into the application, the API acts as a doorway into the application so that other third party applications can yield use from it without needing to provide any custom code whatsoever.
+- Say the `Custom App` wants to access data and features from the `App`.
+  - This can be done using API requests in the form of simple HTTP methods.
+    - The diagram above depicts use of the HTTP `GET` method in order to retrieve information from the application via the API.
+      - The API will return a "response" in JSON format to the `Custom App` with the `App` data requested.
+  - Other HTTP methods are discussed later in this document:
+    - `POST`
+    - `GET`
+    - `PUT`
+    - `PATCH`
+    - `DELETE`
+
+#### Example: Weather
+
+<p align="center" width="100%">
+    <img src="img/hlo-weather-app.png">
+</p>
+
+- Instead of a generically named `App`, consider a `Weather App` of weather stations set up all around the world.
+- Instead of a `Custom App`, consider a `Mobile App`.
+- It is not an easy task to set up a worldwide network of weather stations and compiling all that information is not feasible.
+  - This highlights the usefulness of APIs since they allow any third party application to retrieve this kind of difficult to compile information from applications that have the access to do so.
+- The `Mobile App` sends an API `GET` request that looks something like this:
+
+```
+https://api.openweathermap.org/data/2.5/weather?q?={city_name}&appid={api_key}
+```
+
+- Note that this URL has two fields:
+  - `city_name`
+    - Where the app would enter the city.
+  - `api_key`
+    - Required so the application can keep track of:
+      - Who is requesting.
+      - What is being requested.
+      - How much is requested.
+- The response will be in JSON format and will look something like this:
+
+```json
+"main": {
+  "temp": 78,
+  "feels_like": 85,
+  "temp_min": 60,
+  "temp_max": 84,
+  "pressure": 1025,
+  "humidity": 80
+}
+```
+
+- This information can be taken and displayed on a GUI within the `Mobile App`.
+
+#### Example: YouTube
+
+<p align="center" width="100%">
+    <img src="img/hlo-youtube-app.png">
+</p>
+
+- Instead of a generically named `App`, consider the `YouTube App` consisting of data from YouTube via [YouTube Data API](https://developers.google.com/youtube/v3).
+- Instead of a `Custom App`, consider a `Computer App`.
+- After consulting the documentation, consider the following API `GET` request:
+
+```
+GET https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=emaanr&key=*
+```
+
+1. The first part of an API request is the API resource, in this case the `channels` resource is of interest:
+
+   ```
+   https://youtube.googleapis.com/youtube/v3/channels
+   ```
+
+2. The second part is the query parameters:
+
+   ```
+   ?part=statistics&id=emaanr&key=*
+   ```
+
+- Query parameters include:
+
+  - `part`
+  - `id`
+  - `key`
+
+- The API request returns the following response in JSON format:
+
+```json
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "abcdefghijklmnopqrstuvwxyz",
+      "id": "emaanr",
+      "statistics": {
+        "viewCount": 0,
+        "subscriberCount": 0,
+        "hiddenSubscriberCount": true,
+        "videoCount": 0
+      }
+    }
+  ]
+}
+```
 
 # Remote API
 
