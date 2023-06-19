@@ -10,21 +10,28 @@
   - [Interface](#interface)
     - [Example: Buttons](#example-buttons)
   - [API](#api-1)
+    - [High Level Overview](#high-level-overview)
+      - [HLO Example: Weather](#hlo-example-weather)
+      - [HLO Example: YouTube](#hlo-example-youtube)
     - [Examples](#examples)
       - [Example: Strings](#example-strings)
       - [Example: Operating Systems](#example-operating-systems)
       - [Example: Web Browsers](#example-web-browsers)
     - [Analogies](#analogies)
       - [Restaurant](#restaurant)
+        - [Cooks ⇔ Back End](#cooks--back-end)
+        - [Dining ⇔ Front End](#dining--front-end)
+        - [Server ⇔ API](#server--api)
       - [Puzzle](#puzzle)
-        - [Puzzle Piece](#puzzle-piece)
-        - [Puzzle](#puzzle-1)
-        - [Blanks](#blanks)
+        - [Puzzle Piece ⇔ App](#puzzle-piece--app)
+        - [Puzzle ⇔ Apps](#puzzle--apps)
+        - [Blanks ⇔ API](#blanks--api)
         - [Example: Uber](#example-uber)
         - [Example: Review System](#example-review-system)
-          - [Shape](#shape)
+          - [Shape ⇔ API Definition](#shape--api-definition)
         - [Example: Login Form](#example-login-form)
           - [Endpoint](#endpoint)
+          - [Accepatable Piece ⇔ Endpoint](#accepatable-piece--endpoint)
         - [Frontend-Backend](#frontend-backend)
         - [Example: YouTube](#example-youtube)
           - [Authorization](#authorization)
@@ -33,10 +40,6 @@
         - [Example: Facebook \& Slack](#example-facebook--slack)
           - [Triggers](#triggers)
         - [Documentation](#documentation)
-  - [More on API](#more-on-api)
-    - [High Level Overview](#high-level-overview)
-      - [Example: Weather](#example-weather)
-      - [Example: YouTube](#example-youtube-1)
 - [Remote API](#remote-api)
   - [Example: Shazam](#example-shazam)
 - [Web Review](#web-review)
@@ -62,6 +65,9 @@
         - [Authentication](#authentication)
       - [Status Codes](#status-codes)
 - [REST](#rest)
+  - [REST API](#rest-api)
+    - [Communication](#communication)
+    - [Example: API App](#example-api-app)
   - [RESTful API](#restful-api)
   - [Constraints](#constraints)
     - [Client-Server](#client-server-1)
@@ -80,10 +86,23 @@
       - [Common Status Codes](#common-status-codes)
       - [Status Codes Categories](#status-codes-categories)
     - [API Endpoints](#api-endpoints)
+      - [Example: CRM System](#example-crm-system)
   - [REST \& Python](#rest--python)
     - [Consuming APIs](#consuming-apis)
+      - [`GET`](#get)
+      - [`PUT`](#put)
+      - [`POST`](#post)
+      - [`PATCH`](#patch)
+      - [`DELETE`](#delete)
     - [Building APIs](#building-apis)
+      - [Identify Resources](#identify-resources)
+      - [Define Endpoints](#define-endpoints)
+      - [Pick Response Format](#pick-response-format)
+      - [Design Success Responses](#design-success-responses)
+      - [Design Error Responses](#design-error-responses)
     - [Tools of the Trade](#tools-of-the-trade)
+      - [Flask](#flask)
+      - [Django REST Framework](#django-rest-framework)
   - [Conclusion](#conclusion)
 - [Sources](#sources)
 
@@ -120,6 +139,125 @@ APIs exist for developers to use and extend in their own applications.
     - That is, using the API and honoring the "contract" enforced by it.
 
 > **Note:** In the current technological climate, the term API is almost always used to refer to Web-Based API. However all kinds of APIs exist.
+
+### High Level Overview
+
+<p align="center" width="100%">
+    <img src="img/hlo-api.png">
+</p>
+
+- Consider an application that has taken years of development and a lot of money to build.
+- Would want said application to be easily integratable with other applications and services in order to be useful.
+  - Trying to build custom integrations with thousands of third party apps simply isn't feasible.
+    - APIs mitigate this issue.
+- By building an API into the application, the API acts as a doorway into the application so that other third party applications can yield use from it without needing to provide any custom code whatsoever.
+- Say the `Custom App` wants to access data and features from the `App`.
+  - This can be done using API requests in the form of simple HTTP methods.
+    - The diagram above depicts use of the HTTP `GET` method in order to retrieve information from the application via the API.
+      - The API will return a "response" in JSON format to the `Custom App` with the `App` data requested.
+  - Other HTTP methods are discussed later in this document:
+    - `POST`
+    - `GET`
+    - `PUT`
+    - `PATCH`
+    - `DELETE`
+
+#### HLO Example: Weather
+
+<p align="center" width="100%">
+    <img src="img/hlo-weather-app.png">
+</p>
+
+- Instead of a generically named `App`, consider a `Weather App` of weather stations set up all around the world.
+- Instead of a `Custom App`, consider a `Mobile App`.
+- It is not an easy task to set up a worldwide network of weather stations and compiling all that information is not feasible.
+  - This highlights the usefulness of APIs since they allow any third party application to retrieve this kind of difficult to compile information from applications that have the access to do so.
+- The `Mobile App` sends an API `GET` request that looks something like this:
+
+```
+https://api.openweathermap.org/data/2.5/weather?q?={city_name}&appid={api_key}
+```
+
+- Note that this URL has two fields:
+  - `city_name`
+    - Where the app would enter the city.
+  - `api_key`
+    - Required so the application can keep track of:
+      - Who is requesting.
+      - What is being requested.
+      - How much is requested.
+- The response will be in JSON format and will look something like this:
+
+```json
+"main": {
+  "temp": 78,
+  "feels_like": 85,
+  "temp_min": 60,
+  "temp_max": 84,
+  "pressure": 1025,
+  "humidity": 80
+}
+```
+
+- This information can be taken and displayed on a GUI within the `Mobile App`.
+
+#### HLO Example: YouTube
+
+<p align="center" width="100%">
+    <img src="img/hlo-youtube-app.png">
+</p>
+
+- Instead of a generically named `App`, consider the `YouTube App` consisting of data from YouTube via [YouTube Data API](https://developers.google.com/youtube/v3).
+- Instead of a `Custom App`, consider a `Computer App`.
+- After consulting the documentation, consider the following API `GET` request:
+
+```
+GET https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=emaanr&key=*
+```
+
+1. The first part of an API request is the API resource, in this case the `channels` resource is of interest:
+
+   ```
+   https://youtube.googleapis.com/youtube/v3/channels
+   ```
+
+2. The second part is the query parameters:
+
+   ```
+   ?part=statistics&id=emaanr&key=*
+   ```
+
+- Query parameters include:
+
+  - `part`
+  - `id`
+  - `key`
+
+- The API request returns the following response in JSON format:
+
+```json
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "abcdefghijklmnopqrstuvwxyz",
+      "id": "emaanr",
+      "statistics": {
+        "viewCount": 0,
+        "subscriberCount": 0,
+        "hiddenSubscriberCount": true,
+        "videoCount": 0
+      }
+    }
+  ]
+}
+```
 
 ### Examples
 
@@ -173,6 +311,18 @@ for entry in os.listdir(current_dur):
   - API:
     - Servers in the restaurant.
 
+##### Cooks ⇔ Back End
+
+- The Cooks in the kitchen of a restaurant are analogous with the Back End portion of an application that may use an API.
+
+##### Dining ⇔ Front End
+
+- The Dining Area of a restaurant is analogous with the Front End portion of an application that may use an API.
+
+##### Server ⇔ API
+
+- The Servers of a restaurant are analogous with the API portion of an application that uses as API.
+
 #### Puzzle
 
 - May help to understand the use of an API on a lower-level.
@@ -190,16 +340,16 @@ for entry in os.listdir(current_dur):
   - API Endpoint:
     - Acceptable Piece of a Puzzle Piece.
 
-##### Puzzle Piece
+##### Puzzle Piece ⇔ App
 
 - An individual `App` can be likened to a `Puzzle Piece`.
   - Is some code running on a server.
 
-##### Puzzle
+##### Puzzle ⇔ Apps
 
 - A larger app, comprised of connecting many smaller `Apps` can be likened to a `Puzzle`.
 
-##### Blanks
+##### Blanks ⇔ API
 
 - The parts where the puzzle piece connect, called `Blanks`, are `APIs`.
   - But can also be `UI`.
@@ -232,7 +382,7 @@ for entry in os.listdir(current_dur):
     - Driver
     - Stars
 
-###### Shape
+###### Shape ⇔ API Definition
 
 - If the puzzle piece "fits" then this means the API recieved the required data.
   - In which case, the API or "puzzle piece" can do its job.
@@ -285,6 +435,9 @@ for entry in os.listdir(current_dur):
 - There can be a "piece" for "CREATE ACCOUNT" whose "shape" requires:
   - Email
   - Password
+
+###### Accepatable Piece ⇔ Endpoint
+
 - We can call each `Acceptable Piece` of a `Puzzle Piece` one of its `API Endpoint`s.
 
 > **Note:** In this example, both "LOG IN" and "CREATE ACCOUNT" can be said to have the same "shape" because they require the same data. Depending on which "endpoint" the data is delivered to, the resulting behavior delivered by the API will differ.
@@ -380,129 +533,6 @@ for entry in os.listdir(current_dur):
   - This is increasingly true if many APIs are being used:
     - Would have to read up on all of them.
     - Would have to potentially set up accounts and keys.
-
-## More on API
-
-More information on APIs including high level overview with diagrams and more practical examples with diagram.
-
-### High Level Overview
-
-<p align="center" width="100%">
-    <img src="img/hlo-api.png">
-</p>
-
-- Consider an application that has taken years of development and a lot of money to build.
-- Would want said application to be easily integratable with other applications and services in order to be useful.
-  - Trying to build custom integrations with thousands of third party apps simply isn't feasible.
-    - APIs mitigate this issue.
-- By building an API into the application, the API acts as a doorway into the application so that other third party applications can yield use from it without needing to provide any custom code whatsoever.
-- Say the `Custom App` wants to access data and features from the `App`.
-  - This can be done using API requests in the form of simple HTTP methods.
-    - The diagram above depicts use of the HTTP `GET` method in order to retrieve information from the application via the API.
-      - The API will return a "response" in JSON format to the `Custom App` with the `App` data requested.
-  - Other HTTP methods are discussed later in this document:
-    - `POST`
-    - `GET`
-    - `PUT`
-    - `PATCH`
-    - `DELETE`
-
-#### Example: Weather
-
-<p align="center" width="100%">
-    <img src="img/hlo-weather-app.png">
-</p>
-
-- Instead of a generically named `App`, consider a `Weather App` of weather stations set up all around the world.
-- Instead of a `Custom App`, consider a `Mobile App`.
-- It is not an easy task to set up a worldwide network of weather stations and compiling all that information is not feasible.
-  - This highlights the usefulness of APIs since they allow any third party application to retrieve this kind of difficult to compile information from applications that have the access to do so.
-- The `Mobile App` sends an API `GET` request that looks something like this:
-
-```
-https://api.openweathermap.org/data/2.5/weather?q?={city_name}&appid={api_key}
-```
-
-- Note that this URL has two fields:
-  - `city_name`
-    - Where the app would enter the city.
-  - `api_key`
-    - Required so the application can keep track of:
-      - Who is requesting.
-      - What is being requested.
-      - How much is requested.
-- The response will be in JSON format and will look something like this:
-
-```json
-"main": {
-  "temp": 78,
-  "feels_like": 85,
-  "temp_min": 60,
-  "temp_max": 84,
-  "pressure": 1025,
-  "humidity": 80
-}
-```
-
-- This information can be taken and displayed on a GUI within the `Mobile App`.
-
-#### Example: YouTube
-
-<p align="center" width="100%">
-    <img src="img/hlo-youtube-app.png">
-</p>
-
-- Instead of a generically named `App`, consider the `YouTube App` consisting of data from YouTube via [YouTube Data API](https://developers.google.com/youtube/v3).
-- Instead of a `Custom App`, consider a `Computer App`.
-- After consulting the documentation, consider the following API `GET` request:
-
-```
-GET https://youtube.googleapis.com/youtube/v3/channels?part=statistics&id=emaanr&key=*
-```
-
-1. The first part of an API request is the API resource, in this case the `channels` resource is of interest:
-
-   ```
-   https://youtube.googleapis.com/youtube/v3/channels
-   ```
-
-2. The second part is the query parameters:
-
-   ```
-   ?part=statistics&id=emaanr&key=*
-   ```
-
-- Query parameters include:
-
-  - `part`
-  - `id`
-  - `key`
-
-- The API request returns the following response in JSON format:
-
-```json
-{
-  "kind": "youtube#channelListResponse",
-  "etag": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "pageInfo": {
-    "totalResults": 1,
-    "resultsPerPage": 5
-  },
-  "items": [
-    {
-      "kind": "youtube#channel",
-      "etag": "abcdefghijklmnopqrstuvwxyz",
-      "id": "emaanr",
-      "statistics": {
-        "viewCount": 0,
-        "subscriberCount": 0,
-        "hiddenSubscriberCount": true,
-        "videoCount": 0
-      }
-    }
-  ]
-}
-```
 
 # Remote API
 
@@ -642,6 +672,78 @@ URLs have a scheme portion such as "HTTP".
 - Provides a set of constraints for software architecture to promote performance, scalability, simplicity, and reliability in the system.
 
 > **Note:** REST is not a specification but a set of guidelines on how to architect a network-connected software system.
+
+## REST API
+
+Recall that an API stands for "Application Programming Interface," therefore an API that adhreres to the REST architectural style/standard is a "REST API".
+
+<p align="center" width="100%">
+    <img src="img/triggers.png">
+</p>
+
+- Consider two pieces of software written in different languages.
+  - APIs serve as the interface which allows two applications that are not built exactly the same to communicate with each other.
+  - There is always a "Server" and a "Client" such that the "Client" consumes data from the "Server" who then serves the data as a response to the "Client".
+  - Unlike web requests which return HTML pages, API requests typically serve their information in JSON format.
+
+### Communication
+
+- JSON:
+  - Language of communication.
+- API:
+  - What can be communicated.
+- Endpoints:
+  - Channels for communicated different kinds of information.
+- Client/Server:
+  - Who is communicating.
+
+### Example: API App
+
+<p align="center" width="100%">
+    <img src="img/rest-api-intro.png">
+</p>
+
+- Consider an application written in Python such that it is the "Server" or "Back End" software.
+  - This software is where all the data is accessed and stored within a database.
+  - Because it is undesirable to directly expose the database, access is granted via "Endpoints".
+
+<p align="center" width="100%">
+    <img src="img/rest-api-get-drinks.png">
+</p>
+
+- In this example, consider the endpoint `/drinks` which returns names of "Drinks".
+
+<p align="center" width="100%">
+    <img src="img/rest-api-get-drinks-id.png">
+</p>
+
+- In order to `GET` a specific "Drink", there may be another endpoint which takes a drink `id` such as `/drinks/{id}`
+
+<p align="center" width="100%">
+    <img src="img/rest-api-endpoint.png">
+</p>
+
+- Using these endpoints, another application written in any language such as JavaScript is able to get information about "Drinks" or a specific "Drink" by making requests to these endpoints corresponding web addresses.
+  - APIs will have an address associated with them after which the endpoint follows in the url:
+    - `GET https://drinksapi.com/drinks/{id}`
+      - Subdirectory schema.
+    - `GET https://api.drinks.com/drinks/{id}`
+      - Subdomain schema.
+        - Sometimes APIs have a separate domain for organizational purposes.
+- APIs exists because communicating directly from "Client" to the "Database" can be a security hazard especially if the client is written in JavaScript which is often the case with webpages.
+  - Can view JavaScript source code, so it is undesirable to have sensitive information directly on the page as a result of direct communication between the "Client" and "Database".
+- As a reult, specific "Endpoints" are exposed in order to permit access to certain data.
+
+  - This also assists in versatility because regardless of what language the "Server" is written in, the "Client" will be able to make requests via the "Endpoints" to consume data.
+  - Likewise, the "Client" can be written in any language or be different kinds of applications such as web applications or mobile applications since they can consume the same data via the same channels.
+
+<p align="center" width="100%">
+    <img src="img/rest-api-mobile.png">
+</p>
+
+- Assists in data synchronization across different applications that are pulling from the same data source.
+- Interoperability since many APIs are free, resulting in the creation of many third party apps that support the API functionality.
+  - Will often still need some sort of authorization token, "API Key".
 
 ## RESTful API
 
@@ -808,13 +910,65 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 
 ### API Endpoints
 
+- Endpoints:
+  - The set of public URLs that a REST API exposes for client applications to use in order to access the resources of a web service.
+
+#### Example: CRM System
+
+| HTTP Method | API Endpoint               | Description                  |
+| ----------: | -------------------------- | ---------------------------- |
+|       `GET` | `/customers`               | Get a list of customers.     |
+|       `GET` | `/customers/{customer_id}` | Get a single customer.       |
+|      `POST` | `/customers`               | Create a new customer.       |
+|       `PUT` | `/customers/{customer_id}` | Update a customer.           |
+|     `PATCH` | `/customers/{customer_id}` | Partially update a customer. |
+|    `DELETE` | `/customers/{customer_ud}` | Delete a customer.           |
+
+> **Note:** The base URL for the endpoints has been omitted for brevity. In reality, the full URL path is needed to access an API endpoint:
+>
+> ```
+> https://api.example.com/customers
+> ```
+>
+> This is the full URL that would be used to access these endpoints. The base URL is everything besides `/customers`.
+
+- Consider the API Endpoints for a hypothetical Customer Relationship Management System.
+- Each of the endpoints above performs a different action based on the HTTP method.
+  - Some of the endpoints include `{customer_id}` which notates that a numeric `customer_id` needs to be appended to the resource in order to consume the desired data.
+- The example above contains endpoints related to only one resource, `/customers`.
+  - However, in production-ready REST APIs, there are many more resources available.
+
 ## REST & Python
 
 ### Consuming APIs
 
+#### `GET`
+
+#### `PUT`
+
+#### `POST`
+
+#### `PATCH`
+
+#### `DELETE`
+
 ### Building APIs
 
+#### Identify Resources
+
+#### Define Endpoints
+
+#### Pick Response Format
+
+#### Design Success Responses
+
+#### Design Error Responses
+
 ### Tools of the Trade
+
+#### Flask
+
+#### Django REST Framework
 
 ## Conclusion
 
@@ -831,3 +985,5 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 [[5]](https://www.youtube.com/watch?v=ZveW4_ZJtVY) **CertBros:** APIs Explained w/ Real World Examples
 
 [[6]](https://www.youtube.com/watch?v=dfaj4vI8QxE) **Code with Ana Kubów**: How to Use APIs
+
+[[7]](https://www.youtube.com/watch?v=-MTSQjw5DrM) **Fireship:** RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express
