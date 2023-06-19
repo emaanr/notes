@@ -162,82 +162,191 @@
     - [`del`](#del)
     - [`global`](#global)
     - [`nonlocal`](#nonlocal)
-- [Built-In Functions](#built-in-functions)
-  - [`abs()`](#abs)
-  - [`aiter()`](#aiter)
-  - [`all()`](#all)
-  - [`any()`](#any)
-  - [`anext()`](#anext)
-  - [`ascii()`](#ascii)
-  - [`bin()`](#bin)
-  - [`bool()`](#bool)
-  - [`breakpoint()`](#breakpoint)
-  - [`bytearray()`](#bytearray)
-  - [`bytes()`](#bytes)
-  - [`callable()`](#callable)
-  - [`chr()`](#chr)
-  - [`classmethod()`](#classmethod)
-  - [`compile()`](#compile)
-  - [`complex()`](#complex)
-  - [`delattr()`](#delattr)
-  - [`dict()`](#dict)
-  - [`dir()`](#dir)
-  - [`divmod()`](#divmod)
-  - [`enumerate()`](#enumerate)
-  - [`eval()`](#eval)
-  - [`exec()`](#exec)
-  - [`filter()`](#filter)
-  - [`float()`](#float)
-  - [`format()`](#format)
-  - [`frozenset()`](#frozenset)
-  - [`getattr()`](#getattr)
-  - [`globals()`](#globals)
-  - [`hasattr()`](#hasattr)
-  - [`hash()`](#hash)
-  - [`help()`](#help)
-  - [`hex()`](#hex)
-  - [`id()`](#id)
-  - [`input()`](#input-1)
-  - [`int()`](#int)
-  - [`isinstance()`](#isinstance)
-  - [`issubclass()`](#issubclass)
-  - [`iter()`](#iter)
-  - [`len()`](#len)
-  - [`list()`](#list)
-  - [`locals()`](#locals)
-  - [`map()`](#map)
-  - [`max()`](#max)
-  - [`memoryview()`](#memoryview)
-  - [`min()`](#min)
-  - [`next()`](#next)
-  - [`object()`](#object)
-  - [`oct()`](#oct)
-  - [`open()`](#open)
-  - [`ord()`](#ord)
-  - [`pow()`](#pow)
-  - [`print()`](#print-1)
-  - [`property()`](#property)
-  - [`range()`](#range)
-  - [`repr()`](#repr)
-  - [`reversed()`](#reversed)
-  - [`round()`](#round)
-  - [`set()`](#set-1)
-  - [`setattr()`](#setattr)
-  - [`slice()`](#slice)
-  - [`sorted()`](#sorted)
-  - [`staticmethod()`](#staticmethod)
-  - [`str()`](#str)
-  - [`sum()`](#sum)
-  - [`super()`](#super)
-  - [`tuple()`](#tuple)
-  - [`type()`](#type)
-  - [`vars()`](#vars)
-  - [`zip()`](#zip)
-  - [`__import__()`](#__import__)
+- [Built-Ins](#built-ins)
+  - [Functions](#functions-1)
+    - [`abs()`](#abs)
+    - [`aiter()`](#aiter)
+    - [`all()`](#all)
+    - [`any()`](#any)
+    - [`anext()`](#anext)
+    - [`ascii()`](#ascii)
+    - [`bin()`](#bin)
+    - [`bool()`](#bool)
+    - [`breakpoint()`](#breakpoint)
+    - [`bytearray()`](#bytearray)
+    - [`bytes()`](#bytes)
+    - [`callable()`](#callable)
+    - [`chr()`](#chr)
+    - [`classmethod()`](#classmethod)
+    - [`compile()`](#compile)
+    - [`complex()`](#complex)
+    - [`delattr()`](#delattr)
+    - [`dict()`](#dict)
+    - [`dir()`](#dir)
+    - [`divmod()`](#divmod)
+    - [`enumerate()`](#enumerate)
+    - [`eval()`](#eval)
+    - [`exec()`](#exec)
+    - [`filter()`](#filter)
+    - [`float()`](#float)
+    - [`format()`](#format)
+    - [`frozenset()`](#frozenset)
+    - [`getattr()`](#getattr)
+    - [`globals()`](#globals)
+    - [`hasattr()`](#hasattr)
+    - [`hash()`](#hash)
+    - [`help()`](#help)
+    - [`hex()`](#hex)
+    - [`id()`](#id)
+    - [`input()`](#input-1)
+    - [`int()`](#int)
+    - [`isinstance()`](#isinstance)
+    - [`issubclass()`](#issubclass)
+    - [`iter()`](#iter)
+    - [`len()`](#len)
+    - [`list()`](#list)
+    - [`locals()`](#locals)
+    - [`map()`](#map)
+    - [`max()`](#max)
+    - [`memoryview()`](#memoryview)
+    - [`min()`](#min)
+    - [`next()`](#next)
+    - [`object()`](#object)
+    - [`oct()`](#oct)
+    - [`open()`](#open)
+    - [`ord()`](#ord)
+    - [`pow()`](#pow)
+    - [`print()`](#print-1)
+    - [`property()`](#property)
+    - [`range()`](#range)
+    - [`repr()`](#repr)
+    - [`reversed()`](#reversed)
+    - [`round()`](#round)
+    - [`set()`](#set-1)
+    - [`setattr()`](#setattr)
+    - [`slice()`](#slice)
+    - [`sorted()`](#sorted)
+    - [`staticmethod()`](#staticmethod)
+    - [`str()`](#str)
+    - [`sum()`](#sum)
+    - [`super()`](#super)
+    - [`tuple()`](#tuple)
+    - [`type()`](#type)
+    - [`vars()`](#vars)
+    - [`zip()`](#zip)
+    - [`__import__()`](#__import__)
+  - [String Methods](#string-methods)
+    - [`capitalize()`](#capitalize)
+    - [`casefold()`](#casefold)
+    - [`center()`](#center)
+    - [`count()`](#count)
+    - [`encode()`](#encode)
+    - [`endswith()`](#endswith)
+    - [`expandtabs()`](#expandtabs)
+    - [`find()`](#find)
+    - [`format()`](#format-1)
+    - [`format_map()`](#format_map)
+    - [`index()`](#index)
+    - [`isalnum()`](#isalnum)
+    - [`isalpha()`](#isalpha)
+    - [`isascii()`](#isascii)
+    - [`isdecimal()`](#isdecimal)
+    - [`isdigit()`](#isdigit)
+    - [`isidentifier()`](#isidentifier)
+    - [`islower()`](#islower)
+    - [`isnumeric()`](#isnumeric)
+    - [`isprintable()`](#isprintable)
+    - [`isspace()`](#isspace)
+    - [`istitle()`](#istitle)
+    - [`isupper()`](#isupper)
+    - [`join()`](#join)
+    - [`ljust()`](#ljust)
+    - [`lower()`](#lower)
+    - [`lstrip()`](#lstrip)
+    - [`maketrans()`](#maketrans)
+    - [`partition()`](#partition)
+    - [`replace()`](#replace)
+    - [`rfind()`](#rfind)
+    - [`rindex()`](#rindex)
+    - [`rjust()`](#rjust)
+    - [`rpartition()`](#rpartition)
+    - [`rsplit()`](#rsplit)
+    - [`rstrip()`](#rstrip)
+    - [`split()`](#split)
+    - [`splitlines()`](#splitlines)
+    - [`startswith()`](#startswith)
+    - [`strip()`](#strip)
+    - [`swapcase()`](#swapcase)
+    - [`title()`](#title)
+    - [`translate()`](#translate)
+    - [`upper()`](#upper)
+    - [`zfill()`](#zfill)
+  - [List Methods](#list-methods)
+    - [`append()`](#append)
+    - [`clear()`](#clear)
+    - [`copy()`](#copy)
+    - [`count()`](#count-1)
+    - [`extend()`](#extend)
+    - [`index()`](#index-1)
+    - [`insert()`](#insert)
+    - [`pop()`](#pop)
+    - [`remove()`](#remove)
+    - [`reverse()`](#reverse)
+    - [`sort()`](#sort)
+  - [Dictionary Methods](#dictionary-methods)
+    - [`clear()`](#clear-1)
+    - [`copy()`](#copy-1)
+    - [`fromkeys()`](#fromkeys)
+    - [`get()`](#get-1)
+    - [`items()`](#items)
+    - [`keys()`](#keys)
+    - [`pop()`](#pop-1)
+    - [`popitem()`](#popitem)
+    - [`setdefault()`](#setdefault)
+    - [`update()`](#update)
+    - [`values()`](#values)
+  - [Tuple Methods](#tuple-methods)
+    - [`count()`](#count-2)
+    - [`index()`](#index-2)
+  - [Set Methods](#set-methods)
+    - [`add()`](#add)
+    - [`clear()`](#clear-2)
+    - [`copy()`](#copy-2)
+    - [`difference()`](#difference)
+    - [`difference_update()`](#difference_update)
+    - [`discard()`](#discard)
+    - [`intersection()`](#intersection)
+    - [`intersection_update()`](#intersection_update)
+    - [`isdisjoint()`](#isdisjoint)
+    - [`issubset()`](#issubset)
+    - [`issuperset()`](#issuperset)
+    - [`pop()`](#pop-2)
+    - [`remove()`](#remove-1)
+    - [`symmetric_difference()`](#symmetric_difference)
+    - [`symmetric_difference_update()`](#symmetric_difference_update)
+    - [`union()`](#union)
+    - [`update()`](#update-1)
+  - [File Methods](#file-methods)
+    - [`close()`](#close)
+    - [`detach()`](#detach)
+    - [`fileno()`](#fileno)
+    - [`flush()`](#flush)
+    - [`isatty()`](#isatty)
+    - [`read()`](#read)
+    - [`readable()`](#readable)
+    - [`readline()`](#readline)
+    - [`readlines()`](#readlines)
+    - [`seek()`](#seek)
+    - [`seekable()`](#seekable)
+    - [`tell()`](#tell)
+    - [`truncate()`](#truncate)
+    - [`writable()`](#writable)
+    - [`write()`](#write)
+    - [`writelines()`](#writelines)
 - [Functions vs Methods](#functions-vs-methods)
   - [Function Aliasing](#function-aliasing)
     - [Why use Aliases](#why-use-aliases)
-  - [Functions](#functions-1)
+  - [Functions](#functions-2)
   - [Methods](#methods)
   - [Example](#example)
 - [Dunder](#dunder)
@@ -324,7 +433,7 @@
     - [Generator Methods](#generator-methods)
       - [`send()`](#send)
       - [`throw()`](#throw)
-      - [`close()`](#close)
+      - [`close()`](#close-1)
   - [Comprehensions](#comprehensions)
     - [Lists](#lists)
       - [List vs Array](#list-vs-array)
@@ -838,6 +947,8 @@ Hey, Program User!
   - Due to reduced complexity, template strings are a safer choice.
 
 ## Numerical Formatting
+
+// Do this section
 
 # User Input
 
@@ -1870,153 +1981,399 @@ def <function>():
 
 ### `nonlocal`
 
-# Built-In Functions
+# Built-Ins
+
+## Functions
 
 The Python interpreter has a number of functions and types built into it that are always available.
 
 - [Python Documentation: Built-Ins](https://docs.python.org/3/library/functions.html)
 
-## `abs()`
+### `abs()`
 
-## `aiter()`
+### `aiter()`
 
-## `all()`
+### `all()`
 
-## `any()`
+### `any()`
 
-## `anext()`
+### `anext()`
 
-## `ascii()`
+### `ascii()`
 
-## `bin()`
+### `bin()`
 
-## `bool()`
+### `bool()`
 
-## `breakpoint()`
+### `breakpoint()`
 
-## `bytearray()`
+### `bytearray()`
 
-## `bytes()`
+### `bytes()`
 
-## `callable()`
+### `callable()`
 
-## `chr()`
+### `chr()`
 
-## `classmethod()`
+### `classmethod()`
 
-## `compile()`
+### `compile()`
 
-## `complex()`
+### `complex()`
 
-## `delattr()`
+### `delattr()`
 
-## `dict()`
+### `dict()`
 
-## `dir()`
+### `dir()`
 
-## `divmod()`
+### `divmod()`
 
-## `enumerate()`
+### `enumerate()`
 
-## `eval()`
+### `eval()`
 
-## `exec()`
+### `exec()`
 
-## `filter()`
+### `filter()`
 
-## `float()`
+### `float()`
 
-## `format()`
+### `format()`
 
-## `frozenset()`
+### `frozenset()`
 
-## `getattr()`
+### `getattr()`
 
-## `globals()`
+### `globals()`
 
-## `hasattr()`
+### `hasattr()`
 
-## `hash()`
+### `hash()`
 
-## `help()`
+### `help()`
 
-## `hex()`
+### `hex()`
 
-## `id()`
+### `id()`
 
-## `input()`
+### `input()`
 
-## `int()`
+### `int()`
 
-## `isinstance()`
+### `isinstance()`
 
-## `issubclass()`
+### `issubclass()`
 
-## `iter()`
+### `iter()`
 
-## `len()`
+### `len()`
 
-## `list()`
+### `list()`
 
-## `locals()`
+### `locals()`
 
-## `map()`
+### `map()`
 
-## `max()`
+### `max()`
 
-## `memoryview()`
+### `memoryview()`
 
-## `min()`
+### `min()`
 
-## `next()`
+### `next()`
 
-## `object()`
+### `object()`
 
-## `oct()`
+### `oct()`
 
-## `open()`
+### `open()`
 
-## `ord()`
+### `ord()`
 
-## `pow()`
+### `pow()`
 
-## `print()`
+### `print()`
 
-## `property()`
+### `property()`
 
-## `range()`
+### `range()`
 
-## `repr()`
+### `repr()`
 
-## `reversed()`
+### `reversed()`
 
-## `round()`
+### `round()`
 
-## `set()`
+### `set()`
 
-## `setattr()`
+### `setattr()`
 
-## `slice()`
+### `slice()`
 
-## `sorted()`
+### `sorted()`
 
-## `staticmethod()`
+### `staticmethod()`
 
-## `str()`
+### `str()`
 
-## `sum()`
+### `sum()`
 
-## `super()`
+### `super()`
 
-## `tuple()`
+### `tuple()`
 
-## `type()`
+### `type()`
 
-## `vars()`
+### `vars()`
 
-## `zip()`
+### `zip()`
 
-## `__import__()`
+### `__import__()`
+
+## String Methods
+
+Python has a set of built-in methods that you can use on strings.
+
+- [Python: String Methods](https://www.w3schools.com/python/python_ref_string.asp)
+
+> **Note:** All string methods returns new values. They do not change the original string.
+
+### `capitalize()`
+
+### `casefold()`
+
+### `center()`
+
+### `count()`
+
+### `encode()`
+
+### `endswith()`
+
+### `expandtabs()`
+
+### `find()`
+
+### `format()`
+
+### `format_map()`
+
+### `index()`
+
+### `isalnum()`
+
+### `isalpha()`
+
+### `isascii()`
+
+### `isdecimal()`
+
+### `isdigit()`
+
+### `isidentifier()`
+
+### `islower()`
+
+### `isnumeric()`
+
+### `isprintable()`
+
+### `isspace()`
+
+### `istitle()`
+
+### `isupper()`
+
+### `join()`
+
+### `ljust()`
+
+### `lower()`
+
+### `lstrip()`
+
+### `maketrans()`
+
+### `partition()`
+
+### `replace()`
+
+### `rfind()`
+
+### `rindex()`
+
+### `rjust()`
+
+### `rpartition()`
+
+### `rsplit()`
+
+### `rstrip()`
+
+### `split()`
+
+### `splitlines()`
+
+### `startswith()`
+
+### `strip()`
+
+### `swapcase()`
+
+### `title()`
+
+### `translate()`
+
+### `upper()`
+
+### `zfill()`
+
+## List Methods
+
+Python has a set of built-in methods that you can use on lists/arrays.
+
+- [Python: List Methods](https://www.w3schools.com/python/python_ref_list.asp)
+
+> **Note:** Python does not have built-in support for Arrays, but Python Lists can be used instead.
+
+### `append()`
+
+### `clear()`
+
+### `copy()`
+
+### `count()`
+
+### `extend()`
+
+### `index()`
+
+### `insert()`
+
+### `pop()`
+
+### `remove()`
+
+### `reverse()`
+
+### `sort()`
+
+## Dictionary Methods
+
+Python has a set of built-in methods that you can use on dictionaries.
+
+- [Python: Dictionary Methods](https://www.w3schools.com/python/python_ref_dictionary.asp)
+
+### `clear()`
+
+### `copy()`
+
+### `fromkeys()`
+
+### `get()`
+
+### `items()`
+
+### `keys()`
+
+### `pop()`
+
+### `popitem()`
+
+### `setdefault()`
+
+### `update()`
+
+### `values()`
+
+## Tuple Methods
+
+Python has two built-in methods that you can use on tuples.
+
+- [Python: Tuple Methods](https://www.w3schools.com/python/python_ref_tuple.asp)
+
+### `count()`
+
+### `index()`
+
+## Set Methods
+
+Python has a set of built-in methods that you can use on sets.
+
+- [Python: Set Methods](https://www.w3schools.com/python/python_ref_set.asp)
+
+### `add()`
+
+### `clear()`
+
+### `copy()`
+
+### `difference()`
+
+### `difference_update()`
+
+### `discard()`
+
+### `intersection()`
+
+### `intersection_update()`
+
+### `isdisjoint()`
+
+### `issubset()`
+
+### `issuperset()`
+
+### `pop()`
+
+### `remove()`
+
+### `symmetric_difference()`
+
+### `symmetric_difference_update()`
+
+### `union()`
+
+### `update()`
+
+## File Methods
+
+Python has a set of methods available for the file object.
+
+- [Python: File Methods](https://www.w3schools.com/python/python_ref_file.asp)
+
+### `close()`
+
+### `detach()`
+
+### `fileno()`
+
+### `flush()`
+
+### `isatty()`
+
+### `read()`
+
+### `readable()`
+
+### `readline()`
+
+### `readlines()`
+
+### `seek()`
+
+### `seekable()`
+
+### `tell()`
+
+### `truncate()`
+
+### `writable()`
+
+### `write()`
+
+### `writelines()`
 
 # Functions vs Methods
 
