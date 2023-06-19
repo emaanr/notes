@@ -343,6 +343,40 @@
     - [`writable()`](#writable)
     - [`write()`](#write)
     - [`writelines()`](#writelines)
+  - [Exceptions](#exceptions)
+    - [`ArithmeticError`](#arithmeticerror)
+    - [`AssertionError`](#assertionerror)
+    - [`AttributeError`](#attributeerror)
+    - [`Exception`](#exception)
+    - [`EOFError`](#eoferror)
+    - [`FloatingPointError`](#floatingpointerror)
+    - [`GeneratorExit`](#generatorexit)
+    - [`ImportError`](#importerror)
+    - [`IndentationError`](#indentationerror)
+    - [`IndexError`](#indexerror)
+    - [`KeyError`](#keyerror)
+    - [`KeyboardInterrupt`](#keyboardinterrupt)
+    - [`LookupError`](#lookuperror)
+    - [`MemoryError`](#memoryerror)
+    - [`NameError`](#nameerror)
+    - [`NotImplementedError`](#notimplementederror)
+    - [`OSError`](#oserror)
+    - [`OverflowError`](#overflowerror)
+    - [`ReferenceError`](#referenceerror)
+    - [`RuntimeError`](#runtimeerror)
+    - [`StopIteration`](#stopiteration)
+    - [`SyntaxError`](#syntaxerror)
+    - [`TabError`](#taberror)
+    - [`SystemError`](#systemerror)
+    - [`SystemExit`](#systemexit)
+    - [`TypeError`](#typeerror-3)
+    - [`UnboundLocalError`](#unboundlocalerror)
+    - [`UnicodeError`](#unicodeerror)
+    - [`UnicodeEncodeError`](#unicodeencodeerror)
+    - [`UnicodeDecodeError`](#unicodedecodeerror)
+    - [`UnicodeTranslateError`](#unicodetranslateerror)
+    - [`ValueError`](#valueerror)
+    - [`ZeroDivisionError`](#zerodivisionerror)
 - [Functions vs Methods](#functions-vs-methods)
   - [Function Aliasing](#function-aliasing)
     - [Why use Aliases](#why-use-aliases)
@@ -411,7 +445,7 @@
           - [`iter()`](#iter-1)
         - [`iterator.__next__()`](#iterator__next__)
           - [`next()`](#next-1)
-          - [`StopIteration`](#stopiteration)
+          - [`StopIteration`](#stopiteration-1)
         - [`itertools`](#itertools)
       - [Limitations](#limitations)
     - [Why Separate](#why-separate)
@@ -1985,7 +2019,7 @@ def <function>():
 
 ## Functions
 
-The Python interpreter has a number of functions and types built into it that are always available.
+The Python interpreter has a number of functions and types built into it that are always available:
 
 - [Python Documentation: Built-Ins](https://docs.python.org/3/library/functions.html)
 
@@ -2133,7 +2167,7 @@ The Python interpreter has a number of functions and types built into it that ar
 
 ## String Methods
 
-Python has a set of built-in methods that you can use on strings.
+Python has a set of built-in methods that you can use on strings:
 
 - [Python: String Methods](https://www.w3schools.com/python/python_ref_string.asp)
 
@@ -2231,7 +2265,7 @@ Python has a set of built-in methods that you can use on strings.
 
 ## List Methods
 
-Python has a set of built-in methods that you can use on lists/arrays.
+Python has a set of built-in methods that you can use on lists/arrays:
 
 - [Python: List Methods](https://www.w3schools.com/python/python_ref_list.asp)
 
@@ -2261,7 +2295,7 @@ Python has a set of built-in methods that you can use on lists/arrays.
 
 ## Dictionary Methods
 
-Python has a set of built-in methods that you can use on dictionaries.
+Python has a set of built-in methods that you can use on dictionaries:
 
 - [Python: Dictionary Methods](https://www.w3schools.com/python/python_ref_dictionary.asp)
 
@@ -2289,7 +2323,7 @@ Python has a set of built-in methods that you can use on dictionaries.
 
 ## Tuple Methods
 
-Python has two built-in methods that you can use on tuples.
+Python has two built-in methods that you can use on tuples:
 
 - [Python: Tuple Methods](https://www.w3schools.com/python/python_ref_tuple.asp)
 
@@ -2299,7 +2333,7 @@ Python has two built-in methods that you can use on tuples.
 
 ## Set Methods
 
-Python has a set of built-in methods that you can use on sets.
+Python has a set of built-in methods that you can use on sets:
 
 - [Python: Set Methods](https://www.w3schools.com/python/python_ref_set.asp)
 
@@ -2339,7 +2373,7 @@ Python has a set of built-in methods that you can use on sets.
 
 ## File Methods
 
-Python has a set of methods available for the file object.
+Python has a set of methods available for the file object:
 
 - [Python: File Methods](https://www.w3schools.com/python/python_ref_file.asp)
 
@@ -2374,6 +2408,78 @@ Python has a set of methods available for the file object.
 ### `write()`
 
 ### `writelines()`
+
+## Exceptions
+
+Built-in exceptions that are usually raised in Python:
+
+- [Python: Exceptions](https://www.w3schools.com/python/python_ref_exceptions.asp)
+
+### `ArithmeticError`
+
+### `AssertionError`
+
+### `AttributeError`
+
+### `Exception`
+
+### `EOFError`
+
+### `FloatingPointError`
+
+### `GeneratorExit`
+
+### `ImportError`
+
+### `IndentationError`
+
+### `IndexError`
+
+### `KeyError`
+
+### `KeyboardInterrupt`
+
+### `LookupError`
+
+### `MemoryError`
+
+### `NameError`
+
+### `NotImplementedError`
+
+### `OSError`
+
+### `OverflowError`
+
+### `ReferenceError`
+
+### `RuntimeError`
+
+### `StopIteration`
+
+### `SyntaxError`
+
+### `TabError`
+
+### `SystemError`
+
+### `SystemExit`
+
+### `TypeError`
+
+### `UnboundLocalError`
+
+### `UnicodeError`
+
+### `UnicodeEncodeError`
+
+### `UnicodeDecodeError`
+
+### `UnicodeTranslateError`
+
+### `ValueError`
+
+### `ZeroDivisionError`
 
 # Functions vs Methods
 
