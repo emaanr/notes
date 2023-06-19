@@ -32,7 +32,7 @@
           - [Step 6](#step-6)
           - [Step 7](#step-7)
           - [Step 8](#step-8)
-        - [Step 9](#step-9)
+          - [Step 9](#step-9)
       - [Revised Solution](#revised-solution)
     - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
@@ -252,7 +252,7 @@ stack = []
   <img title="Example: s[7]" src="img/s[7].png" />
 </div>
 
-##### Step 9
+###### Step 9
 
 1. `stack == []`
 2. `return True`
