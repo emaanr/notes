@@ -61,6 +61,17 @@
       - [Parser Feature](#parser-feature)
     - [`from string import Template`](#from-string-import-template)
   - [Numerical Formatting](#numerical-formatting)
+    - [Round](#round)
+      - [Nearest Integer](#nearest-integer)
+      - [Decimal Places](#decimal-places)
+    - [Percentage](#percentage)
+    - [Currency](#currency)
+    - [Comma Separator](#comma-separator)
+    - [Scientific Notation](#scientific-notation)
+    - [Zeroes](#zeroes)
+      - [Leading](#leading)
+      - [Trailing](#trailing)
+    - [Other Base](#other-base)
 - [User Input](#user-input)
   - [`input()`](#input)
 - [Math](#math)
@@ -221,7 +232,7 @@
     - [`range()`](#range)
     - [`repr()`](#repr)
     - [`reversed()`](#reversed)
-    - [`round()`](#round)
+    - [`round()`](#round-1)
     - [`set()`](#set-1)
     - [`setattr()`](#setattr)
     - [`slice()`](#slice)
@@ -794,6 +805,9 @@ My favorite number is 25
 
 # Formatting
 
+1. String Formatting
+2. Numerical Formatting
+
 ## String Formatting
 
 There have been a number of ways to format strings:
@@ -982,7 +996,42 @@ Hey, Program User!
 
 ## Numerical Formatting
 
-// Do this section
+1. Round
+   1. Nearest Integer
+   2. Decimal Places
+2. Percentage
+3. Currency
+4. Comma Separator
+5. Scientific Notation
+6. Zeroes
+   1. Leading
+   2. Trailing
+7. Other Base
+
+### Round
+
+1. Nearest Integer
+2. Decimal Places
+
+#### Nearest Integer
+
+#### Decimal Places
+
+### Percentage
+
+### Currency
+
+### Comma Separator
+
+### Scientific Notation
+
+### Zeroes
+
+#### Leading
+
+#### Trailing
+
+### Other Base
 
 # User Input
 
