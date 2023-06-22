@@ -1,6 +1,6 @@
 # Questions & Answers
 
-    Some questions and answers (with the help of ChatGPT) that came up during my studies.
+    Some Questions (that came up during my studying) and Answers (with the help of ChatGPT).
 
 # Table of Contents
 
