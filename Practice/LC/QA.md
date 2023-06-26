@@ -7,12 +7,12 @@
 - [Questions \& Answers](#questions--answers)
 - [Table of Contents](#table-of-contents)
 - [Sliding Window Algorithm](#sliding-window-algorithm)
+  - [What is the Sliding Window Algorithm?](#what-is-the-sliding-window-algorithm)
   - [What is the Difference between a Static Sliding Window and a Dynamic Sliding Window?](#what-is-the-difference-between-a-static-sliding-window-and-a-dynamic-sliding-window)
     - [Static Sliding Window](#static-sliding-window)
     - [Dynamic Sliding Window](#dynamic-sliding-window)
     - [Conclusion](#conclusion)
-  - [What is the Sliding Window Algorithm?](#what-is-the-sliding-window-algorithm)
-  - [Does the Sliding Window Algorithm always shrink from the Left and grow to the Right?](#does-the-sliding-window-algorithm-always-shrink-from-the-left-and-grow-to-the-right)
+  - [Does the Sliding Window Algorithm always Shrink from the Left and Grow to the Right?](#does-the-sliding-window-algorithm-always-shrink-from-the-left-and-grow-to-the-right)
   - [What is the Difference between the Sliding Window Algorithm and the Two Pointers Approach?](#what-is-the-difference-between-the-sliding-window-algorithm-and-the-two-pointers-approach)
     - [Two Pointers Approach](#two-pointers-approach)
     - [Sliding Window Algorithm](#sliding-window-algorithm-1)
@@ -22,30 +22,8 @@
 
 1. What is the Sliding Window Algorithm?
 2. What is the Difference between a Static Sliding Window and a Dynamic Sliding Window?
-3. Does the Sliding Window Algorithm always shrink from the Left and grow to the Right?
+3. Does the Sliding Window Algorithm always Shrink from the Left and Grow to the Right?
 4. What is the Difference between the Sliding Window Algorithm and the Two Pointers Approach?
-
-## What is the Difference between a Static Sliding Window and a Dynamic Sliding Window?
-
-The terms "Static Sliding Window" and "Dynamic Sliding Window" refer to different variations of the Sliding Window Algorithm based on how the window size is determined and whether it can change during the algorithm's execution.
-
-### Static Sliding Window
-
-- In a Static Sliding Window, the window size remains fixed throughout the execution of the algorithm. It means that the number of elements or the range of indices included in the window remains constant. The static window slides through the data structure, processing the elements within the fixed-size window at each step.
-- Static sliding windows are often used when the problem requires analyzing or computing values within a fixed-size subset of the data structure. The window size is typically determined in advance based on the problem's constraints or requirements.
-
-### Dynamic Sliding Window
-
-- In a Dynamic Sliding Window, the window size can change during the execution of the algorithm. The size of the window is adjusted dynamically based on certain conditions or criteria. As the window slides through the data structure, the window size may grow or shrink depending on the specific problem and the values encountered.
-- Dynamic sliding windows are useful when the problem requires finding an optimal or maximum/minimum size window that satisfies certain conditions. The window size is adjusted dynamically based on the problem's constraints, and it may expand or contract as the algorithm progresses.
-
-### Conclusion
-
-- The choice between a Static Sliding Window and a Dynamic Sliding Window depends on the problem you are trying to solve.
-  - If the problem requires analyzing a fixed-size subset of the data structure, a Static Sliding Window is appropriate.
-  - If the problem requires finding an optimal window size or adjusting the window based on certain conditions, a Dynamic Sliding Window would be more suitable.
-
-> **Note:** It's worth noting that the distinction between Static and Dynamic Sliding Windows is not always strict. Some problems may have a combination of static and dynamic characteristics, where the window size is initially fixed but can be adjusted dynamically based on certain conditions or criteria. In such cases, the algorithm may start as a Static Sliding Window and transition into a Dynamic Sliding Window approach as the algorithm progresses.
 
 ## What is the Sliding Window Algorithm?
 
@@ -70,7 +48,29 @@ The Sliding Window Algorithm is a technique used to efficiently process or analy
 - It's important to note that the specific details of implementing a Sliding Window Algorithm may vary depending on the problem you're solving. The size of the window, the conditions for sliding or terminating the algorithm, and the computations performed on the elements within the window will all depend on the problem's requirements.
 - Overall, the Sliding Window Algorithm is a powerful technique for solving a wide range of problems efficiently, particularly those that involve analyzing or processing subsets of data within a larger structure.
 
-## Does the Sliding Window Algorithm always shrink from the Left and grow to the Right?
+## What is the Difference between a Static Sliding Window and a Dynamic Sliding Window?
+
+The terms "Static Sliding Window" and "Dynamic Sliding Window" refer to different variations of the Sliding Window Algorithm based on how the window size is determined and whether it can change during the algorithm's execution.
+
+### Static Sliding Window
+
+- In a Static Sliding Window, the window size remains fixed throughout the execution of the algorithm. It means that the number of elements or the range of indices included in the window remains constant. The static window slides through the data structure, processing the elements within the fixed-size window at each step.
+- Static sliding windows are often used when the problem requires analyzing or computing values within a fixed-size subset of the data structure. The window size is typically determined in advance based on the problem's constraints or requirements.
+
+### Dynamic Sliding Window
+
+- In a Dynamic Sliding Window, the window size can change during the execution of the algorithm. The size of the window is adjusted dynamically based on certain conditions or criteria. As the window slides through the data structure, the window size may grow or shrink depending on the specific problem and the values encountered.
+- Dynamic sliding windows are useful when the problem requires finding an optimal or maximum/minimum size window that satisfies certain conditions. The window size is adjusted dynamically based on the problem's constraints, and it may expand or contract as the algorithm progresses.
+
+### Conclusion
+
+- The choice between a Static Sliding Window and a Dynamic Sliding Window depends on the problem you are trying to solve.
+  - If the problem requires analyzing a fixed-size subset of the data structure, a Static Sliding Window is appropriate.
+  - If the problem requires finding an optimal window size or adjusting the window based on certain conditions, a Dynamic Sliding Window would be more suitable.
+
+> **Note:** It's worth noting that the distinction between Static and Dynamic Sliding Windows is not always strict. Some problems may have a combination of static and dynamic characteristics, where the window size is initially fixed but can be adjusted dynamically based on certain conditions or criteria. In such cases, the algorithm may start as a Static Sliding Window and transition into a Dynamic Sliding Window approach as the algorithm progresses.
+
+## Does the Sliding Window Algorithm always Shrink from the Left and Grow to the Right?
 
 No, in Sliding Window Algorithm problems, you don't necessarily always grow to the right and shrink from the left. The direction of growth and shrinkage depends on the specific problem and the requirements of the algorithm.
 
