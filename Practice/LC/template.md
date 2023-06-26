@@ -64,15 +64,61 @@
 
 ### My Solutions
 
+```python
+
+```
+
 #### Initial Solution
+
+```python
+
+```
+
+#### Algorithm Walkthrough: [Technique/Data Structure]
+
+##### Input
+
+```
+
+```
+
+##### Variable(s): [Technique/Data Structure]
+
+```
+
+```
+
+##### Step n
 
 #### Revised Solution
 
+```python
+
+```
+
+### Neetcode Solution
+
+```python
+
+```
+
 ### Other Solutions
 
-#### Solution 1
+#### Friend Solution
 
-#### Solution 2
+##### Algorithm Walkthrough
+
+#### Solution 1: [Technique/Data Structure]
+
+```python
+
+```
+
+#### Solution 2: [Technique/Data Structure]
+
+```python
+
+```
 
 ## Java
 
@@ -80,10 +126,48 @@
 
 #### Initial Solution
 
+```java
+
+```
+
+#### Algorithm Walkthrough: [Technique/Data Structure]
+
+##### Input
+
+```
+
+```
+
+##### Variable(s): [Technique/Data Structure]
+
+```
+
+```
+
+##### Step n
+
 #### Revised Solution
+
+```java
+
+```
+
+### NeetCode Solution
+
+```java
+
+```
 
 ### Other Solutions
 
-#### Solution 1
+#### Solution 1: [Technique/Data Structure]
 
-#### Solution 2
+```java
+
+```
+
+#### Solution 2: [Technique/Data Structure]
+
+```java
+
+```

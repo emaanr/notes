@@ -13,7 +13,7 @@
       - [Initial Solution](#initial-solution)
     - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
-      - [Friend's Solution](#friends-solution)
+      - [Friend Solution](#friend-solution)
         - [Algorithm Walkthrough](#algorithm-walkthrough)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -81,7 +81,7 @@ class Solution:
 
 ### Other Solutions
 
-#### Friend's Solution
+#### Friend Solution
 
 ```python
 class Solution:
@@ -105,7 +105,7 @@ class Solution:
 
 ##### Algorithm Walkthrough
 
-- The code snippet you provided performs the following operation on a string:
+- The code snippet provided performs the following operation on a string:
 
   1. `string.index(i)` finds the index of the first occurrence of the character `i` within the string.
   2. `string.index(i) + 1` adds `1` to the index value obtained in the previous step. This effectively gives the index of the character immediately following the first occurrence of `i`.

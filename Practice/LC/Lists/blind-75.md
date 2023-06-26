@@ -1,6 +1,6 @@
 # Blind 75
 
-    List of 75 frequently asked LeetCode questions.
+    List of 75 frequently asked LeetCode problems.
 
 # Table Of Contents
 
