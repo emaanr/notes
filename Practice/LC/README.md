@@ -1,6 +1,6 @@
 # LeetCode
 
-    Repository for LeetCode problems and lists of LeetCode problems in order to study and practice.
+    LeetCode problems and lists of LeetCode problems in order to study and practice.
 
 # Table of Contents
 
