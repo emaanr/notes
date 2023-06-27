@@ -61,17 +61,53 @@
       - [Parser Feature](#parser-feature)
     - [`from string import Template`](#from-string-import-template)
   - [Numerical Formatting](#numerical-formatting)
+    - [Alignment](#alignment)
+      - [Spaces ` `](#spaces--)
+      - [Specified Character `c`](#specified-character-c)
+      - [Equal Symbol `=`](#equal-symbol-)
+      - [`ValueError`](#valueerror)
+    - [Leading Sign Prefix](#leading-sign-prefix)
     - [Round](#round)
       - [Nearest Integer](#nearest-integer)
+        - [`str.format()`](#strformat-1)
+        - [`f`-String](#f-string)
+        - [`round()`](#round-1)
       - [Decimal Places](#decimal-places)
+        - [`str.format()`](#strformat-2)
+        - [`f`-String](#f-string-1)
     - [Percentage](#percentage)
+      - [`str.format()`](#strformat-3)
+      - [`f`-String](#f-string-2)
     - [Currency](#currency)
-    - [Comma Separator](#comma-separator)
+      - [`locale`](#locale)
+    - [Thousands Separator](#thousands-separator)
+      - [Comma](#comma)
+        - [`str.format()`](#strformat-4)
+        - [`f`-String](#f-string-3)
+      - [Underscore](#underscore)
+        - [`str.format()`](#strformat-5)
+        - [`f`-String](#f-string-4)
     - [Scientific Notation](#scientific-notation)
-    - [Zeroes](#zeroes)
+      - [`str.format()`](#strformat-6)
+      - [`f`-String](#f-string-5)
+    - [Padding](#padding)
       - [Leading](#leading)
+        - [`str.format()`](#strformat-7)
+        - [`f`-String](#f-string-6)
       - [Trailing](#trailing)
+        - [`str.format()`](#strformat-8)
+        - [`f`-String](#f-string-7)
     - [Other Base](#other-base)
+      - [Binary](#binary)
+        - [`str.format()`](#strformat-9)
+        - [`f`-String](#f-string-8)
+      - [Octal](#octal)
+        - [`str.format()`](#strformat-10)
+        - [`f`-String](#f-string-9)
+      - [Hexadecimal](#hexadecimal)
+        - [`str.format()`](#strformat-11)
+        - [`f`-String](#f-string-10)
+    - [Datetime](#datetime)
 - [User Input](#user-input)
   - [`input()`](#input)
 - [Math](#math)
@@ -232,7 +268,7 @@
     - [`range()`](#range)
     - [`repr()`](#repr)
     - [`reversed()`](#reversed)
-    - [`round()`](#round-1)
+    - [`round()`](#round-2)
     - [`set()`](#set-1)
     - [`setattr()`](#setattr)
     - [`slice()`](#slice)
@@ -386,7 +422,7 @@
     - [`UnicodeEncodeError`](#unicodeencodeerror)
     - [`UnicodeDecodeError`](#unicodedecodeerror)
     - [`UnicodeTranslateError`](#unicodetranslateerror)
-    - [`ValueError`](#valueerror)
+    - [`ValueError`](#valueerror-1)
     - [`ZeroDivisionError`](#zerodivisionerror)
 - [Functions vs Methods](#functions-vs-methods)
   - [Function Aliasing](#function-aliasing)
@@ -829,15 +865,14 @@ There have been a number of ways to format strings:
 
 ### `%` Operator
 
-The "Old Style" enables simple positional string formatting denoted by `%s` using the `%` operator.
-
-- Emulates the [`printf`](https://docs.python.org/3/library/stdtypes.html#old-string-formatting) functionality found in other languages.
-- Technically superseded by "New Style" formatting in Python 3.
-- Other format specifiers exist as well to convert non-string values to a string in the desired position such as, but not limited to:
-  - `%d`
-    - Converts `int` positional element to `str` class.
-  - `%x`
-    - Converts `int` positional element as its hexadecimal value to `str` class.
+- The "Old Style" enables simple positional string formatting denoted by `%s` using the `%` operator.
+  - Emulates the [`printf`](https://docs.python.org/3/library/stdtypes.html#old-string-formatting) functionality found in other languages.
+  - Technically superseded by "New Style" formatting in Python 3.
+  - Other format specifiers exist as well to convert non-string values to a string in the desired position such as, but not limited to:
+    - `%d`
+      - Converts `int` positional element to `str` class.
+    - `%x`
+      - Converts `int` positional element as its hexadecimal value to `str` class.
 
 #### Single Substitution
 
@@ -885,9 +920,8 @@ My name is Emaan Rana
 
 ### `str.format()`
 
-The "New-Style" introduced in Python 3 which replaces the `%` operator special syntax in effort to make syntax for string formatting more regular.
-
-- Formatting is now handled by calling `.format()` on a string object.
+- The "New-Style" introduced in Python 3 which replaces the `%` operator special syntax in effort to make syntax for string formatting more regular.
+  - Formatting is now handled by calling `.format()` on a string object.
 
 #### Single Substitution
 
@@ -928,15 +962,14 @@ My name is Emaan Rana
 
 ### `f`-Strings
 
-Read as "format strings" or "formatted string literals", `f`-Strings are another way to format strings in Python using "String Interpolation".
-
-- Lets you use embedded Python expressions inside string constants.
-- Powerful because:
-  - Can embed arbitrary Python expressions.
-  - Can do inline arithmetic with it.
-- Similar to using format specifiers in other languages.
-- Denote location of variable using `{}` notation within the string and include the name of the variable in it like so: `{<var>}`.
-  - Can be used with single `f''` or double `f""` quotes.
+- Read as "format strings" or "formatted string literals", `f`-Strings are another way to format strings in Python using "String Interpolation".
+  - Lets you use embedded Python expressions inside string constants.
+  - Powerful because:
+    - Can embed arbitrary Python expressions.
+    - Can do inline arithmetic with it.
+  - Similar to using format specifiers in other languages.
+  - Denote location of variable using `{}` notation within the string and include the name of the variable in it like so: `{<var>}`.
+    - Can be used with single `f''` or double `f""` quotes.
 
 ```python
 age = 23
@@ -972,9 +1005,8 @@ My name is Emaan Rana and I am 23 years old
 
 ### `from string import Template`
 
-A simpler and less powerful means of formatting strings that excludes the use of format specifiers.
-
-- Requires some manual labor, that is, we cannot simply use format specifier`%x` to convert to hexadecimal.
+- A simpler and less powerful means of formatting strings that excludes the use of format specifiers.
+  - Requires some manual labor, that is, we cannot simply use format specifier`%x` to convert to hexadecimal.
 
 ```python
 from string import Template
@@ -996,17 +1028,104 @@ Hey, Program User!
 
 ## Numerical Formatting
 
-1. Round
+1. Alignment
+2. Leading Sign Prefix
+3. Round
    1. Nearest Integer
    2. Decimal Places
-2. Percentage
-3. Currency
-4. Comma Separator
-5. Scientific Notation
-6. Zeroes
+4. Percentage
+5. Currency
+6. Thousands Separator
+   1. Comma
+   2. Underscore
+7. Scientific Notation
+8. Padding
    1. Leading
    2. Trailing
-7. Other Base
+9. Other Base
+10. Binary
+11. Octal
+12. Hexadecimal
+13. Datetime
+
+### Alignment
+
+- The `<`, `^`, and `>` characters can be used to left-align, center-align, and right-align respectively in addition to`n`total characters using the following format specifiers`:<n`, `:^n`, and `:>n`.
+
+#### Spaces ` `
+
+```python
+# Left: 100
+print('Left  : {:<10}'.format(100))
+# Center:    100
+print('Center: {:^10}'.format(100))
+# Right:        100
+print('Right : {:>10}'.format(100))
+```
+
+#### Specified Character `c`
+
+```python
+# Left: 100*******
+print('Left  : {:*<10}'.format(100))
+# Center: ***100****
+print('Center: {:*^10}'.format(100))
+# Right: *******100
+print('Right : {:*>10}'.format(100))
+```
+
+#### Equal Symbol `=`
+
+```python
+# Sign: 000000-100
+print('Sign: {:0>10}'.format(-100))
+# Sign: -000000100
+print('Sign: {:0=10}'.format(-100))
+```
+
+#### `ValueError`
+
+- While `<`, `^`, and `>` can be used with strings, an error is raised if `=` is used.
+- To apply `=` to a string, you must first convert the string to a number with `int()` or `float()`.
+
+```python
+print('Sign: {:0=10}'.format('-100'))
+# ValueError: '=' alignment not allowed in string format specifier
+
+print('Sign: {:0=10}'.format(int('-100')))
+# Sign: -000000100
+```
+
+### Leading Sign Prefix
+
+- By default, only negative numbers are prefixed with a sign `-`.
+- However, by using `+` in the format string, positive numbers are prefixed with `+`.
+- By using space in the format string, positive numbers are prefixed with a space.
+- The sign option should be written after the alignment option.
+
+```python
+# Sign: 100
+print('Sign: {}'.format(100))
+# Sign: -100
+print('Sign: {}'.format(-100))
+
+# Sign: +100
+print('Sign: {:+}'.format(100))
+# Sign: -100
+print('Sign: {:+}'.format(-100))
+
+# Sign:  100
+print('Sign: {: }'.format(100))
+# Sign: -100
+print('Sign: {: }'.format(-100))
+
+# Sign: ***100
+print('Sign: {:*>6}'.format(100))
+# Sign: **-100
+print('Sign: {:*>6}'.format(-100))
+```
+
+> **Note:** By default, the positive number is padded with an additional character when padding.
 
 ### Round
 
@@ -1015,23 +1134,369 @@ Hey, Program User!
 
 #### Nearest Integer
 
+- Round a float number to the nearest integer.
+
+##### `str.format()`
+
+```python
+num = 3.141592653589793
+print("Nearest integer of num is {:.0f}".format(num))
+```
+
+```
+Nearest integer of num is 3
+```
+
+##### `f`-String
+
+```python
+num = 3.141592653589793
+print(f"Nearest integer of num is {num:.0f}")
+```
+
+```
+Nearest integer of num is 3
+```
+
+##### `round()`
+
+```python
+num = 3.141592653589793
+print(f"Nearest integer of num is {round(num)}")
+```
+
+```
+Nearest integer of num is 3
+```
+
 #### Decimal Places
+
+- Round a float number to some number of decimal places using format specifiers `.2f`, `.3f`, or `.nf` for `n` decimal places.
+
+##### `str.format()`
+
+```python
+num = 3.141592653589793
+print("Rounding num to 2 decimal places is {:.2f}".format(num))
+```
+
+```
+Rounding num to 2 decimal places is 3.14
+```
+
+##### `f`-String
+
+```python
+num = 3.141592653589793
+print(f"Rounding num to 2 decimal places is {num:.2f}")
+```
+
+```
+Rounding num to 2 decimal places is 3.14
+```
 
 ### Percentage
 
+- Format a percentage sign `%` after rounding a float to `n` decimal places by simply including the `%` sign after the `.nf` format specifier.
+
+#### `str.format()`
+
+```python
+num = 3.141592653589793
+print("{:.2f}%".format(num))
+```
+
+```
+3.14%
+```
+
+#### `f`-String
+
+```python
+num = 3.141592653589793
+print(f"{num:.2f}%")
+```
+
+```
+3.14%
+```
+
 ### Currency
 
-### Comma Separator
+- Numerical values can be formatted as a currency value using the Python `locale` module.
+- Set the currency locale using `locale.setLocale()` and format currency using `locale.currency()`.
+
+#### `locale`
+
+```python
+import locale
+
+amount = 25000
+
+# Set locale to US
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+# Format currency value
+dollar = locale.currency(amount, grouping=True)
+print(dollar)
+```
+
+```
+$25,000.00
+```
+
+### Thousands Separator
+
+1. Comma
+2. Underscore
+
+#### Comma
+
+- Comma separated numbers are easier to read and can be added using the format specifier `:,` or `:,.nf` for `n` decimal places.
+- For `float`s, only the integer part is separated.
+
+##### `str.format()`
+
+```python
+num = 1234567890
+print("{:,}".format(num))
+```
+
+```
+1,234,567,890
+```
+
+##### `f`-String
+
+```python
+num = 1234567890
+print(f"{num:,.2f}")
+```
+
+```
+1,234,567,890.00
+```
+
+#### Underscore
+
+- Underscores can be used as a thousands separator as of Python 3.6 using `:_` or `:_.nf` for `n` decimal places.
+- For `float`s, only the integer part is separated.
+
+##### `str.format()`
+
+```python
+num = 1234.56789
+print("{:_}".format(num))
+```
+
+```
+1,234.56789
+```
+
+##### `f`-String
+
+```python
+num = 1234.56789
+print("{:_}".format(num))
+```
+
+```
+1_234.56789
+```
 
 ### Scientific Notation
 
-### Zeroes
+- Format a number in scientific notation using the format specifier `e` or `E`.
+
+#### `str.format()`
+
+```python
+num = 123456789
+print("{:e}".format(num))
+```
+
+```
+1.234568e+09
+```
+
+#### `f`-String
+
+```python
+num = 123456789
+print(f"{num:E}")
+```
+
+```
+1.234568E+09
+```
+
+### Padding
+
+1. Leading
+2. Trailing
 
 #### Leading
 
+- Pad numerical values with leading character `c` to be of length `n` using the format specifiers `:c>n` or `:cn` or `:0n` if leading with zeroes.
+
+##### `str.format()`
+
+```python
+num = 25
+print('{:0>9}'.format(num))
+```
+
+```
+000000025
+```
+
+##### `f`-String
+
+```python
+num = 25
+print(f"{num:09}")
+```
+
+```
+000000025
+```
+
 #### Trailing
 
+- Pad numerical values with trailing character `c` to be of length `n` using the format specifiers `:c<n` or `:c<n`.
+
+##### `str.format()`
+
+```python
+num = 25
+print("{:c<9}".format(num))
+```
+
+```
+25ccccccc
+```
+
+##### `f`-String
+
+```python
+num = 25
+print(f"{num:#<9}")
+```
+
+```
+25#######
+```
+
 ### Other Base
+
+1. Binary
+2. Octal
+3. Hexadecimal
+
+#### Binary
+
+- Format numbers to binary using `:b` format specifier.
+- Optionally include `#` character to include prefixes.
+- Only the underscore `_` can be used as a separator.
+  - Underscores are inserted every 4 digits.
+
+##### `str.format()`
+
+```python
+num = 255
+print("{}".format(num), "in binary is", "{:b}".format(num))
+```
+
+```
+255 in binary is 11111111
+```
+
+##### `f`-String
+
+```python
+num = 255
+print(f"{num} in binary is {num:b}")
+```
+
+```
+255 in binary is 11111111
+```
+
+#### Octal
+
+- Format numbers to octal using `:o` format specifier.
+- Optionally include `#` character to include prefixes.
+- Only the underscore `_` can be used as a separator.
+  - Underscores are inserted every 4 digits.
+
+##### `str.format()`
+
+```python
+num = 255
+print("{}".format(num), "in octal is", "{:o}".format(num))
+```
+
+```
+255 in octal is 377
+```
+
+##### `f`-String
+
+```python
+num = 255
+print(f"{num} in octal is {num:o}")
+```
+
+```
+255 in octal is 377
+```
+
+#### Hexadecimal
+
+- Format numbers to hexadecimal using `:x` for lowercase characters and `:X` for uppercase characters.
+- Optionally include `#` character to include prefixes.
+- Only the underscore `_` can be used as a separator.
+  - Underscores are inserted every 4 digits.
+
+##### `str.format()`
+
+```python
+num = 255
+print("{}".format(num), "in hexadecimal is", "{:#011_x}".format(num))
+```
+
+```
+255 in hexadecimal is 0x0000_00ff
+```
+
+##### `f`-String
+
+```python
+num = 255
+print(f"{num} in hexadecimal is {num:X}")
+```
+
+```
+255 in hexadecimal is FF
+```
+
+### Datetime
+
+- Format specifiers can be used for `datetime`, `date`, and `time` objects from the `datetime` module in format strings.
+
+```python
+import datetime
+
+dt = datetime.datetime(1999, 10, 31, 23, 59, 99)
+
+print('datetime: {}'.format(dt))
+# datetime: 1999-10-31 23:59:59
+
+print('datetime: {:%A, %m/%d/%Y %I:%M:%S %p}'.format(dt))
+# datetime: Sunday, 10/31/1999 11:59:59 PM
+
+print('datetime: {}'.format(dt.isoformat()))
+# datetime: 1999-10-31T23:59:59
+```
 
 # User Input
 
