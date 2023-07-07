@@ -41,7 +41,6 @@
 - [Sources](#sources)
 - [Resources](#resources)
 
-
 # Repositories
 
     Repository-related inquiries and commands.
@@ -56,37 +55,38 @@
 Make sure there is a newly initialized and empty repository with the same name as the folder you wish to push.
 
 1. `git init`
-2. `git commit -m <msg>`
-3. `git branch -M main`
-4. `git remote add origin https://github.com/<username>/<repo>.git`
-5. `git push -u origin main`
+2. `git add .`
+3. `git commit -m <msg>`
+4. `git branch -M main`
+5. `git remote add origin https://github.com/<username>/<repo>.git`
+6. `git push -u origin main`
 
 ### `git init`
 
-   - Initialize repository, this creates a `.git` folder in the project's root folder (whose name should be the same as the repo you are trying to push to).
+- Initialize repository, this creates a `.git` folder in the project's root folder (whose name should be the same as the repo you are trying to push to).
 
 ### `git add .`
 
-   - Add all files to be staged for commit.
+- Add all files to be staged for commit.
 
 ### `git commit -m <msg>`
 
-   - Commit staged files with a commit message using `-m <msg>` where `<msg>` message is surrounded in single quotes or double quotes.
+- Commit staged files with a commit message using `-m <msg>` where `<msg>` message is surrounded in single quotes or double quotes.
 
 ### `git branch -M main`
 
-   - This branch renames the default branch name `master` to `main` via the use of the `-M` flag.
-   - I prefer to use `main` over `master`, otherwise this step could be skipped entirely.
+- This branch renames the default branch name `master` to `main` via the use of the `-M` flag.
+- I prefer to use `main` over `master`, otherwise this step could be skipped entirely.
 
 ### `git remote add origin https://github.com/<username>/<repo>.git`
 
-   - To tell the local git repository on your computer which remote repository `<repo>` to send changes to.
+- To tell the local git repository on your computer which remote repository `<repo>` to send changes to.
 
 ### `git push -u origin main`
 
-   - The `-u` flag adds a tracking reference to the upstream server you are pushing to.
-   - This means that every next push/pull done from within our local repository will know to send/retrieve information to/from the `main` branch.
-   - Recall that if you didn't do `git branch -M main` then you would instead invoke `git push -u origin master` at this point.
+- The `-u` flag adds a tracking reference to the upstream server you are pushing to.
+- This means that every next push/pull done from within our local repository will know to send/retrieve information to/from the `main` branch.
+- Recall that if you didn't do `git branch -M main` then you would instead invoke `git push -u origin master` at this point.
 
 ## Repository Topic
 
