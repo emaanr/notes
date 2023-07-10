@@ -4,6 +4,12 @@
 
 # Table of Contents
 
+- [CapitalOne](#capitalone)
+- [Table of Contents](#table-of-contents)
+- [Hard](#hard)
+- [Medium](#medium)
+- [Easy](#easy)
+
 # Hard
 
 - [ ] [Reverse Nodes in k-Group](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/25/reverse-nodes-in-k-group.md)
