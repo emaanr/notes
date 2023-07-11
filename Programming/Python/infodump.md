@@ -3383,7 +3383,7 @@ Distinguishing between some important concepts in Python:
   - `set`
 
 <div align="center" width="100%">
-    <img title="Relationship Diagram: Containers vs Iterables vs Iterators vs Generators vs Comprehension" src="img/iter/relationship.png">
+    <img title="Relationship Diagram: Containers vs Iterables vs Iterators vs Generators vs Comprehension" src="img/iter/relationship.png"><br>
     <figcaption><b>Relationship Diagram:</b> Containers vs Iterables vs Iterators vs Generators vs Comprehension</figcaption>
 </div>
 
@@ -3434,7 +3434,7 @@ An iterable is any object that can return an iterator, and an iterator is the ob
 - Note that every iterator is also an iterable, but not every iterable is an iterator.
 
 <div align="center" width="100%">
-    <img title="Flow Chart: Iteration Behavior" src="img/iter/behavior.png">
+    <img title="Flow Chart: Iteration Behavior" src="img/iter/behavior.png"><br>
     <figcaption><b>Flow Chart:</b> Iteration Behavior</figcaption>
 </div>
 
@@ -3547,7 +3547,7 @@ for elem in x:
 ```
 
 <div align="center" width="100%">
-    <img title="Example: Iteration" src="img/iter/example.png">
+    <img title="Example: Iteration" src="img/iter/example.png"><br>
     <figcaption><b>Example:</b> Iteration</figcaption>
 </div>
 
@@ -3671,7 +3671,7 @@ It is iterable
 #### Limitations
 
 <div align="center" width="100%">
-    <img title="Flow Chart: Iteration Limitations" src="img/iter/limitations.png">
+    <img title="Flow Chart: Iteration Limitations" src="img/iter/limitations.png"><br>
     <figcaption><b>Flow Chart:</b> Iteration Limitations</figcaption>
 </div>
 
