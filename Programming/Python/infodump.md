@@ -3382,10 +3382,10 @@ Distinguishing between some important concepts in Python:
   - `dict`
   - `set`
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
     <img title="Relationship Diagram: Containers vs Iterables vs Iterators vs Generators vs Comprehension" src="img/iter/relationship.png">
     <figcaption><b>Relationship Diagram:</b> Containers vs Iterables vs Iterators vs Generators vs Comprehension</figcaption>
-</figure>
+</div>
 
 ## Containers
 
@@ -3433,10 +3433,10 @@ An iterable is any object that can return an iterator, and an iterator is the ob
 
 - Note that every iterator is also an iterable, but not every iterable is an iterator.
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
     <img title="Flow Chart: Iteration Behavior" src="img/iter/behavior.png">
     <figcaption><b>Flow Chart:</b> Iteration Behavior</figcaption>
-</figure>
+</div>
 
 Iterables:
 
@@ -3546,10 +3546,10 @@ for elem in x:
   ...
 ```
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
     <img title="Example: Iteration" src="img/iter/example.png">
     <figcaption><b>Example:</b> Iteration</figcaption>
-</figure>
+</div>
 
 #### Disassembly
 
@@ -3670,10 +3670,10 @@ It is iterable
 
 #### Limitations
 
-<figure align="center" width="100%">
+<div align="center" width="100%">
     <img title="Flow Chart: Iteration Limitations" src="img/iter/limitations.png">
     <figcaption><b>Flow Chart:</b> Iteration Limitations</figcaption>
-</figure>
+</div>
 
 - Can only go forward with iterator.
   - No way to obtain previous element.
