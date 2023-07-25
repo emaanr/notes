@@ -64,10 +64,6 @@
 
 ### My Solutions
 
-```python
-
-```
-
 #### Initial Solution
 
 ```python
