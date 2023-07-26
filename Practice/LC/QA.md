@@ -17,6 +17,8 @@
     - [Two Pointers Approach](#two-pointers-approach)
     - [Sliding Window Algorithm](#sliding-window-algorithm-1)
     - [Conclusion](#conclusion-1)
+- [Linked List Data Structure](#linked-list-data-structure)
+  - [What are Fast and Slow Pointers when working with Linked Lists?](#what-are-fast-and-slow-pointers-when-working-with-linked-lists)
 
 # Sliding Window Algorithm
 
@@ -102,3 +104,33 @@ Using Two Pointers to solve a problem and implementing the Sliding Window Algori
   - The Sliding Window Algorithm is tailored for analyzing or computing values within a fixed-size window.
 
 > **Note:** It's worth noting that the Sliding Window Algorithm can incorporate the Two Pointers technique. In some cases, the sliding window may involve two pointers that move in the same direction or towards each other, depending on the problem requirements. The specific approach to solving a problem will depend on the problem itself and the most efficient way to process the data.
+
+# Linked List Data Structure
+
+1. What are Fast and Slow Pointers when working with Linked Lists?
+
+## What are Fast and Slow Pointers when working with Linked Lists?
+
+The concept of Fast and Slow Pointers is a common technique used to solve various problems related to linked lists efficiently. It involves using two pointers that move through the linked list at different speeds. The Fast Pointer moves faster than the Slow Pointer, allowing you to perform specific operations or find certain properties in the linked list effectively.
+
+- Here's a brief explanation of how Fast and Slow Pointers work with examples:
+
+  1. Finding the Middle of the Linked List:
+
+     - To find the middle node of a linked list, you can use the Fast and Slow Pointers.
+     - The Slow Pointer moves one step at a time (increments by one), and the Fast Pointer moves two steps at a time (increments by two).
+     - When the Fast Pointer reaches the end of the linked list (i.e., points to null or None), the Slow Pointer will be at the middle node.
+     - This technique is often used in problems where you need to divide the linked list into two parts.
+
+  2. Detecting Cycles in the Linked List (Cycle Detection):
+
+     - Fast and Slow Pointers can be used to detect cycles in a linked list.
+     - In this scenario, the Fast Pointer moves two steps at a time, and the Slow Pointer moves one step at a time.
+     - If there is a cycle in the linked list, the Fast Pointer will eventually catch up to the Slow Pointer, and they will meet at some point within the cycle.
+
+  3. Checking Palindromes in Linked Lists:
+
+     - For palindrome-checking problems with linked lists, you can use the Fast and Slow Pointer technique.
+     - The Slow Pointer advances one step at a time, while the Fast Pointer advances two steps at a time.
+     - While moving, you can reverse the first half of the linked list using the Slow pointer.
+     - When the Fast Pointer reaches the end, the Slow Pointer will be at the middle, and you can compare the first half (which is reversed) with the second half to check for a palindrome.
