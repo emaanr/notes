@@ -134,3 +134,5 @@ The concept of Fast and Slow Pointers is a common technique used to solve variou
      - The Slow Pointer advances one step at a time, while the Fast Pointer advances two steps at a time.
      - While moving, you can reverse the first half of the linked list using the Slow pointer.
      - When the Fast Pointer reaches the end, the Slow Pointer will be at the middle, and you can compare the first half (which is reversed) with the second half to check for a palindrome.
+
+The key advantage of using Fast and Slow Pointers is that it allows you to navigate the linked list with a time complexity of $O(n)$, where `n` is the number of nodes in the list. This technique often simplifies the algorithms for linked list problems, making them more efficient and concise.
