@@ -1,3 +1,11 @@
+<details>
+
+```python
+print("Code snippet")
+```
+
+</details>
+
 # [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
     Easy
