@@ -69,9 +69,7 @@ true
 
 <details><summary>My Solutions</summary><p> <!-- My Solutions Start -->
 
-<details><summary>Initial Solution</summary><p> <!-- Initial Solution Start -->
-
-<div>
+<details><summary>Initial Solution</summary></p> <!-- Initial Solution Start -->
 
 ```python
 def containsDuplicate(nums):
@@ -81,11 +79,9 @@ def containsDuplicate(nums):
     return False
 ```
 
-</div>
-
 - Correct output, but times out.
 
-</p></details> <!-- Initial Solution End -->
+</details> <!-- Initial Solution End -->
 
 <details><summary>Revised Solution</summary><p> <!-- Revised Solution Start -->
 
