@@ -1,11 +1,3 @@
-<details>
-
-```python
-print("Code snippet")
-```
-
-</details>
-
 # [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
     Easy
@@ -77,7 +69,7 @@ true
 
 <details><summary>My Solutions</summary></p> <!-- My Solutions Start -->
 
-<details><summary>Initial Solution</summary></br> <!-- Initial Solution Start -->
+<details><summary>Initial Solution</summary> <!-- Initial Solution Start -->
 
 ```python
 def containsDuplicate(nums):
