@@ -2,119 +2,74 @@
 
     Easy
 
-# Table of Contents
-
-- [Contains Duplicate](#contains-duplicate)
-- [Table of Contents](#table-of-contents)
-- [Question](#question)
-  - [Example 1](#example-1)
-    - [Input](#input)
-    - [Output](#output)
-  - [Example 2](#example-2)
-    - [Input](#input-1)
-    - [Output](#output-1)
-  - [Example 3](#example-3)
-    - [Input](#input-2)
-    - [Output](#output-2)
-  - [Constraints](#constraints)
-- [Solutions](#solutions)
-  - [Python](#python)
-    - [My Solutions](#my-solutions)
-      - [Initial Solution](#initial-solution)
-      - [Revised Solution](#revised-solution)
-    - [NeetCode Solution](#neetcode-solution)
-    - [Other Solutions](#other-solutions)
-      - [Solution 1: Bruteforce](#solution-1-bruteforce)
-        - [Explanation](#explanation)
-        - [Complexity](#complexity)
-          - [Time Complexity](#time-complexity)
-          - [Space Complexity](#space-complexity)
-      - [Solution 2: Set](#solution-2-set)
-        - [Explanation](#explanation-1)
-        - [Complexity](#complexity-1)
-          - [Time Complexity](#time-complexity-1)
-          - [Space Complexity](#space-complexity-1)
-      - [Solution 3: Sorting](#solution-3-sorting)
-        - [Explanation](#explanation-2)
-        - [Complexity](#complexity-2)
-          - [Time Complexity](#time-complexity-2)
-          - [Space Complexity](#space-complexity-2)
-      - [Solution 4: Counter](#solution-4-counter)
-        - [Explanation](#explanation-3)
-        - [Complexity](#complexity-3)
-          - [Time Complexity](#time-complexity-3)
-          - [Space Complexity](#space-complexity-3)
-      - [Solution 5: Hashmap](#solution-5-hashmap)
-        - [Explanation](#explanation-4)
-        - [Complexity](#complexity-4)
-          - [Time Complexity](#time-complexity-4)
-          - [Space Complexity](#space-complexity-4)
-  - [Java](#java)
-    - [My Solutions](#my-solutions-1)
-      - [Initial Solution](#initial-solution-1)
-      - [Revised Solution](#revised-solution-1)
-    - [Other Solutions](#other-solutions-1)
-      - [Solution 1](#solution-1)
-      - [Solution 2](#solution-2)
-
-# Question
-
 Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
 
-## Example 1
+<details><summary>Examples</summary><p> <!-- Examples Start -->
 
-### Input
+<details><summary>Example 1</summary> <!-- Example 1 Start -->
+
+###### Input
 
 ```
 nums = [1,2,3,1]
 ```
 
-### Output
+###### Output
 
 ```
 true
 ```
 
-## Example 2
+</details> <!-- Example 1 End -->
 
-### Input
+<details><summary>Example 2</summary> <!-- Example 1 Start -->
+
+###### Input
 
 ```
 nums = [1,2,3,4]
 ```
 
-### Output
+###### Output
 
 ```
 false
 ```
 
-## Example 3
+</details> <!-- Example 2 End -->
 
-### Input
+<details><summary>Example 3</summary> <!-- Example 1 Start -->
+
+###### Input
 
 ```
 nums = [1,1,1,3,3,4,3,2,4,2]
 ```
 
-### Output
+###### Output
 
 ```
 true
 ```
 
-## Constraints
+</details> <!-- Example 3 End -->
+
+</p></details> <!-- Examples End -->
+
+<details><summary>Constraints</summary> <!-- Constraints Start -->
 
 - `1 <= nums.length <= 10^5`
 - `-10^9 <= nums[i] <= 10^9`
 
-# Solutions
+</details> <!-- Constraints End -->
 
-## Python
+<details><summary>Solutions</summary><p> <!-- Solutions Start -->
 
-### My Solutions
+<details><summary>Python</summary><p> <!-- Python Start -->
 
-#### Initial Solution
+<details><summary>My Solutions</summary> <!-- My Solutions Start -->
+
+###### Initial Solution
 
 ```python
 def containsDuplicate(nums):
@@ -126,7 +81,7 @@ def containsDuplicate(nums):
 
 - Correct output, but times out.
 
-#### Revised Solution
+###### Revised Solution
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -139,7 +94,11 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-### NeetCode Solution
+</details> <!-- My Solutions End -->
+
+<details><summary>NeetCode Solution</summary> <!-- NeetCode Solution Start -->
+
+###### NeetCode Solution
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -152,9 +111,11 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-### Other Solutions
+</details> <!-- NeetCode Solution End -->
 
-#### Solution 1: Bruteforce
+<details><summary>Other Solutions</summary><p> <!-- Other Solutions Start -->
+
+<details><summary>Solution 1: Bruteforce</summary> <!-- Solution 1 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -200,7 +161,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 - Uses a constant amount of additional space to store the loop variables `i` and `j`.
 - Therefore, the space complexity is $O(1)$, indicating constant space usage.
 
-#### Solution 2: Set
+</details> <!-- Solution 1 End -->
+
+<details><summary>Solution 2: Set</summary> <!-- Solution 2 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -222,7 +185,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-#### Solution 3: Sorting
+</details> <!-- Solution 2 End -->
+
+<details><summary>Solution 3: Sorting</summary> <!-- Solution 3 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -248,7 +213,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-#### Solution 4: Counter
+</details> <!-- Solution 3 End -->
+
+<details><summary>Solution 4: Counter</summary> <!-- Solution 4 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -275,7 +242,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-#### Solution 5: Hashmap
+> </details> <!-- Solution 4 End -->
+
+<details><summary>Solution 5: Hashmap</summary> <!-- Solution 5 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -303,16 +272,10 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-## Java
+</details> <!-- Solution 5 End -->
 
-### My Solutions
+</p></details> <!-- Other Solutions End -->
 
-#### Initial Solution
+</p></details> <!-- Python End -->
 
-#### Revised Solution
-
-### Other Solutions
-
-#### Solution 1
-
-#### Solution 2
+</p></details> <!-- Solutions End -->

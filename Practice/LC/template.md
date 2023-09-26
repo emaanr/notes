@@ -106,6 +106,10 @@
 
 #### Friend Solution
 
+```python
+
+```
+
 ##### Algorithm Walkthrough
 
 #### Solution 1: [Technique/Data Structure]
@@ -130,28 +134,6 @@
 
 ```
 
-#### Algorithm Walkthrough: [Technique/Data Structure]
-
-##### Input
-
-```
-
-```
-
-##### Variable(s): [Technique/Data Structure]
-
-```
-
-```
-
-##### Step n
-
-#### Revised Solution
-
-```java
-
-```
-
 ### NeetCode Solution
 
 ```java
@@ -159,6 +141,12 @@
 ```
 
 ### Other Solutions
+
+#### Friend Solution
+
+```python
+
+```
 
 #### Solution 1: [Technique/Data Structure]
 
