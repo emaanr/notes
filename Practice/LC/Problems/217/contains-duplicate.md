@@ -2,11 +2,11 @@
 
     Easy
 
-Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
+> Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
 
 <details><summary>Examples</summary><p> <!-- Examples Start -->
 
-<details><summary>Example 1</summary> <!-- Example 1 Start -->
+<details><summary>Example 1</summary><p> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -20,9 +20,9 @@ nums = [1,2,3,1]
 true
 ```
 
-</details> <!-- Example 1 End -->
+</p></details> <!-- Example 1 End -->
 
-<details><summary>Example 2</summary> <!-- Example 1 Start -->
+<details><summary>Example 2</summary><p> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -36,9 +36,9 @@ nums = [1,2,3,4]
 false
 ```
 
-</details> <!-- Example 2 End -->
+</p></details> <!-- Example 2 End -->
 
-<details><summary>Example 3</summary> <!-- Example 1 Start -->
+<details><summary>Example 3</summary><p> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -52,24 +52,24 @@ nums = [1,1,1,3,3,4,3,2,4,2]
 true
 ```
 
-</details> <!-- Example 3 End -->
+</p></details> <!-- Example 3 End -->
 
 </p></details> <!-- Examples End -->
 
-<details><summary>Constraints</summary> <!-- Constraints Start -->
+<details><summary>Constraints</summary><p> <!-- Constraints Start -->
 
 - `1 <= nums.length <= 10^5`
 - `-10^9 <= nums[i] <= 10^9`
 
-</details> <!-- Constraints End -->
+</p></details> <!-- Constraints End -->
 
 <details><summary>Solutions</summary><p> <!-- Solutions Start -->
 
 <details><summary>Python</summary><p> <!-- Python Start -->
 
-<details><summary>My Solutions</summary> <!-- My Solutions Start -->
+<details><summary>My Solutions</summary><p> <!-- My Solutions Start -->
 
-###### Initial Solution
+<details><summary>Initial Solution</summary><p> <!-- Initial Solution Start -->
 
 ```python
 def containsDuplicate(nums):
@@ -81,7 +81,9 @@ def containsDuplicate(nums):
 
 - Correct output, but times out.
 
-###### Revised Solution
+</p></details> <!-- Initial Solution End -->
+
+<details><summary>Revised Solution</summary><p> <!-- Revised Solution Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -94,11 +96,11 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-</details> <!-- My Solutions End -->
+</p></details> <!-- Revised Solution End -->
 
-<details><summary>NeetCode Solution</summary> <!-- NeetCode Solution Start -->
+</p></details> <!-- My Solutions End -->
 
-###### NeetCode Solution
+<details><summary>NeetCode Solution</summary><p> <!-- NeetCode Solution Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -111,11 +113,11 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-</details> <!-- NeetCode Solution End -->
+</p></details> <!-- NeetCode Solution End -->
 
 <details><summary>Other Solutions</summary><p> <!-- Other Solutions Start -->
 
-<details><summary>Solution 1: Bruteforce</summary> <!-- Solution 1 Start -->
+<details><summary>Solution 1: Bruteforce</summary><p> <!-- Solution 1 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -161,9 +163,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 - Uses a constant amount of additional space to store the loop variables `i` and `j`.
 - Therefore, the space complexity is $O(1)$, indicating constant space usage.
 
-</details> <!-- Solution 1 End -->
+</p></details> <!-- Solution 1 End -->
 
-<details><summary>Solution 2: Set</summary> <!-- Solution 2 Start -->
+<details><summary>Solution 2: Set</summary><p> <!-- Solution 2 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -185,9 +187,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 2 End -->
+</p></details> <!-- Solution 2 End -->
 
-<details><summary>Solution 3: Sorting</summary> <!-- Solution 3 Start -->
+<details><summary>Solution 3: Sorting</summary><p> <!-- Solution 3 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -213,9 +215,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 3 End -->
+</p></details> <!-- Solution 3 End -->
 
-<details><summary>Solution 4: Counter</summary> <!-- Solution 4 Start -->
+<details><summary>Solution 4: Counter</summary><p> <!-- Solution 4 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -242,9 +244,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-> </details> <!-- Solution 4 End -->
+</p></details> <!-- Solution 4 End -->
 
-<details><summary>Solution 5: Hashmap</summary> <!-- Solution 5 Start -->
+<details><summary>Solution 5: Hashmap</summary><p> <!-- Solution 5 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -272,10 +274,22 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 5 End -->
+</p></details> <!-- Solution 5 End -->
 
 </p></details> <!-- Other Solutions End -->
 
 </p></details> <!-- Python End -->
 
 </p></details> <!-- Solutions End -->
+
+<details><summary>Heuristic</summary><p> <!-- Heuristic Start -->
+
+- Description and [Link]() to the Heuristic(s) utilized goes here.
+
+</p></details> <!-- Heuristic End -->
+
+<details><summary>Tags</summary><p> <!-- Tags Start -->
+
+- List of "Tags" associated with LeetCode problem that describe what kind of problem it is.
+
+</p></details> <!-- Tags End -->
