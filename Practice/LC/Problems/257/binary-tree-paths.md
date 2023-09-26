@@ -1,6 +1,6 @@
-# []()
+# [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
 
-    Difficulty
+    Easy
 
 # Table of Contents
 
@@ -64,6 +64,10 @@
 
 ### My Solutions
 
+```python
+
+```
+
 #### Initial Solution
 
 ```python
@@ -102,10 +106,6 @@
 
 #### Friend Solution
 
-```python
-
-```
-
 ##### Algorithm Walkthrough
 
 #### Solution 1: [Technique/Data Structure]
@@ -130,6 +130,28 @@
 
 ```
 
+#### Algorithm Walkthrough: [Technique/Data Structure]
+
+##### Input
+
+```
+
+```
+
+##### Variable(s): [Technique/Data Structure]
+
+```
+
+```
+
+##### Step n
+
+#### Revised Solution
+
+```java
+
+```
+
 ### NeetCode Solution
 
 ```java
@@ -137,12 +159,6 @@
 ```
 
 ### Other Solutions
-
-#### Friend Solution
-
-```python
-
-```
 
 #### Solution 1: [Technique/Data Structure]
 

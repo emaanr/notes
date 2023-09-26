@@ -69,9 +69,16 @@
     - [Communication](#communication)
     - [Example: API App](#example-api-app)
   - [RESTful API](#restful-api)
+    - [Glossary](#glossary)
+      - [Resource](#resource)
+      - [URI](#uri)
+      - [Endpoint](#endpoint-1)
+      - [Request](#request-1)
+      - [Response](#response-1)
+      - [Stateless](#stateless-1)
   - [Constraints](#constraints)
     - [Client-Server](#client-server-1)
-    - [Stateless](#stateless-1)
+    - [Stateless](#stateless-2)
     - [Uniform Interface](#uniform-interface)
       - [Data](#data)
       - [Resources \& Collections](#resources--collections)
@@ -330,7 +337,7 @@ for entry in os.listdir(current_dur):
   - App:
     - Puzzle Piece.
   - Apps:
-    - Puzzle compised of Puzzle Pieces.
+    - Puzzle comprised of Puzzle Pieces.
   - APIs:
     - Blanks of Puzzle Piece.
   - UI:
@@ -677,10 +684,6 @@ URLs have a scheme portion such as "HTTP".
 
 Recall that an API stands for "Application Programming Interface," therefore an API that adhreres to the REST architectural style/standard is a "REST API".
 
-<p align="center" width="100%">
-    <img src="img/triggers.png">
-</p>
-
 - Consider two pieces of software written in different languages.
   - APIs serve as the interface which allows two applications that are not built exactly the same to communicate with each other.
   - There is always a "Server" and a "Client" such that the "Client" consumes data from the "Server" who then serves the data as a response to the "Client".
@@ -732,8 +735,7 @@ Recall that an API stands for "Application Programming Interface," therefore an 
         - Sometimes APIs have a separate domain for organizational purposes.
 - APIs exists because communicating directly from "Client" to the "Database" can be a security hazard especially if the client is written in JavaScript which is often the case with webpages.
   - Can view JavaScript source code, so it is undesirable to have sensitive information directly on the page as a result of direct communication between the "Client" and "Database".
-- As a reult, specific "Endpoints" are exposed in order to permit access to certain data.
-
+- As a result, specific "Endpoints" are exposed in order to permit access to certain data.
   - This also assists in versatility because regardless of what language the "Server" is written in, the "Client" will be able to make requests via the "Endpoints" to consume data.
   - Likewise, the "Client" can be written in any language or be different kinds of applications such as web applications or mobile applications since they can consume the same data via the same channels.
 
@@ -748,6 +750,49 @@ Recall that an API stands for "Application Programming Interface," therefore an 
 ## RESTful API
 
 When APIs embrace the style and constraints of REST, they are said to be "RESTful".
+
+### Glossary
+
+1. Resource
+2. URI
+3. Endpoint
+
+<p align="center" width="100%">
+    <img src="img/resource-uri.png">
+</p>
+
+#### Resource
+
+- RESTful APIs organizes data entities or "Resources" into unique URIs.
+
+#### URI
+
+- Stands for "Universal Resource Identifier" which differentiate different types of data resources on a server.
+
+#### Endpoint
+
+- The combination of the URI and the Resource can be considered an API Endpoint from which requests can be made from the client to the server.
+
+#### Request
+
+- Sent to server to recieve a response.
+
+<p align="center" width="100%">
+    <img src="img/request.png">
+</p>
+
+#### Response
+
+- Response sent back to client.
+
+<p align="center" width="100%">
+    <img src="img/response.png">
+</p>
+
+#### Stateless
+
+- Every Request-Response cycle is independent.
+- That is, the two entities in this relationship don't need to know anything about each other outside of each Request-Response cycle.
 
 ## Constraints
 
@@ -984,6 +1029,4 @@ A REST Web Service is any web service that adheres to the aforementioned REST Ar
 
 [[5]](https://www.youtube.com/watch?v=ZveW4_ZJtVY) **CertBros:** APIs Explained w/ Real World Examples
 
-[[6]](https://www.youtube.com/watch?v=dfaj4vI8QxE) **Code with Ana Kubów**: How to Use APIs
-
-[[7]](https://www.youtube.com/watch?v=-MTSQjw5DrM) **Fireship:** RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express
+[[6]](https://www.youtube.com/watch?v=-MTSQjw5DrM) **Fireship:** RESTful APIs in 100 Seconds // Build an API from Scratch with Node.js Express
