@@ -1,6 +1,6 @@
 # Grokking the Coding Interview
 
-    Notes on Grokking the Coding Interview.
+    Notes on Grokking the Coding Interview Patterns.
 
 # Table of Contents
 
