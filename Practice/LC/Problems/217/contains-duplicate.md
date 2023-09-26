@@ -1,15 +1,3 @@
-<details>
-<details>
-<details><summary>Description</summary></p>
-
-```python
-int = 1
-```
-
-</details>
-</details>
-</details>
-
 # [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
     Easy
@@ -83,7 +71,7 @@ true
 
 <details><summary>Initial Solution</summary></p> <!-- Initial Solution Start -->
 
-```python
+```java
 def containsDuplicate(nums):
     for num in nums:
         if nums.count(num) >= 2:
