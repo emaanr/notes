@@ -69,7 +69,7 @@ true
 
 <details><summary>My Solutions</summary> <!-- My Solutions Start -->
 
-<details><summary>Initial Solution</summary> <!-- Initial Solution Start -->
+<details> <!-- Initial Solution Start -->
 
 ```python
 def containsDuplicate(nums):
