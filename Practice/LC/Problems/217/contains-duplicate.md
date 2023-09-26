@@ -71,6 +71,8 @@ true
 
 <details><summary>Initial Solution</summary><p> <!-- Initial Solution Start -->
 
+<div>
+
 ```python
 def containsDuplicate(nums):
     for num in nums:
@@ -78,6 +80,8 @@ def containsDuplicate(nums):
             return True
     return False
 ```
+
+</div>
 
 - Correct output, but times out.
 
