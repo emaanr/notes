@@ -4,9 +4,9 @@
 
 > Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
 
-<details><summary>Examples</summary></p> <!-- Examples Start -->
+<details><summary>Examples</summary> <!-- Examples Start -->
 
-<details><summary>Example 1</summary></p> <!-- Example 1 Start -->
+<details><summary>Example 1</summary> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -22,7 +22,7 @@ true
 
 </details> <!-- Example 1 End -->
 
-<details><summary>Example 2</summary></p> <!-- Example 1 Start -->
+<details><summary>Example 2</summary> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -38,7 +38,7 @@ false
 
 </details> <!-- Example 2 End -->
 
-<details><summary>Example 3</summary></p> <!-- Example 1 Start -->
+<details><summary>Example 3</summary> <!-- Example 1 Start -->
 
 ###### Input
 
@@ -56,18 +56,18 @@ true
 
 </details> <!-- Examples End -->
 
-<details><summary>Constraints</summary></p> <!-- Constraints Start -->
+<details><summary>Constraints</summary> <!-- Constraints Start -->
 
 - `1 <= nums.length <= 10^5`
 - `-10^9 <= nums[i] <= 10^9`
 
 </details> <!-- Constraints End -->
 
-<details><summary>Solutions</summary></p> <!-- Solutions Start -->
+<details><summary>Solutions</summary> <!-- Solutions Start -->
 
-<details><summary>Python</summary></p> <!-- Python Start -->
+<details><summary>Python</summary> <!-- Python Start -->
 
-<details><summary>My Solutions</summary></p> <!-- My Solutions Start -->
+<details><summary>My Solutions</summary> <!-- My Solutions Start -->
 
 <details><summary>Initial Solution</summary> <!-- Initial Solution Start -->
 
@@ -83,7 +83,7 @@ def containsDuplicate(nums):
 
 </details> <!-- Initial Solution End -->
 
-<details><summary>Revised Solution</summary></p> <!-- Revised Solution Start -->
+<details><summary>Revised Solution</summary> <!-- Revised Solution Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -100,7 +100,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- My Solutions End -->
 
-<details><summary>NeetCode Solution</summary></p> <!-- NeetCode Solution Start -->
+<details><summary>NeetCode Solution</summary> <!-- NeetCode Solution Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -115,9 +115,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- NeetCode Solution End -->
 
-<details><summary>Other Solutions</summary></p> <!-- Other Solutions Start -->
+<details><summary>Other Solutions</summary> <!-- Other Solutions Start -->
 
-<details><summary>Solution 1: Bruteforce</summary></p> <!-- Solution 1 Start -->
+<details><summary>Solution 1: Bruteforce</summary> <!-- Solution 1 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -165,7 +165,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- Solution 1 End -->
 
-<details><summary>Solution 2: Set</summary></p> <!-- Solution 2 Start -->
+<details><summary>Solution 2: Set</summary> <!-- Solution 2 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -189,7 +189,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- Solution 2 End -->
 
-<details><summary>Solution 3: Sorting</summary></p> <!-- Solution 3 Start -->
+<details><summary>Solution 3: Sorting</summary> <!-- Solution 3 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -217,7 +217,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- Solution 3 End -->
 
-<details><summary>Solution 4: Counter</summary></p> <!-- Solution 4 Start -->
+<details><summary>Solution 4: Counter</summary> <!-- Solution 4 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -246,7 +246,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- Solution 4 End -->
 
-<details><summary>Solution 5: Hashmap</summary></p> <!-- Solution 5 Start -->
+<details><summary>Solution 5: Hashmap</summary> <!-- Solution 5 Start -->
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -282,13 +282,13 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 </details> <!-- Solutions End -->
 
-<details><summary>Heuristic</summary></p> <!-- Heuristic Start -->
+<details><summary>Heuristic</summary> <!-- Heuristic Start -->
 
 - Description and [Link]() to the Heuristic(s) utilized goes here.
 
 </details> <!-- Heuristic End -->
 
-<details><summary>Tags</summary></p> <!-- Tags Start -->
+<details><summary>Tags</summary> <!-- Tags Start -->
 
 - List of "Tags" associated with LeetCode problem that describe what kind of problem it is.
 
