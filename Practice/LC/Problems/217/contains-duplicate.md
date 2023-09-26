@@ -2,76 +2,114 @@
 
     Easy
 
-> Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
+# Table of Contents
 
-<details><summary>Examples</summary></p> <!-- Examples Start -->
+- [Contains Duplicate](#contains-duplicate)
+- [Table of Contents](#table-of-contents)
+- [Question](#question)
+  - [Example 1](#example-1)
+    - [Input](#input)
+    - [Output](#output)
+  - [Example 2](#example-2)
+    - [Input](#input-1)
+    - [Output](#output-1)
+  - [Example 3](#example-3)
+    - [Input](#input-2)
+    - [Output](#output-2)
+  - [Constraints](#constraints)
+- [Solutions](#solutions)
+  - [Python](#python)
+    - [My Solutions](#my-solutions)
+      - [Initial Solution](#initial-solution)
+      - [Revised Solution](#revised-solution)
+    - [NeetCode Solution](#neetcode-solution)
+    - [Other Solutions](#other-solutions)
+      - [Solution 1: Bruteforce](#solution-1-bruteforce)
+        - [Explanation](#explanation)
+        - [Complexity](#complexity)
+          - [Time Complexity](#time-complexity)
+          - [Space Complexity](#space-complexity)
+      - [Solution 2: Set](#solution-2-set)
+        - [Explanation](#explanation-1)
+        - [Complexity](#complexity-1)
+          - [Time Complexity](#time-complexity-1)
+          - [Space Complexity](#space-complexity-1)
+      - [Solution 3: Sorting](#solution-3-sorting)
+        - [Explanation](#explanation-2)
+        - [Complexity](#complexity-2)
+          - [Time Complexity](#time-complexity-2)
+          - [Space Complexity](#space-complexity-2)
+      - [Solution 4: Counter](#solution-4-counter)
+        - [Explanation](#explanation-3)
+        - [Complexity](#complexity-3)
+          - [Time Complexity](#time-complexity-3)
+          - [Space Complexity](#space-complexity-3)
+      - [Solution 5: Hashmap](#solution-5-hashmap)
+        - [Explanation](#explanation-4)
+        - [Complexity](#complexity-4)
+          - [Time Complexity](#time-complexity-4)
+          - [Space Complexity](#space-complexity-4)
 
-<details><summary>Example 1</summary></p> <!-- Example 1 Start -->
+# Question
 
-###### Input
+Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
+
+## Example 1
+
+### Input
 
 ```
 nums = [1,2,3,1]
 ```
 
-###### Output
+### Output
 
 ```
 true
 ```
 
-</details> <!-- Example 1 End -->
+## Example 2
 
-<details><summary>Example 2</summary></p> <!-- Example 1 Start -->
-
-###### Input
+### Input
 
 ```
 nums = [1,2,3,4]
 ```
 
-###### Output
+### Output
 
 ```
 false
 ```
 
-</details> <!-- Example 2 End -->
+## Example 3
 
-<details><summary>Example 3</summary></p> <!-- Example 3 Start -->
-
-###### Input
+### Input
 
 ```
 nums = [1,1,1,3,3,4,3,2,4,2]
 ```
 
-###### Output
+### Output
 
 ```
 true
 ```
 
-</details> <!-- Example 3 End -->
-
-</details> <!-- Examples End -->
-
-<details><summary>Constraints</summary></p> <!-- Constraints Start -->
+## Constraints
 
 - `1 <= nums.length <= 10^5`
 - `-10^9 <= nums[i] <= 10^9`
 
-</details> <!-- Constraints End -->
+# Solutions
 
-<details><summary>Solutions</summary></p> <!-- Solutions Start -->
+## Python
 
-<details><summary>Python</summary></p> <!-- Python Start -->
+### My Solutions
 
-<details><summary>My Solutions</summary></p> <!-- My Solutions Start -->
+#### Initial Solution
 
-<details><summary>Initial Solution</summary></p> <!-- Initial Solution Start -->
-
-```java
+```python
 def containsDuplicate(nums):
     for num in nums:
         if nums.count(num) >= 2:
@@ -81,9 +119,7 @@ def containsDuplicate(nums):
 
 - Correct output, but times out.
 
-</details> <!-- Initial Solution End -->
-
-<details><summary>Revised Solution</summary></p> <!-- Revised Solution Start -->
+#### Revised Solution
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -96,11 +132,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-</details> <!-- Revised Solution End -->
-
-</details> <!-- My Solutions End -->
-
-<details><summary>NeetCode Solution</summary></p> <!-- NeetCode Solution Start -->
+### NeetCode Solution
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -113,11 +145,9 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return False
 ```
 
-</details> <!-- NeetCode Solution End -->
+### Other Solutions
 
-<details><summary>Other Solutions</summary></p> <!-- Other Solutions Start -->
-
-<details><summary>Solution 1: Bruteforce</summary></p> <!-- Solution 1 Start -->
+#### Solution 1: Bruteforce
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -163,9 +193,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 - Uses a constant amount of additional space to store the loop variables `i` and `j`.
 - Therefore, the space complexity is $O(1)$, indicating constant space usage.
 
-</details> <!-- Solution 1 End -->
-
-<details><summary>Solution 2: Set</summary></p> <!-- Solution 2 Start -->
+#### Solution 2: Set
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -187,9 +215,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 2 End -->
-
-<details><summary>Solution 3: Sorting</summary></p> <!-- Solution 3 Start -->
+#### Solution 3: Sorting
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -215,9 +241,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 3 End -->
-
-<details><summary>Solution 4: Counter</summary></p> <!-- Solution 4 Start -->
+#### Solution 4: Counter
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -244,9 +268,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 
 ###### Space Complexity
 
-</details> <!-- Solution 4 End -->
-
-<details><summary>Solution 5: Hashmap</summary></p> <!-- Solution 5 Start -->
+#### Solution 5: Hashmap
 
 ```python
 def containsDuplicate(self, nums: List[int]) -> bool:
@@ -273,23 +295,3 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 ###### Time Complexity
 
 ###### Space Complexity
-
-</details> <!-- Solution 5 End -->
-
-</details> <!-- Other Solutions End -->
-
-</details> <!-- Python End -->
-
-</details> <!-- Solutions End -->
-
-<details><summary>Heuristic</summary></p> <!-- Heuristic Start -->
-
-- Description and [Link]() to the Heuristic(s) utilized goes here.
-
-</details> <!-- Heuristic End -->
-
-<details><summary>Tags</summary></p> <!-- Tags Start -->
-
-- List of "Tags" associated with LeetCode problem that describe what kind of problem it is.
-
-</details> <!-- Tags End -->
