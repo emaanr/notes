@@ -144,7 +144,7 @@ Return _an_ `n x m` _matrix representing the box after the rotation described ab
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

@@ -146,7 +146,7 @@ head = [3, 2, 0, -4, 2, 0, -4, ...]
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

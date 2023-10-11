@@ -106,7 +106,7 @@ nums = [1], target = 0
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

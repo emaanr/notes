@@ -217,7 +217,7 @@ class Solution:
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

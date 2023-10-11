@@ -105,7 +105,7 @@ root = []
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

@@ -103,7 +103,7 @@ head = [1,2,3,4,5]
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

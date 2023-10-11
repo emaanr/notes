@@ -32,7 +32,7 @@
       - [Revised Solution](#revised-solution)
     - [Neetcode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
-      - [Friend Solution](#friend-solution)
+      - [Peer Solution](#friend-solution)
         - [Algorithm Walkthrough](#algorithm-walkthrough)
       - [Solution 1: \[Technique/Data Structure\]](#solution-1-techniquedata-structure)
       - [Solution 2: \[Technique/Data Structure\]](#solution-2-techniquedata-structure)
@@ -149,7 +149,7 @@
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ##### Algorithm Walkthrough
 

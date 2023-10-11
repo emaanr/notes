@@ -100,7 +100,7 @@
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ```python
 
@@ -138,7 +138,7 @@
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ```python
 

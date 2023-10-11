@@ -13,7 +13,7 @@
       - [Initial Solution](#initial-solution)
     - [NeetCode Solution](#neetcode-solution)
     - [Other Solutions](#other-solutions)
-      - [Friend Solution](#friend-solution)
+      - [Peer Solution](#peer-solution)
         - [Algorithm Walkthrough](#algorithm-walkthrough)
       - [Solution 1](#solution-1)
       - [Solution 2](#solution-2)
@@ -81,7 +81,7 @@ class Solution:
 
 ### Other Solutions
 
-#### Friend Solution
+#### Peer Solution
 
 ```python
 class Solution:
