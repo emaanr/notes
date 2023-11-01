@@ -12,6 +12,7 @@
 - [Infodump](#infodump)
 - [Todo](#todo)
 - [Table of Contents](#table-of-contents)
+- [Installing](#installing)
 - [Running](#running)
   - [REPL](#repl)
   - [CLI](#cli)
@@ -536,6 +537,8 @@
 - [Data Scraping \& Extraction](#data-scraping--extraction)
 - [Packages](#packages)
 - [Time Complexity](#time-complexity)
+
+# Installing
 
 # Running
 
