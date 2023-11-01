@@ -1,6 +1,6 @@
 # Git Informed
 
-    Get informed...about Git itself and some other considerations!
+    Get informed...about Git itself and some other considerations.
 
 # Table of Contents
 

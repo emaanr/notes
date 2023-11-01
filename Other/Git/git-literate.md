@@ -1,6 +1,6 @@
 # Git Literate
 
-    Get lit...erate about Git glossary items and terminology!
+    Get lit...erate about Git glossary items and terminology.
 
 # Table of Contents
 
@@ -9,7 +9,6 @@
 - [Vocab Term](#vocab-term)
   - [Example](#example)
 - [Resource](#resource)
-
 
 # Vocab Term
 

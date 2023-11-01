@@ -1,56 +1,50 @@
 # Git Answers
 
-    Get answers...on how to do things with Git!
+    Get answers...on how to do things with Git.
 
 # Table of Contents
 
 - [Git Answers](#git-answers)
 - [Table of Contents](#table-of-contents)
-- [Repositories](#repositories)
-  - [Create New Repo via CLI](#create-new-repo-via-cli)
-    - [`git init`](#git-init)
-    - [`git add .`](#git-add-)
-    - [`git commit -m <msg>`](#git-commit--m-msg)
-    - [`git branch -M main`](#git-branch--m-main)
-    - [`git remote add origin https://github.com/<username>/<repo>.git`](#git-remote-add-origin-httpsgithubcomusernamerepogit)
-    - [`git push -u origin main`](#git-push--u-origin-main)
-  - [Repository Topic](#repository-topic)
-    - [`Command 1`](#command-1)
-    - [`Command 2`](#command-2)
-- [Commits](#commits)
-  - [Commit Topic 1](#commit-topic-1)
-    - [`Command 1`](#command-1-1)
-    - [`Command 2`](#command-2-1)
-  - [Commit Topic 2](#commit-topic-2)
-    - [`Command 1`](#command-1-2)
-    - [`Command 2`](#command-2-2)
-- [Branches](#branches)
-  - [Branch Topic 1](#branch-topic-1)
-    - [`Command 1`](#command-1-3)
-    - [`Command 2`](#command-2-3)
-  - [Branch Topic 2](#branch-topic-2)
-    - [`Command 1`](#command-1-4)
-    - [`Command 2`](#command-2-4)
-- [Merges](#merges)
-  - [Merge Topic 1](#merge-topic-1)
-    - [`Command 1`](#command-1-5)
-    - [`Command 2`](#command-2-5)
-  - [Merge Topic 2](#merge-topic-2)
-    - [`Command 1`](#command-1-6)
-    - [`Command 2`](#command-2-6)
-- [Sources](#sources)
-- [Resources](#resources)
+- [Getting and Creating Projects](#getting-and-creating-projects)
+  - [Create New Repository](#create-new-repository)
+- [Basic Snapshotting](#basic-snapshotting)
+  - [Stage Changes](#stage-changes)
+  - [Check Staging](#check-staging)
+  - [Create Commit](#create-commit)
+- [Branching and Merging](#branching-and-merging)
+  - [Create Branch](#create-branch)
+  - [Switch Branch](#switch-branch)
+  - [Checkout Branch](#checkout-branch)
+  - [Delete Branch](#delete-branch)
+    - [Delete Local Branch](#delete-local-branch)
+    - [Delete Tracking Branch](#delete-tracking-branch)
+    - [Delete Remote Branch](#delete-remote-branch)
+    - [Visualization](#visualization)
+    - [Considerations](#considerations)
+    - [Credit](#credit)
+  - [List Branches](#list-branches)
+  - [Merge Branches](#merge-branches)
+    - [](#)
+- [Sharing and Updating Projects](#sharing-and-updating-projects)
+  - [Fetch Changes](#fetch-changes)
+  - [Pull Changes](#pull-changes)
+  - [Push Changes](#push-changes)
+- [Patching](#patching)
+  - [Cherry-Pick Commits](#cherry-pick-commits)
+  - [Ammend Unpushed Commit](#ammend-unpushed-commit)
+  - [Ammend Pushed Commit](#ammend-pushed-commit)
+  - [Squash Commits](#squash-commits)
 
-# Repositories
+# Getting and Creating Projects
 
     Repository-related inquiries and commands.
 
-- [Create New Repo via CLI](#create-new-repo-via-cli)
-- [Repository Topic](#repository-topic)
+- [Create New Repository](#create-new-repo)
 
-## Create New Repo via CLI
+## Create New Repository
 
-    How to take any folder, turn it into a git repository, and push to GitHub repo of the same name using Command Line Interface (CLI).
+    How to take any folder, turn it into a git repository, and push to remote (GitHub) repo of the same name.
 
 Make sure there is a newly initialized and empty repository with the same name as the folder you wish to push.
 
@@ -61,179 +55,282 @@ Make sure there is a newly initialized and empty repository with the same name a
 5. `git remote add origin https://github.com/<username>/<repo>.git`
 6. `git push -u origin main`
 
-### `git init`
+---
+
+`git init`
 
 - Initialize repository, this creates a `.git` folder in the project's root folder (whose name should be the same as the repo you are trying to push to).
 
-### `git add .`
+`git add .`
 
 - Add all files to be staged for commit.
 
-### `git commit -m <msg>`
+`git commit -m <msg>`
 
 - Commit staged files with a commit message using `-m <msg>` where `<msg>` message is surrounded in single quotes or double quotes.
 
-### `git branch -M main`
+`git branch -M main`
 
 - This branch renames the default branch name `master` to `main` via the use of the `-M` flag.
 - I prefer to use `main` over `master`, otherwise this step could be skipped entirely.
 
-### `git remote add origin https://github.com/<username>/<repo>.git`
+`git remote add origin https://github.com/<username>/<repo>.git`
 
 - To tell the local git repository on your computer which remote repository `<repo>` to send changes to.
+- In this case, a GitHub repo is provided, but any valid remote repository would work fine.
 
-### `git push -u origin main`
+`git push -u origin main`
 
-- The `-u` flag adds a tracking reference to the upstream server you are pushing to.
-- This means that every next push/pull done from within our local repository will know to send/retrieve information to/from the `main` branch.
-- Recall that if you didn't do `git branch -M main` then you would instead invoke `git push -u origin master` at this point.
+- The `-u` flag, also `--upstream`, adds a tracking reference to the upstream server you are pushing to.
+- This means that every next push/pull done from within our local repository will know to send/retrieve information to/from the `main` branch to which we just added a tracking reference.
+- Recall and note that if you didn't do `git branch -M main` then you would instead invoke `git push -u origin master` at this point since you want a reference to `master`, not `main`.
 
-## Repository Topic
-
-    Topic description.
-
-Pre-requisite info.
-
-1.  `Command 1`
-2.  `Command 2`
-
-### `Command 1`
-
-- Description
-
-### `Command 2`
-
-- Description
-
-# Commits
+# Basic Snapshotting
 
     Commit-related inquiries and commands.
 
-- [Commit Topic 1](#commit-topic-1)
-- [Commit Topic 2](#commit-topic-2)
+Capturing the current state of your project's files and creating a new version of that state in the Git repository.
 
-## Commit Topic 1
+- [Stage Changes](#stage-changes)
+- [Check Staging](#check-staging)
+- [Create Commit](#create-commit)
 
-    Topic description.
+## Stage Changes
 
-Pre-requisite info.
+    What it means to "Stage" changes and how to do it.
 
-1.  `Command 1`
-2.  `Command 2`
+## Check Staging
 
-### `Command 1`
+    How to check the current state of staged changes.
 
-- Description
+## Create Commit
 
-### `Command 2`
+    What it means to "Commit" changes and how to do it.
 
-- Description
+# Branching and Merging
 
-## Commit Topic 2
+    Branch-related and Merge-related inquiries and commands.
 
-    Topic description.
+- [Create Branch](#create-branch)
+- [Switch Branch](#switch-branch)
+- [Checkout Branch](#checkout-branch)
+- [Delete Branch](#delete-branch)
+- [List Branches](#list-branches)
+- [Merge Branches](#merge-branches)
 
-Pre-requisite info.
+## Create Branch
 
-1.  `Command 1`
-2.  `Command 2`
+    How to create a new branch.
 
-### `Command 1`
+When working on projects with various features and components, it is smart (and industry standard) to create a new branch to work on in order to avoid breaking changes on a working branch. Often times there will be a `main` or `dev` branch that contain versions of the project that are working and/or deployed from to production (live for customer use rather than solely existing when running from/on a local machine).
 
-- Description
+`git branch <branch>`
 
-### `Command 2`
+- Creates a new branch that is identical to the current branch.
+- Does not switch you onto the new branch.
 
-- Description
+## Switch Branch
 
-# Branches
+    How to switch branches.
 
-    Branch-related inquiries and commands.
+After creating a branch, you want to make sure you switch onto it before writing any code as this can result in mistakenly pushing to a branch you did not intend to push to. Or maybe you're working on multiple features so you need to switch between branches.
 
-- [Branch Topic 1](#branch-topic-1)
-- [Branch Topic 2](#branch-topic-2)
+The `git switch` command was introduced in Git version 2.23 to be a more explicit, user-friendly means for switching branches as well as prevent potential issues that arise due to the multipurpose `git checkout` command.
 
-## Branch Topic 1
+`git switch <branch>`
 
-    Topic description.
+- Switches you onto the specified pre-existing branch.
 
-Pre-requisite info.
+`git switch -c <branch>`
 
-1.  `Command 1`
-2.  `Command 2`
+- Creates the new branch and switches you onto it.
 
-### `Command 1`
+## Checkout Branch
 
-- Description
+    How to checkout branches.
 
-### `Command 2`
+The `git checkout` command is a versatile command that can be used for a variety of tasks such as switching branches as well as creating _and_ switching onto created branch all in one command.
 
-- Description
+`git checkout`
 
-## Branch Topic 2
+- "Checks out" (switches to) an existing branch.
 
-    Topic description.
+`git checkout -b <branch>`
 
-Pre-requisite info.
+- Creates specified branch and switches onto it.
+- Don't forget the `-b` flag as this is what signals creation of the new branch.
+- Can be thought of as a combination of the following two commands:
 
-1.  `Command 1`
-2.  `Command 2`
+```
+git branch <branch>
+git checkout <branch>
+```
 
-### `Command 1`
+## Delete Branch
 
-- Description
+    How to delete local, remote, and tracking branches.
 
-### `Command 2`
+In Git, when you clone a remote repository, you create a local copy of it that has "tracking" branches that track their associated remote branches. In order to work on a branch in the repository, you `checkout` the branch which then creates a local copy of the branch called a "local" branch.
 
-- Description
+Deleting a local branch typically doesn't delete the associated tracking branch nor the remote branch on the remote repository. To delete a remote branch, you often need to push the deletion to the remote repository explicitly. This explanation will clarify how to delete a local branch, the tracking branch, their corresponding remote branch (or any remote branch, for that matter), and how to propagate these changes to other machines with local clones of the repository as well as when you may want to use these commands.
 
-# Merges
+### Delete Local Branch
 
-    Merge-related inquiries and commands.
+```
+git branch --delete <branch>
+git branch -d <branch> # Shorter version
+git branch -D <branch> # Force-delete un-merged branches
+```
 
-- [Merge Topic 1](#merge-topic-1)
-- [Merge Topic 2](#merge-topic-2)
+### Delete Tracking Branch
 
-## Merge Topic 1
+```
+git branch --delete --remote <remote>/<branch>
+git branch -dr <remote>/<branch> # Shorter
 
-    Topic description.
+git fetch <remote> --prune # Delete multiple obsolete remote-tracking branches
+git fetch <remote> -p      # Shorter
+```
 
-Pre-requisite info.
+### Delete Remote Branch
 
-1.  `Command 1`
-2.  `Command 2`
+```
+git push origin --delete <branch>  # Git version 1.7.0 or newer
+git push origin -d <branch>        # Shorter version (Git 1.7.0 or newer)
+git push origin :<branch>          # Git versions older than 1.7.0
+```
 
-### `Command 1`
+### Visualization
 
-- Description
+- When dealing with deleting branches both locally and remotely, keep in mind that there are **_three_** different branches involved:
 
-### `Command 2`
+  1. Local Branch `X`
+  2. Remote Origin Branch `X`
+  3. Local Remote-Tracking Branch `origin/X` that tracks Remote Origin Branch `X`
 
-- Description
+```
+git branch -rd origin/X
+```
 
-## Merge Topic 2
+<div align="center" width="100%">
+  <img title="Delete Tracking Branch" src="img/delete-tracking.png" />
+  <br />
+  <em>Only deletes local remote-tracking branch.</em>
+</div>
 
-    Topic description.
+<br />
 
-Pre-requisite info.
+```
+git push origin --delete X
+```
 
-1.  `Command 1`
-2.  `Command 2`
+<div align="center" width="100%">
+  <img title="Delete Remote Branch " src="img/delete-remote.png" />
+  <br />
+  <em>Deletes actual remote branch as well as local remote-tracking branch.</em>
+</div>
 
-### `Command 1`
+### Considerations
 
-- Description
+1. Using `push` to delete a remote branch `X` will also remove the tracking branch `origin/X`.
 
-### `Command 2`
+   - This makes it unnecessary to prune obsolete tracking braches with `git fetch --prune` or `git fetch -p`, but it wouldn't cause harm if you did anyway.
+   - You can verify that the tracking branch `origin/X` was deleted by running the following:
 
-- Description
+```
+# View just tracking branches
+git branch --remotes
+git branch -r
 
-# Sources
+# View both strictly local as well as remote-tracking branches
+git branch --all
+git branch -a
+```
 
-- [[1]]() Source 1
-- [[2]]() Source 2
+2. If you delete a remote branch via some web interface (such as CodeCommit or GitHub), then your local copy of the repository will still contain a (now obsolete) tracking branch `origin/X`.
+   - A typical way to remove these obsolete tracking branches (since Git version 1.6.6) is to simply run `git fetch` with the `--prune`, or shorter `-p`, flag.
+   - Note that this removes _all_ obsolete tracking branches for any remote branches that no longer exist on the remote:
 
-# Resources
+```
+git fetch origin --prune
+git fetch origin -p # Shorter
+```
 
-- [[1]]() Source 1
-- [[2]]() Source 2
+3. Alternatively, rather than using automatic pruning with `git fetch -p`, you can avoid the extra network operation by manually removing the tracking branches as mentioned earlier:
+
+```
+git branch --delete --remotes origin/X
+git branch -dr origin/X # Shorter
+```
+
+### Credit
+
+- Credit to user456814 on [StackOverflow](https://stackoverflow.com/a/23961231)
+
+## List Branches
+
+    How to list branches in a repository.
+
+It can be useful to list all the branches on a project. There are different "kinds" or branches and so we will explore how to list them.
+
+`git branch`
+
+- Lists all local branches only.
+
+`git branch -r`
+
+- Lists all remote branches only.
+
+`git branch -a`
+
+- Lists all local and remote branches.
+
+## Merge Branches
+
+    How to merge branches and the different ways to do so.
+
+###
+
+# Sharing and Updating Projects
+
+    Project management related inquiries and commands.
+
+- [Fetch Changes](#fetch-changes)
+- [Pull Changes](#pull-changes)
+- [Push Changes](#push-changes)
+
+## Fetch Changes
+
+    What it means to "Fetch" changes, how to do it, and why you may want to use it over "Pull".
+
+## Pull Changes
+
+    What it means to "Pull", how to do it, and why you may want to use it over "Fetch".
+
+## Push Changes
+
+    What it means to "Push" changes and how to do it.
+
+# Patching
+
+    Different patching-related inquiries and commands.
+
+- [Cherry-Pick Commits](#cherry-pick-commits)
+- [Ammend Unpushed Commit](#ammend-unpushed-commit)
+- [Ammend Pushed Commit](#ammend-pushed-commit)
+
+## Cherry-Pick Commits
+
+    How to cherry-pick commits from one branch into another.
+
+## Ammend Unpushed Commit
+
+    How to ammend a commit that hasn't been pushed yet.
+
+## Ammend Pushed Commit
+
+    How to ammend a commit that has already been pushed.
+
+## Squash Commits
+
+    How to combine two or more commits under one commit and why you might want to do so.
