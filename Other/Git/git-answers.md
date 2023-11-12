@@ -35,6 +35,7 @@
   - [Ammend Unpushed Commit](#ammend-unpushed-commit)
   - [Ammend Pushed Commit](#ammend-pushed-commit)
   - [Squash Commits](#squash-commits)
+  - [Prune Local-Tracking Branches](#prune-local-tracking-branches)
 
 # Getting and Creating Projects
 
@@ -334,3 +335,15 @@ It can be useful to list all the branches on a project. There are different "kin
 ## Squash Commits
 
     How to combine two or more commits under one commit and why you might want to do so.
+
+## Prune Local-Tracking Branches
+
+    Cleaning up all local-tracking branches at once in bulk rather than individually.
+
+When you fetch or pull changes from a remote repository using `git fetch` or `git pull`, Git retrieves information about the remote branches, and it updates your local references to those remote branches.
+
+If a branch was deleted on the remote repository (e.g., someone deleted a branch on GitHub), your local repository still keeps references to that branch.
+
+`git remote prune origin`
+
+- Checks the remote repository (in this case, `origin`) for any branches that no longer exist there and removes the corresponding remote tracking branches in your local repository.

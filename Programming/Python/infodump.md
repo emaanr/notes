@@ -13,6 +13,10 @@
 - [Todo](#todo)
 - [Table of Contents](#table-of-contents)
 - [Installing](#installing)
+  - [Check Version](#check-version)
+  - [Official Installation](#official-installation)
+    - [Set `PATH`](#set-path)
+    - [Install via Microsoft Store](#install-via-microsoft-store)
 - [Running](#running)
   - [REPL](#repl)
   - [CLI](#cli)
@@ -539,6 +543,53 @@
 - [Time Complexity](#time-complexity)
 
 # Installing
+
+Some information related to installing Python on a machine.
+
+## Check Version
+
+It's not inherently a problem to install a new version of Python if you already have an older version installed on your machine, and in many cases, it's a common and necessary practice. However, potential issues can arise if you don't manage the installation and version dependencies correctly. Here are some of the key reasons why problems might occur:
+
+1. Path Conflicts:
+
+   - One of the most common issues is that the new Python installation might add its path to the system's `PATH` environment variable.
+   - If this isn't managed properly, the new Python version could take precedence over the older one.
+   - This can affect the behavior of existing Python scripts and projects that rely on the older version, leading to unexpected issues.
+
+2. Package Compatibility:
+
+   - Some Python packages and libraries may not be immediately compatible with the latest Python release.
+   - When you install a new version, existing projects may encounter issues with dependencies, and you may need to update or modify your code and requirements.
+
+3. Virtual Environment Problems:
+
+   - If you have Python projects set up within virtual environments, installing a new Python version might not automatically update these environments.
+   - Your virtual environments may still use the older Python interpreter, and you'll need to recreate or update them to work with the new version.
+
+4. Dependency Conflicts:
+
+   - Other software or applications on your machine might depend on a specific version of Python.
+   - Installing a new Python version could lead to conflicts, where those applications may not function correctly with the new release.
+   - Adjusting your system configurations or managing multiple Python versions can be complex in such cases.
+
+5. Library and Module Confusion:
+   - When you have multiple Python versions installed, there can be confusion about which version of a library or module should be used by default.
+   - This can affect the behavior of your Python scripts and projects if they rely on specific versions of libraries.
+
+To avoid these potential issues, it's essential to manage Python installations carefully:
+
+- Use virtual environments to isolate Python and package dependencies for different projects.
+- Be mindful of how Python versions are configured in your system's `PATH` variable.
+- Update and test your existing code and dependencies when transitioning to a new Python version.
+- Consider using package management tools like `pip` to maintain and manage Python packages consistently.
+
+In summary, installing a new version of Python alongside an existing installation is not inherently problematic. The key is to manage the installation and dependencies effectively to prevent conflicts and ensure the smooth operation of your Python projects and applications.
+
+## Official Installation
+
+### Set `PATH`
+
+### Install via Microsoft Store
 
 # Running
 
