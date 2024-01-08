@@ -8,8 +8,6 @@
 - [Table of Contents](#table-of-contents)
 - [Topics](#topics)
 - [DSA](#dsa)
-- [FX](#fx)
-- [GUI](#gui)
 
 # Topics
 
@@ -106,40 +104,3 @@
 | [23](https://github.com/emaanr/notes/tree/main/Programming/Java/DSA/23) | Trees                     | Tree Data Structure Intro         |
 | [24](https://github.com/emaanr/notes/tree/main/Programming/Java/DSA/24) | Binary Search Tree        | Binary Search Tree Data Structure |
 | [25](https://github.com/emaanr/notes/tree/main/Programming/Java/DSA/25) | Tree Traversal            | Tree Traversal                    |
-
-# [FX](https://github.com/emaanr/notes/tree/main/Programming/Java/FX)
-
-|                                   ##                                   | README | Content     |
-| :--------------------------------------------------------------------: | ------ | ----------- |
-| [01](https://github.com/emaanr/notes/tree/main/Programming/Java/FX/01) | Topic  | Topic Title |
-
-# [GUI](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI)
-
-|                                   ##                                    | README                | Content                    |
-| :---------------------------------------------------------------------: | --------------------- | -------------------------- |
-| [01](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/01) | Audio                 | Java Audio                 |
-| [02](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/02) | GUI                   | Java GUI                   |
-| [03](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/03) | Labels                | Java Labels                |
-| [04](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/04) | Panels                | Java Panels                |
-| [05](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/05) | Buttons               | Java Buttons               |
-| [06](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/06) | BorderLayout          | Java BorderLayout          |
-| [07](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/07) | FlowLayout            | Java FlowLayout            |
-| [08](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/08) | GridLayout            | Java GridLayout            |
-| [09](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/09) | GUI Window            | Java Open a new GUI Window |
-| [10](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/10) | JOptionPane           | Java JOptionPane           |
-| [11](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/11) | JTextField            | Java TextField             |
-| [12](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/12) | JCheckbox             | Java Checkbox              |
-| [13](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/13) | JRadioButton          | Java Radio Buttons         |
-| [14](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/14) | JComboBox             | Java ComboBox              |
-| [15](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/15) | JSlider               | Java Slider                |
-| [16](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/16) | JProgressBar          | Java Progress Bar          |
-| [17](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/17) | JMenuBar              | Java Menu Bar              |
-| [18](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/18) | JFileChooser          | Java Select a File         |
-| [19](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/19) | JColorChooser         | Java Color Chooser         |
-| [20](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/20) | KeyListener           | Java KeyListener           |
-| [21](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/21) | Key Bindings          | Java Key Bindings          |
-| [22](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/22) | 2D Graphics           | Java 2D Graphics           |
-| [23](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/23) | 2D Animation          | Java 2D Animation          |
-| [24](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/24) | Anonymous Objects     | Java Anonymous Objects     |
-| [25](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/25) | Anonymous Inner Class | Java Anonymous Inner Class |
-| [26](https://github.com/emaanr/notes/tree/main/Programming/Java/GUI/26) | Lambda λ              | Java Lambda λ              |
