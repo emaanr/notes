@@ -28,7 +28,7 @@
 ## Arrays & Hashing
 
 - [ ] [Contains Duplicate](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/217/contains-duplicate.md)
-- [x] [Valid Anagram](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/242/valid-anagram.md)
+- [ ] [Valid Anagram](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/242/valid-anagram.md)
 - [ ] [Two Sum](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/1/two-sum.md)
 - [ ] [Group Anagrams](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/49/group-anagrams.md)
 - [ ] [Top K Frequent Elements](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/347/top-k-frequent-elements.md)
@@ -44,7 +44,7 @@
 
 ## Sliding Window
 
-- [ ] [Best Time To Buy And Sell Stock](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/121/best-time-to-buy-and-sell-stock.md)
+- [ ] [Best Time to Buy and Sell Stock](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/121/best-time-to-buy-and-sell-stock.md)
 - [ ] [Longest Substring Without Repeating Characters](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/3/longest-substring-without-repeating-characters.md)
 - [ ] [Longest Repeating Character Replacement](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/424/longest-repeating-character-replacement.md)
 - [ ] [Minimum Window Substring](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/76/minimum-window-substring.md)
@@ -55,7 +55,7 @@
 
 ## Binary Search
 
-- [ ] [Find Minimum In Rotated Sorted Array](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
+- [ ] [Find Minimum in Rotated Sorted Array](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Search in Rotated Sorted Array](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 
 ## Linked List
@@ -77,14 +77,14 @@
 - [ ] [Binary Tree Level Order Traversal](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Validate Binary Search Tree](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Kth Smallest Element in a BST](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
-- [ ] [Construct Binary Tree From Preorder And Inorder Traversal](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
+- [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Binary Tree Maximum Path Sum](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Serialize and Deserialize Binary Tree](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 
 ## Tries
 
 - [ ] [Implement Trie (Prefix Tree)](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
-- [ ] [Design Add And Search Words Data Structure](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
+- [ ] [Design Add and Search Words Data Structure](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 - [ ] [Word Search II](https://github.com/emaanr/notes/blob/main/Practice/LC/Problems/)
 
 ## Heap/Priority Queue
