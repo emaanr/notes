@@ -19,6 +19,12 @@
     - [Conclusion](#conclusion-1)
 - [Linked List Data Structure](#linked-list-data-structure)
   - [What are Fast and Slow Pointers when working with Linked Lists?](#what-are-fast-and-slow-pointers-when-working-with-linked-lists)
+- [Hashing](#hashing)
+  - [What is the Difference between a Set, HashMap, and HashSet?](#what-is-the-difference-between-a-set-hashmap-and-hashset)
+    - [Set](#set)
+    - [HashMap](#hashmap)
+    - [HashSet](#hashset)
+    - [Conclusion](#conclusion-2)
 
 # Sliding Window Algorithm
 
@@ -136,3 +142,46 @@ The concept of Fast and Slow Pointers is a common technique used to solve variou
      - When the Fast Pointer reaches the end, the Slow Pointer will be at the middle, and you can compare the first half (which is reversed) with the second half to check for a palindrome.
 
 The key advantage of using Fast and Slow Pointers is that it allows you to navigate the linked list with a time complexity of $O(n)$, where `n` is the number of nodes in the list. This technique often simplifies the algorithms for linked list problems, making them more efficient and concise.
+
+# Hashing
+
+1. What is the Difference between a Set, HashMap, and HashSet?
+
+## What is the Difference between a Set, HashMap, and HashSet?
+
+Explained in a general context (not necessarily tied to any one language).
+
+### Set
+
+- Collection of distinct elements where each element is unique.
+- Does not allow duplicate elements.
+- Typically do not maintain any order among its elements.
+- Python's `set()` data structure uses hashing under the hood to provide constant time average-case performance for basic operations like adding, removing, and checking for membership.
+- In various programming languages, sets are implemented differently but serve the same purpose of storing unique elements.
+  - Python: `set()`
+  - JavaScript: `Set`
+  - C++: `std::set`
+
+### HashMap
+
+- A HashMap is also referred to as a HashTable.
+- A data structure that stores key-value pairs.
+- Uses a hash function to compute an index into an array of buckets or slots, from which desired value can be found.
+- Provide efficient insertion, deletion, and retrieval of key-value pairs.
+- In Python, this concept is realized through the `dict` data type, where keys are hashed for efficient lookup (typically $O(n)$ lookup).
+- In other languages like JavaScript, there are similar implementations such as JavaScript's `Object`.
+
+### HashSet
+
+- Specifically a "Set" implementation that uses "Hashing" to achieve constand-time average complexity for basic operations like add, remove, and contains.
+- In Java, `HashSet` is an implementation of the `Set` interface that uses a `HashMap` under the hood.
+- Elements are not ordered and are stored based on their hash codes for efficient retrieval.
+- Other languages may have similar implementations but they may not necessaruly use the exact name `HashSet`.
+
+### Conclusion
+
+While the concepts of "Set", "HashMap", and "HashSet" are general and applicable across various programming languages, the specific names and implementation may vary.
+
+- In languages like Python, "Sets" are available as built-in data types.
+- Meanwhile, "HashMaps" are often represented by "Dictionaries".
+- "HashSet", as a specific implementation utilizing hashing for sets, may have counterparts in other languages but may not always be named exactly the same.
