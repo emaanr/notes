@@ -19,11 +19,11 @@
   - [Constraints](#constraints)
 - [Solutions](#solutions)
   - [HashSet](#hashset)
-    - [Complexities](#complexities)
+    - [Complexity](#complexity)
       - [Worst Case](#worst-case)
       - [Best Case](#best-case)
   - [Length](#length)
-    - [Complexity](#complexity)
+    - [Complexity](#complexity-1)
 
 # Question
 
@@ -99,7 +99,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
   - For every `num` in `nums`, check if it is already in the `hashset`, if not, then add it to the `hashset`. This way, if the same `num` comes up again during our iteration, we will know it is a duplicate value at which point we can end the program early via `return True`.
   - If the `for`-loop iterates over the entire input array `nums` without satisfying the `if num in hashset` condition, then we know there were no duplicates found and can `return False`.
 
-### Complexities
+### Complexity
 
 - Time Complexity: $O(n)$
   - The time complexity in the worst case will be $O(n)$ which is the case where there are no duplicates in the input array `nums` and so the entire input array `nums` is iterated over before returning `False`, which is $O(n)$ time.

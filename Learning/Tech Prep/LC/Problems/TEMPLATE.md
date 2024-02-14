@@ -14,7 +14,7 @@
 
 - Explanation
 
-### Complexities
+### Complexity
 
 - Time Complexity: $O(?)$
   - Explanation
