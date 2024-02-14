@@ -2,6 +2,29 @@
 
     Easy
 
+# Table of Contents
+
+- [Contains Duplicate](#contains-duplicate)
+- [Table of Contents](#table-of-contents)
+- [Question](#question)
+  - [Example 1](#example-1)
+    - [Input](#input)
+    - [Output](#output)
+  - [Example 2](#example-2)
+    - [Input](#input-1)
+    - [Output](#output-1)
+  - [Example 3](#example-3)
+    - [Input](#input-2)
+    - [Output](#output-2)
+  - [Constraints](#constraints)
+- [Solutions](#solutions)
+  - [HashSet](#hashset)
+    - [Complexities](#complexities)
+      - [Worst Case](#worst-case)
+      - [Best Case](#best-case)
+  - [Length](#length)
+    - [Complexity](#complexity)
+
 # Question
 
 Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
@@ -72,22 +95,30 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 ```
 
 - Sets by definition contain unique values.
-- Therefore, we add numbers to a set while the number isn't already in it.
-- If we come across a number that is already in the set, then we know it is a duplicate and can `return True` early.
+- For this solution, initialize an empty set using `hashset = set()` and then loop over the input array `nums`, looking at every value in it, in order.
+  - For every `num` in `nums`, check if it is already in the `hashset`, if not, then add it to the `hashset`. This way, if the same `num` comes up again during our iteration, we will know it is a duplicate value at which point we can end the program early via `return True`.
+  - If the `for`-loop iterates over the entire input array `nums` without satisfying the `if num in hashset` condition, then we know there were no duplicates found and can `return False`.
 
-- Otherwise, we will iterate over the entire list (worst case) and have a set of the same size as the input array which is $O(n)$ time complexity and space complexity.
+### Complexities
+
+- Time Complexity: $O(n)$
+  - The time complexity in the worst case will be $O(n)$ which is the case where there are no duplicates in the input array `nums` and so the entire input array `nums` is iterated over before returning `False`, which is $O(n)$ time.
+- Space Complexity: $O(n)$
+  - Likewise, the space complexity in the worst case will be $O(n)$ which is the case where there are no duplicates in the input array `nums` and so the entire input array `nums` is iterated over and has it's values added to a `set` of eventually the same size as `nums`, which is $O(n)$ space.
+
+#### Worst Case
 
 <div align="center" width="100%">
-  <img title="Figure 1" src="img/fig-1.png" />
+  <img title="HashSet Worst Case" src="img/figure-01.png" />
 </div>
 
-- Note that the time and space complexity can be less than $O(n)$ in the cases where it exits early, such as the when the first two elements of the input array are the same digit (best case).
+#### Best Case
 
 <div align="center" width="100%">
-  <img title="Figure 2" src="img/fig-2.png" />
+  <img title="HashSet Best Case" src="img/figure-02.png" />
 </div>
 
-- If we are able to exit the `for`-loop that is iterating over the entire input array, then we know to `return False` because it means no duplicate values were found via the logic in the `for`-loop.
+> Note: The time and space complexity can be _less than_ $O(n)$ in the cases where it exits early, such as the when the first two elements of the input array are the same digit, which is the best case since it is the fastest and least spacious scenario.
 
 ## Length
 
@@ -96,7 +127,20 @@ def containsDuplicate(self, nums: List[int]) -> bool:
     return len(set(nums)) != len(nums)
 ```
 
-- Convert array `nums` using `set(nums)` into a set.
-- Sets by definition contain unique values and as such there exists no duplicate elements.
-- If the set version of the input array has a different length than the array, it means there are duplicate values in the input array.
-- The time complexity and space complexity of this solution is also $O(n)$ for both, however this solution is slightly worse since it _always_ has a space complexity of $O(n)$ since we are creating a set of the input array entirely before being able to perform the comparison.
+- Convert input array `nums` into a set using `set(nums)`.
+- Sets by definition contain unique values.
+- If the `set` version of the input array `nums` has a different length than the input array `nums`, this means there are duplicate values in the input array `nums`.
+
+### Complexity
+
+<div align="center" width="100%">
+  <img title="Length Every Case" src="img/figure-01.png" />
+</div>
+
+- Time Complexity: $O(n)$
+  - It takes $O(n)$ time for the `set()` function to iterate over the input array `nums` to create the `set` representation of `nums`.
+  - It takes $O(1)$ time to compare the lengths.
+  - It takes $O(1)$ time to perform `len(nums)` as well since `len()` has been optimized in Python to take $O(1)$ time.
+- Space Complexity: $O(n)$
+  - This solution is slightly worse than the previous solution in terms of Space Complexity.
+  - This solution _always_ has an $O(n)$ space complexity since this approach needs to create a `set` of the input array `nums` via `set(nums)` whose length can _then_ be compared to the length of the original input array `nums` to determine the result.
