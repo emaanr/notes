@@ -84,7 +84,7 @@ def containsDuplicate(self, nums: List[int]) -> bool:
 - Note that the time and space complexity can be less than $O(n)$ in the cases where it exits early, such as the when the first two elements of the input array are the same digit (best case).
 
 <div align="center" width="100%">
-  <img title="Figure 1" src="img/fig-1.png" />
+  <img title="Figure 2" src="img/fig-2.png" />
 </div>
 
 - If we are able to exit the `for`-loop that is iterating over the entire input array, then we know to `return False` because it means no duplicate values were found via the logic in the `for`-loop.
