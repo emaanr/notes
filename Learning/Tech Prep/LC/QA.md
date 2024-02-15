@@ -25,6 +25,8 @@
     - [HashMap](#hashmap)
     - [HashSet](#hashset)
     - [Conclusion](#conclusion-2)
+- [Miscellaneous](#miscellaneous)
+  - [What is `_driver()` doing in this Solution?](#what-is-_driver-doing-in-this-solution)
 
 # Sliding Window Algorithm
 
@@ -185,3 +187,38 @@ While the concepts of "Set", "HashMap", and "HashSet" are general and applicable
 - In languages like Python, "Sets" are available as built-in data types.
 - Meanwhile, "HashMaps" are often represented by "Dictionaries".
 - "HashSet", as a specific implementation utilizing hashing for sets, may have counterparts in other languages but may not always be named exactly the same.
+
+# Miscellaneous
+
+1. What is `_driver()` doing in this Solution?
+
+## What is `_driver()` doing in this Solution?
+
+```python
+class Solution:
+   def isAnagram(self, s: str, t: str) -> bool:
+      # Solution
+
+def _driver():
+   # Test Cases
+   s1 = "listen"
+   t1 = "silent"
+   print(Solution().isAnagram(s1, t1)) # Output: True
+
+   s2 = "abc"
+   t2 = "def"
+   print(Solution().isAnagram(s2, t2)) # Output: False
+
+if __name__ == "__main__":
+   _driver()
+```
+
+In the given code snippet, `_driver()` is a utility function used to test the `isAnagram()` method of the `Solution` class. A breakdown of how it works is as follows:
+
+1. The `_driver()` function defines test cases `s1`, `t1`, `s2`, and `t2`.
+2. It then calls the `isAnagram()` method of the `Solution` class with these test cases and prints the output.
+3. Finally, it checks if the script is being executed as the main program (`__name__ == "__main__"`) and if so, it called the `_driver()` function.
+
+The purpose of separating the test cases into a `_driver()` function is to keep the main body of the script clean and organized. It allows for easy readability and maintainability, especially when dealing with multiple test cases or when you want to reuse the test logic in multiple places. Additionally, by placing the test cases inside a function, it prevents them from being executed unintentionally if this script were imported into another module.
+
+> **Note**: The main reason for including this is because I wanted a reference to this kind of solution layout since this was my first time encountering it. Otherwise I generally understood what was being done.
