@@ -1,10 +1,10 @@
-# Git Answers
+# Git Ref
 
-    Get answers...on how to do things with Git.
+    Reference for Git-related stuff.
 
 # Table of Contents
 
-- [Git Answers](#git-answers)
+- [Git Ref](#git-ref)
 - [Table of Contents](#table-of-contents)
 - [Getting and Creating Projects](#getting-and-creating-projects)
   - [Create New Repository](#create-new-repository)
