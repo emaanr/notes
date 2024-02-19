@@ -123,7 +123,7 @@ Capturing the current state of your project's files and creating a new version o
 
     How to create a new branch.
 
-When working on projects with various features and components, it is smart (and industry standard) to create a new branch to work on in order to avoid breaking changes on a working branch. Often times there will be a `main` or `dev` branch that contain versions of the project that are working and/or deployed from to production (live for customer use rather than solely existing when running from/on a local machine).
+When working on projects with various features and components, it is smart (and industry standard) to create a new branch to work on in order to avoid breaking changes on a working branch. Often times there will be a `main` or `dev` branch that contains versions of the project that are working and/or deployed from to production (live for customer use rather than solely existing when running from/on a local machine).
 
 `git branch <branch>`
 
