@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="-835 -585 1925 960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <g id="phone">
+    <rect x="-833" y="-150" width="166" height="300" rx="20" fill="black" />
+    <rect x="-823" y="-135" width="146" height="270" fill="white" />
+    <circle cx="-750" cy="-143" r="4" fill="white" />
+  </g>
+  <text x="-830" y="-170" font-size="60">client</text>
+
+  <g id="server" stroke="black">
+    <rect x="917" y="-150" width="166" height="300" rx="5" fill="white" stroke-width="7" />
+    <rect x="929" y="-150" width="142" height="300" rx="5" fill="none" stroke-width="3" />
+    <rect id="foot" x="929" y="150" width="20" height="10" fill="black" />
+    <use href="#foot" xlink:href="#foot" x="122" />
+    <g id="unit">
+      <rect x="923" y="-100" width="154" height="40" rx="5" fill="white" stroke-width="3" />
+      <circle cx="933" cy="-80" r="4" fill="black" />
+      <line x1="947" x2="1067" y1="-85" y2="-85" stroke-width="2" />
+      <line x1="947" x2="1067" y1="-75" y2="-75" stroke-width="2" />
+    </g>
+    <use href="#unit" xlink:href="#unit" y="155" />
+    <use href="#unit" xlink:href="#unit" y="200" />
+  </g>
+  <text x="1090" y="-170" font-size="60" text-anchor="end">server</text>
+
+  <g id="guardconn" stroke="#404040" stroke-width="65" >
+    <line  x1="-750" x2="-250" y1="0" y2="0" />
+    <line x1="500" x2="1000" y1="0" y2="0"/>
+  </g>
+
+  <g id="middle1conn" stroke="gray" stroke-width="50" >
+    <line x1="-750" x2="-250" y1="0" y2="0" />
+    <line x1="-250" x2="0" y1="0" y2="250" />
+    <line x1="250" x2="500" y1="-250" y2="0"/>
+    <line x1="500" x2="1000" y1="0" y2="0"/>
+  </g>
+
+  <g id="middle2conn" stroke="#A9A9A9" stroke-width="35" >
+    <line x1="-750" x2="-250" y1="0" y2="0" />
+    <line x1="-250" x2="0" y1="0" y2="250" />
+    <line x1="0" x2="0" y1="250" y2="0" />
+    <line x1="250" x2="250" y1="0" y2="-250"/>
+    <line x1="250" x2="500" y1="-250" y2="0"/>
+    <line x1="500" x2="1000" y1="0" y2="0"/>
+  </g>
+
+  <g id="onionconn" stroke="silver" stroke-width="20" >
+    <line x1="-750" x2="-250" y1="0" y2="0" />
+    <line x1="-250" x2="0" y1="0" y2="250" />
+    <line x1="0" x2="0" y1="250" y2="0" />
+    <line x1="0" x2="250" y1="0" y2="0"/>
+    <line x1="250" x2="250" y1="0" y2="-250"/>
+    <line x1="250" x2="500" y1="-250" y2="0"/>
+    <line x1="500" x2="1000" y1="0" y2="0"/>
+  </g>
+
+  <g id="data" stroke="purple" stroke-width="5" >
+    <line x1="-750" x2="-250" y1="0" y2="0" />
+    <line x1="-250" x2="0" y1="0" y2="250" />
+    <line x1="0" x2="0" y1="250" y2="0" />
+    <line x1="0" x2="250" y1="0" y2="0"/>
+    <line x1="250" x2="250" y1="0" y2="-250"/>
+    <line x1="250" x2="500" y1="-250" y2="0"/>
+    <line x1="500" x2="1000" y1="0" y2="0"/>
+  </g>
+
+  <clipPath id="slice">
+    <rect x="-50" y="-50" width="50" height="100"/>
+  </clipPath>
+
+  <g id="onion" stroke="black" stroke-width="2.5">
+    <circle cx="0" cy="0" r="50" fill="#dea0de" />
+    <circle cx="0" cy="0" r="37.5" fill="#ee82ee" />
+    <circle cx="0" cy="0" r="25" fill="#da70d7" />
+    <circle cx="0" cy="0" r="50" fill="#9932cc" clip-path="url(#slice)" />
+    <line x1="0" x2="0" y1="-50" y2="50" />
+  </g>
+
+  <use href="#onion" xlink:href="#onion" x="-250" />
+  <use href="#onion" xlink:href="#onion" x="250" />
+  <use href="#onion" xlink:href="#onion" y="-250" />
+  <use href="#onion" xlink:href="#onion" y="250" />
+  <use href="#onion" xlink:href="#onion" x="-250" y="-250" />
+  <use href="#onion" xlink:href="#onion" x="-250" y="250" />
+  <use href="#onion" xlink:href="#onion" x="250" y="-250" />
+  <use href="#onion" xlink:href="#onion" x="250" y="250" />
+  <use href="#onion" xlink:href="#onion" x="500" />
+  <use href="#onion" xlink:href="#onion" x="500" y="-250" />
+  <use href="#onion" xlink:href="#onion" x="500" y="250" />
+  <use href="#onion" xlink:href="#onion" x="-750" />
+  <use href="#onion" xlink:href="#onion" x="1000" y="0"/>
+
+  <text x="-250" y="-325" font-size="60" text-anchor="middle">guard</text>
+  <text x="0" y="-325" font-size="60" text-anchor="middle">middle</text>
+  <text x="250" y="-325" font-size="60" text-anchor="middle">middle</text>
+  <text x="500" y="-325" font-size="60" text-anchor="middle">guard</text>
+
+  <text x="-125" y="-425" font-size="60" text-anchor="middle">client’s</text>
+  <text x="375" y="-425" font-size="60" text-anchor="middle">server’s</text>
+
+  <text x="125" y="-525" font-size="60" text-anchor="middle">relays</text>
+
+  <defs>
+    <mask id="hole">
+      <circle cx="-13" cy="0" r="10" fill="white" />
+      <circle cx="-18" cy="0" r="2.5" fill="black"/>
+    </mask>
+    <g id="key" transform="rotate(-40, 0, 0)">
+      <circle cx="-13" cy="0" r="10" mask="url(#hole)" />
+      <rect x="-8" y="-1.75" width="30" height="4" />
+      <rect x="15" y="-1.75" width="8" height="9" />
+      <rect x="8" y="-1.75" width="4" height="9" />
+    </g>
+  </defs>
+  <use href="#key" xlink:href="#key" fill="silver" x="-750" />
+  <use href="#key" xlink:href="#key" fill="silver" x="1000" />
+</svg>

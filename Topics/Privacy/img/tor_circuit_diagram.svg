@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="-835 -585 1675 960" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <g id="phone">
+    <rect x="-833" y="-150" width="166" height="300" rx="20" fill="black" />
+    <rect x="-823" y="-135" width="146" height="270" fill="white" />
+    <circle cx="-750" cy="-143" r="4" fill="white" />
+  </g>
+  <text x="-830" y="-170" font-size="60">client</text>
+
+  <g id="server" stroke="black">
+    <rect x="667" y="-150" width="166" height="300" rx="5" fill="white" stroke-width="7" />
+    <rect x="679" y="-150" width="142" height="300" rx="5" fill="none" stroke-width="3" />
+    <rect id="foot" x="679" y="150" width="20" height="10" fill="black" />
+    <use href="#foot" xlink:href="#foot" x="122" />
+    <g id="unit">
+      <rect x="673" y="-100" width="154" height="40" rx="5" fill="white" stroke-width="3" />
+      <circle cx="683" cy="-80" r="4" fill="black" />
+      <line x1="697" x2="817" y1="-85" y2="-85" stroke-width="2" />
+      <line x1="697" x2="817" y1="-75" y2="-75" stroke-width="2" />
+    </g>
+    <use href="#unit" xlink:href="#unit" y="50" />
+    <use href="#unit" xlink:href="#unit" y="100" />
+  </g>
+  <text x="840" y="-170" font-size="60" text-anchor="end">server</text>
+
+  <line id="guardconn" x1="-750" x2="-250" y1="0" y2="-250" stroke="#404040" stroke-width="50" />
+
+  <g id="middleconn" stroke="gray" stroke-width="35" >
+    <line x1="-750" x2="-250" y1="0" y2="-250" />
+    <line x1="-250" x2="0" y1="-250" y2="250" />
+  </g>
+
+  <g id="exitconn" stroke="silver" stroke-width="20" >
+    <line x1="-750" x2="-250" y1="0" y2="-250" />
+    <line x1="-250" x2="0" y1="-250" y2="250" />
+    <line x1="0" x2="250" y1="250" y2="0" />
+  </g>
+
+  <g id="serverconn" stroke="green" stroke-width="5" >
+    <line x1="-750" x2="-250" y1="0" y2="-250" />
+    <line x1="-250" x2="0" y1="-250" y2="250" />
+    <line x1="0" x2="250" y1="250" y2="0" />
+    <line x1="250" x2="750" y1="0" y2="0"/>
+  </g>
+
+  <clipPath id="slice">
+    <rect x="-50" y="-50" width="50" height="100"/>
+  </clipPath>
+
+  <g id="onion" stroke="black" stroke-width="2.5">
+    <circle cx="0" cy="0" r="50" fill="#dea0de" />
+    <circle cx="0" cy="0" r="37.5" fill="#ee82ee" />
+    <circle cx="0" cy="0" r="25" fill="#da70d7" />
+    <circle cx="0" cy="0" r="50" fill="#9932cc" clip-path="url(#slice)" />
+    <line x1="0" x2="0" y1="-50" y2="50" />
+  </g>
+
+  <use href="#onion" xlink:href="#onion" x="-250" />
+  <use href="#onion" xlink:href="#onion" x="250" />
+  <use href="#onion" xlink:href="#onion" y="-250" />
+  <use href="#onion" xlink:href="#onion" y="250" />
+  <use href="#onion" xlink:href="#onion" x="-250" y="-250" />
+  <use href="#onion" xlink:href="#onion" x="-250" y="250" />
+  <use href="#onion" xlink:href="#onion" x="250" y="-250" />
+  <use href="#onion" xlink:href="#onion" x="250" y="250" />
+  <use href="#onion" xlink:href="#onion" x="-750" />
+
+  <text x="-250" y="-325" font-size="60" text-anchor="middle">guard</text>
+  <text x="0" y="370" font-size="60" text-anchor="middle">middle</text>
+  <text x="250" y="-75" font-size="60" text-anchor="middle">exit</text>
+
+  <path id="bracetip" d="m 325,-400 c -14.93,-29.88 -50.71,-51.37 -100.51,-51.37 -2.62,0 -2.62,03.99 0,3.99 49.8,0 83.79,18.4 98.71,48.28 0.62,1.17 2.38,0.27 1.8,-0.9" />
+  <use href="#bracetip" xlink:href="#bracetip" transform="scale(-1,1)" />
+  <use href="#bracetip" xlink:href="#bracetip" x="-324.5" y="897" transform="scale(1,-1)" />
+  <use href="#bracetip" xlink:href="#bracetip" x="-324.5" y="897" transform="scale(-1,-1)" />
+  <path id="braceedge" d="m 224.49,-451.37 l 0,4 L 100,-445.63 l 0,-4 " />
+  <use href="#braceedge" xlink:href="#braceedge" transform="scale(-1,1)" />
+
+  <text x="0" y="-525" font-size="60" text-anchor="middle">relays</text>
+
+  <defs>
+    <mask id="hole">
+      <circle cx="-13" cy="0" r="10" fill="white" />
+      <circle cx="-18" cy="0" r="2.5" fill="black"/>
+    </mask>
+    <g id="key" transform="rotate(-45, 0, 0)">
+      <circle cx="-13" cy="0" r="10" mask="url(#hole)" />
+      <rect x="-8" y="-1.75" width="30" height="4" />
+      <rect x="15" y="-1.75" width="8" height="9" />
+      <rect x="8" y="-1.75" width="4" height="9" />
+    </g>
+  </defs>
+  <use href="#key" xlink:href="#key" fill="#404040" x="-800" y="-50"/>
+  <use href="#key" xlink:href="#key" fill="gray" x="-800" y="0" />
+  <use href="#key" xlink:href="#key" fill="silver" x="-800" y="50" />
+
+  <use href="#key" xlink:href="#key" fill="#404040" x="-295" y="-295" />
+  <use href="#key" xlink:href="#key" fill="gray" x="-65" y="215" />
+  <use href="#key" xlink:href="#key" fill="silver" x="195" y="-45" />
+</svg>
