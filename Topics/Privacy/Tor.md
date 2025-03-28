@@ -18,12 +18,14 @@
   - [Restrict Exit Relays](#restrict-exit-relays)
     - [`ExitRelay`](#exitrelay)
 - [Programmatically](#programmatically)
-  - [Changing `torrc`](#changing-torrc)
-  - [Proxies \& IP Rotation using Tor](#proxies--ip-rotation-using-tor)
+  - [`torrc`](#torrc)
+    - [Changing `torrc`](#changing-torrc)
+  - [Using Tor As A Client](#using-tor-as-a-client)
     - [Disable Being An Exit Node](#disable-being-an-exit-node)
     - [Disable Being A Relay Node](#disable-being-a-relay-node)
     - [Disable Being A Bridge Node](#disable-being-a-bridge-node)
     - [Disable Being Any Node](#disable-being-any-node)
+    - [Enable Use As Client Only](#enable-use-as-client-only)
   - [Restricting Exit Relays](#restricting-exit-relays)
     - [Key Takeaways](#key-takeaways)
     - [Scope of Damage](#scope-of-damage)
@@ -95,7 +97,13 @@ In the Tor nextwork, an Exit Node is the final relay in the chain that sends tra
 
 > Some notes on interfacing with the Tor network programatically.
 
-## Changing `torrc`
+## `torrc`
+
+The standard configuration file used by Tor. Typically located in `/etc/tor/torrc` on Linux or `C:\Users\<Username>\AppData\Roaming\tor\torrc` on Windows. 
+
+> I've seen `tor.cfg` used as a non-standard name for Tor's configuration file. It is essentially the same thing/purpose though.
+
+### Changing `torrc`
 
 The Tor configuration file should be accessible by invoking something like the following in the CLI:
 
@@ -107,7 +115,7 @@ Restart Tor after making changes to `torrc` by invoking something like the follo
 
 > **Note:** Commands were invoked in Linux Ubuntu. YMMV.
 
-## Proxies & IP Rotation using Tor
+## Using Tor As A Client
 
 If using Tor purely as a client for IP rotation (for something like web scraping), then Tor is being used as a proxy which is fine and commonly done. Just _using_ Tor does not automatically turn your server into a (Exit, Relay, Bridge) Node in the network.
 
@@ -137,6 +145,10 @@ Your server will use the Tor network as _only_ a client if it does not participa
 ### Disable Being Any Node
 
 - You can disable your server participating as any kind of Node in the Tor network by ensuring `DisableAllRelay 1` in the `torrc` configuration file.
+
+### Enable Use As Client Only
+
+- You can enable using Tor as only a client by ensuring `ClientOnly 1` in the `torrc` configuration file. This means the node will only use the Tor network to access the internet and will not participate in relaying traffic or acting as an exit node. In essence, this setting restricts the Tor process to only being used for browsing or other client-side activies, rather than contributing to the network by routing traffic to others.
 
 ## Restricting Exit Relays
 
