@@ -1,4 +1,4 @@
-# Blogposts
+# Posts
 
 > Unsolicited musings.
 
