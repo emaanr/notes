@@ -154,7 +154,7 @@ Containers use OS-level virtualization, meaning they share the host operating sy
 
 #### Linux
 
-In Linux, user space is managed through namespaces and cgroups, which containers borrow and use for isolation and resource management. Docker, which was originally designed specifically for Linux, leverages these features to enable containerization:
+In Linux, user space is managed through namespaces and cgroups, concepts which containers borrow and use for isolation and resource management. Docker, which was originally designed specifically for Linux, leverages these features to enable containerization:
 
 - Namespaces provide isolation for various system resources within the user space, such as:
   - PID namespace isolates process IDs, so each container can have its own set of process IDs.
@@ -255,7 +255,7 @@ Containers are lightweight and fast, using minimal resources while offering port
 
 ##### `containerd`
 
-- A high-level container runtime thathandles all aspects of container lifecycle management.
+- A high-level container runtime that handles all aspects of container lifecycle management.
 - Short for _container daemon_.
 
 ##### `runc`

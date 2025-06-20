@@ -28,6 +28,15 @@
   - [Authentication](#authentication)
     - [RFC 7235 – HTTP/1.1: Authentication](#rfc-7235--http11-authentication)
 - [Ref](#ref)
+- [Learn HTTP or Network+ Certification First?](#learn-http-or-network-certification-first)
+    - [If you're pursuing **Network+ certification**:](#if-youre-pursuing-network-certification)
+  - [✅ **Why Network+ First**](#-why-network-first)
+  - [✅ **When to Go Deep into HTTP RFCs**](#-when-to-go-deep-into-http-rfcs)
+  - [📚 Your HTTP RFC List is Excellent — Here's How to Use It](#-your-http-rfc-list-is-excellent--heres-how-to-use-it)
+    - [**Start With:**](#start-with)
+    - [**Then Continue With:**](#then-continue-with)
+    - [**Optional but Great Additions (Post-core HTTP):**](#optional-but-great-additions-post-core-http)
+  - [🎓 TL;DR Recommendation](#-tldr-recommendation)
 
 
 # Key HTTP RFCs to Focus On
@@ -118,3 +127,76 @@ In addition to the core HTTP RFCs you've already considered, several other RFCs 
 # Ref
 
 [IETF's Guide on Reading RFCs](https://www.ietf.org/blog/how-read-rfc/?utm_source=chatgpt.com)
+
+
+# Learn HTTP or Network+ Certification First?
+
+It makes **perfect sense** to go in-depth into HTTP—**but when** depends on your goals and current skill level.
+
+### If you're pursuing **Network+ certification**:
+
+You should **focus on Network+ first** before diving deep into HTTP at the RFC level. Here’s why:
+
+---
+
+## ✅ **Why Network+ First**
+
+**1. Network+ gives you critical context**
+It covers foundational concepts like:
+
+* The OSI and TCP/IP models
+* Ports, protocols (like HTTP, FTP, DNS), and their roles
+* TCP vs UDP, IP addressing, routing, and firewalls
+* Basic security and troubleshooting
+  This background helps you **understand the "why" behind HTTP** behavior and design.
+
+**2. HTTP is layered on top of what Network+ teaches**
+HTTP lives at the application layer. Without grasping transport and network layers (e.g., TCP, TLS, IP), going deep into things like QUIC (used by HTTP/3) or ALPN may confuse more than clarify.
+
+---
+
+## ✅ **When to Go Deep into HTTP RFCs**
+
+**After Network+**, especially if:
+
+* You're getting into **web development**, **backend systems**, **DevOps**, or **security**
+* You're prepping for a **job interview** or **technical deep dive**
+* You want to build **HTTP-compliant services**, proxies, caches, or debugging tools
+
+---
+
+## 📚 Your HTTP RFC List is Excellent — Here's How to Use It
+
+Group your study **post-Network+** like this:
+
+### **Start With:**
+
+* 📘 **RFC 9110** – HTTP Semantics
+* 📘 **RFC 9111** – Caching
+* 📘 **RFC 9112** – HTTP/1.1
+  *(Focus on connection reuse, chunking, status codes, headers)*
+
+### **Then Continue With:**
+
+* 📘 **RFC 9113** – HTTP/2 (Multiplexing, HPACK)
+* 📘 **RFC 7541** – HPACK
+* 📘 **RFC 9114** – HTTP/3 (QUIC)
+* 📘 **RFC 9204** – QPACK
+
+### **Optional but Great Additions (Post-core HTTP):**
+
+* 🔐 **RFC 6797** – HSTS
+* 🔐 **RFC 7469** – HPKP *(deprecated in practice, but good history)*
+* 🍪 **RFC 6265** – Cookies
+* 🔄 **RFC 7232 & 7233** – Conditional & Range Requests
+* 🔐 **RFC 7235** – Auth
+* 📡 **RFC 6455** – WebSockets
+
+---
+
+## 🎓 TL;DR Recommendation
+
+* **Start with Network+**
+* Then **move to HTTP RFCs** for deeper knowledge
+
+You’ll be far more effective at absorbing and applying HTTP protocol knowledge **after** you've mastered the foundational networking concepts in Network+.
